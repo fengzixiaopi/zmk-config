@@ -1,4 +1,4 @@
-#include "dactyl_manuform_5x6.dtsi" // Notice that the main dtsi files are included in the overlay.
+#include "dactyl_manuform_4x6.dtsi" // Notice that the main dtsi files are included in the overlay.
 
 &kscan0 {
     col-gpios
