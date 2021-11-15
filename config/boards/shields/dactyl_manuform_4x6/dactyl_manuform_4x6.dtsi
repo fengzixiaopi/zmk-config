@@ -48,8 +48,8 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                   RC(3,11) RC(3,
 
 &pro_micro_i2c {
     status = "okay";
-    sda-pin = <6>;
-    scl-pin = <8>; 
+    sda-pin = <06>;
+    scl-pin = <08>; 
 
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb";
