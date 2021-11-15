@@ -20,8 +20,8 @@
                 &kp LCTRL &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp LBKT &kp RBKT                                      &kp PLUS &kp EQUAL
                                             &kp RET  &kp SPACE            &kp RET  &kp SPACE
-                                            &kp END   &kp HOME             &kp END  &kp DEL
-                                            &kp LALT &ext_power EP_TOG            &kp LGUI &kp LALT
+                                            &kp END   &bt BT_CLR             &kp END  &kp DEL
+                                            &kp LALT &kp LALT            &kp LGUI &kp LALT
             >;
         };
 
