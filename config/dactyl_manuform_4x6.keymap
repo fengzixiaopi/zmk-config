@@ -20,7 +20,7 @@
                                  &kp LBKT &kp RBKT                                      &kp PLUS &kp EQUAL
                                             &kp RET  &kp SPACE            &kp RET  &kp SPACE
                                             &kp END   &kp HOME             &kp END  &kp DEL
-                                            &kp LALT &kp GRAVE            &kp LGUI &kp LALT
+                                            &kp LALT &ext_power EP_TOG            &kp LGUI &kp LALT
             >;
         };
 
