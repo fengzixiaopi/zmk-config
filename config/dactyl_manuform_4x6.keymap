@@ -21,7 +21,7 @@
                 &mt LCTRL ESC &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp LS(LBKT) &kp LS(RBKT)                                      &kp KP_EQUAL &kp KP_MINUS
                                             &lt CONTROL SPACE  &mt LSHFT LBKT           &mt RSHFT RBKT  &lt CONTROL ENTER
-                                            &mo numfuncpad   &kp LGUI             &kp RGUI  &mo SYSTEM
+                                            &mo NUMFUNCPAD   &kp LGUI             &kp RGUI  &mo SYSTEM
                                             &kp BSPC &ext_power LALT            &kp RALT &kp DEL
             >;
         };
