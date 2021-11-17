@@ -26,56 +26,6 @@
             >;
         };
 
-        control {
-            bindings = <
-                &to QWERTY  &kp PG_UP &kp HOME &kp UP &kp END &kp BSPC                 &trans &trans &&kp UP &trans &trans &trans
-                &tog numfuncpad  &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp SPACE                &kp SPACE &kp LEFT &kp DOWN &kp RIGHT &trans &trans
-                &tog lightroom  &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp ENTER                &kp ENTER &trans &trans &trans &trans &trans
-                               &kp LPAR &kp RPAR                                            &kp KP_PLUS &kp UNDER
-                                             &trans &trans                &trans &trans
-                                             &trans  &trans               &trans &trans
-                                             &trans  &trans               &trans &trans
-            >;
-        };
-
-
-        numfuncpad {
-            bindings = <
-                &trans  &trans &kp N7 &kp N8 &kp N9 &trans                &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans
-                &trans  &kp N0 &kp N4 &kp N5 &kp N6 &trans                &kp F5 &kp F6 &kp F7 &kp F8 &trans &trans
-                &trans  &trans &kp N1 &kp N2 &kp N3 &trans                &kp F1 &kp F2 &kp F3 &kp F4 &trans &trans
-                               &trans &trans                                            &trans &trans
-                                             &trans &trans                &trans &trans
-                                             &trans  &trans               &trans &trans
-                                             &trans  &trans               &trans &trans
-            >;
-        };
-
-
-    
-        lightroom {
-            bindings = <
-                &trans  &trans &kp LC(S) &kp UP &kp LC(W) &trans                &trans &trans &kp UP &trans &trans &trans
-                &trans  &trans &kp LEFT &kp DOWN &kp RIGHT &trans                &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans
-                &trans  &trans &kp N5 &kp X &kp U &trans                &trans &trans &trans &trans &trans &trans
-                               &trans &trans                                            &trans &trans
-                                             &trans &trans                &trans &trans
-                                             &trans  &trans               &trans &trans
-                                             &trans  &trans               &trans &trans
-            >;
-        };
-
-
-        system {
-            bindings = <
-                &trans  &trans &ext_power EP_ON &ext_power EP_TOG &ext_power EP_OFF &trans                &trans &trans &trans &trans &trans &trans
-                &trans  &trans &bt BT_PRV &bt BT_CLR &bt BT_NXT &reset                &trans &trans &trans &trans &trans &trans
-                &trans  &trans &out OUT_USB &out OUT_TOG &out OUT_BLE &bootloader                &trans &trans &trans &trans &trans &trans
-                               &trans &trans                                            &trans &trans
-                                             &trans &trans                &trans &trans
-                                             &trans &trans                &trans &trans
-                                             &trans &trans                &trans &trans
-            >;
-        };
+ 
     };
 };
