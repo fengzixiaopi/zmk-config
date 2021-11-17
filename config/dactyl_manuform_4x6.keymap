@@ -53,6 +53,19 @@
 
 
     
+        lightroom {
+            bindings = <
+                &trans  &trans &kp LC(S) &kp UP &kp LC(W) &trans                &trans &trans &kp UP &trans &trans &trans
+                &trans  &trans &kp LEFT &kp DOWN &kp RIGHT &trans                &trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans
+                &trans  &trans &kp N5 &kp X &kp U &trans                &trans &trans &trans &trans &trans &trans
+                               &trans &trans                                            &trans &trans
+                                             &trans &trans                &trans &trans
+                                             &trans  &trans               &trans &trans
+                                             &trans  &trans               &trans &trans
+            >;
+        };
+
+
 
     };
 };
