@@ -22,13 +22,13 @@
                                  &kp LS(LBKT) &kp LS(RBKT)                                      &kp EQUAL &kp MINUS
                                             &lt CONTROL SPACE  &mt LSHFT LBKT           &mt RSHFT RBKT  &lt CONTROL ENTER
                                             &mo NUMFUNCPAD   &kp LGUI             &kp RGUI  &mo SYSTEM
-                                            &kp BSPC &ext_power LALT            &kp RALT &kp DEL
+                                            &kp BSPC &kp LALT            &kp RALT &kp DEL
             >;
         };
 
         control {
             bindings = <
-                &to QWERTY  &kp PG_UP &kp HOME &kp UP &kp END &kp BSPC                 &trans &trans &kp UP &trans &trans &trans
+                &to QWERTY  &kp PG_UP &kp HOME &kp UP &kp END &kp BSPC                 &trans &trans &``    kp UP &trans &trans &trans
                 &tog NUMFUNCPAD  &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp SPACE                &kp SPACE &kp LEFT &kp DOWN &kp RIGHT &trans &trans
                 &tog LIGHTROOM  &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp ENTER                &kp ENTER &trans &trans &trans &trans &trans
                                &kp LPAR &kp RPAR                                            &kp KP_PLUS &kp UNDER
