@@ -28,7 +28,7 @@
 
         control {
             bindings = <
-                &to QWERTY  &kp PG_UP &kp HOME &kp UP &kp END &kp BSPC                 &trans &trans &``    kp UP &trans &trans &trans
+                &to QWERTY  &kp PG_UP &kp HOME &kp UP &kp END &kp BSPC                 &trans &trans &kp UP &trans &trans &trans
                 &tog NUMFUNCPAD  &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp SPACE                &kp SPACE &kp LEFT &kp DOWN &kp RIGHT &trans &trans
                 &tog LIGHTROOM  &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp ENTER                &kp ENTER &trans &trans &trans &trans &trans
                                &kp LPAR &kp RPAR                                            &kp KP_PLUS &kp UNDER
