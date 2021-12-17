@@ -18,11 +18,11 @@
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
                 &kp TAB &kp A  &kp S  &kp D  &kp F  &kp G               &kp H  &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &mt LCTRL ESC &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
+                &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp LS(LBKT) &kp LS(RBKT)                                      &kp EQUAL &kp MINUS
                                             &lt CONTROL SPACE  &mt LSHFT LBKT           &mt RSHFT RBKT  &lt CONTROL ENTER
                                             &mo NUMFUNCPAD   &kp LGUI             &kp RGUI  &mo SYSTEM
-                                            &kp BSPC &kp LALT            &kp RALT &kp DEL
+                                            &key_repeat &kp LALT            &kp RALT &kp DEL
             >;
         };
 
