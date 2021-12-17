@@ -9,7 +9,7 @@
 #define NAV 1
 #define MOUSE 2
 #define MEDIA 3
-#define NAV 4
+#define NUM 4
 #define SYS 5
 #define FUN 6
 
