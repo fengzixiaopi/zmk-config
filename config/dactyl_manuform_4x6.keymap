@@ -22,7 +22,7 @@
                                  &kp LS(LBKT) &kp LS(RBKT)                                      &kp EQUAL &kp MINUS
                                             &lt CONTROL SPACE  &mt LSHFT LBKT           &mt RSHFT RBKT  &lt CONTROL ENTER
                                             &mo NUMFUNCPAD   &kp LGUI             &kp RGUI  &mo SYSTEM
-                                            &key_repeat &kp LALT            &kp RALT &kp DEL
+                                            &kp BSPC &kp LALT            &kp RALT &kp DEL
             >;
         };
 
