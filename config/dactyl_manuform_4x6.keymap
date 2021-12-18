@@ -83,9 +83,9 @@
 
         num {
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
-                &trans  &trans &trans &trans &trans &trans                &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
+                &trans  &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT                &trans  &trans &trans &trans &trans &trans
+                &kp CAPS  &kp CAPS &kp CAPS &kp CAPS &kp CAPS &kp CAPS    &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
+                &trans  &kp CAPS &kp CAPS &kp CAPS &kp CAPS &kp CAPS                &trans  &trans &trans &trans &trans &trans
                                &trans &trans                                            &trans &trans
                                              &trans &trans                &trans &trans
                                              &trans  &trans               &trans &trans
