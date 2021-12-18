@@ -45,18 +45,7 @@
             >;
         };
 
-
-        media {
-            bindings = <
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans  &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
-                               &trans &trans                                            &trans &trans
-                                             &trans &trans                &kp K_STOP2 &kp K_PP
-                                             &trans &trans                &trans &kp K_MUTE
-                                             &trans &trans                &trans &trans
-            >;
-        };
+        
 
         num {
             bindings = <
