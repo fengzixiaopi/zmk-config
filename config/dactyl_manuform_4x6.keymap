@@ -26,7 +26,7 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <42 17>;
-            bindings = <&kp N1>, <&kp N3>, <&kp B>;
+            bindings = <&kp N1 N3>;
         };
     };
 
