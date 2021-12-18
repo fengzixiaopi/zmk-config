@@ -36,7 +36,7 @@
         colemak-dh {
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
-                &kp TAB &kp A  &kp R  &kp S  &kp T  &kp G               &kp M  &kp N  &kp je     &kp I   &kp O &kp SQT
+                &kp TAB &kp A  &kp R  &kp S  &kp T  &kp G               &kp M  &kp N  &kp E     &kp I   &kp O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
@@ -45,7 +45,41 @@
             >;
         };
 
-        
+        nav {
+            bindings = <
+                &trans  &trans &trans &trans &trans &trans                &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO &trans
+                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
+                &trans  &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                               &trans &trans                                            &trans &trans
+                                             &trans  &trans               &kp BSPC &kp ENTER
+                                             &trans  &trans               &trans &kp DEL
+                                             &trans  &trans               &trans &trans
+            >;
+        };
+
+        mouse {
+            bindings = <
+                &trans  &trans &trans &trans &trans &trans                &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO &trans
+                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
+                &trans  &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                               &trans &trans                                            &trans &trans
+                                             &trans  &trans               &kp BSPC &kp ENTER
+                                             &trans  &trans               &trans &kp DEL
+                                             &trans  &trans               &trans &trans
+            >;
+        };
+
+        media {
+            bindings = <
+                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
+                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans  &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
+                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
+                               &trans &trans                                            &trans &trans
+                                             &trans &trans                &kp K_STOP2 &kp K_PP
+                                             &trans &trans                &trans &kp K_MUTE
+                                             &trans &trans                &trans &trans
+            >;
+        };
 
         num {
             bindings = <
