@@ -33,13 +33,25 @@
             >;
         };
 
+        colemak-dh {
+            bindings = <
+                &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
+                &kp TAB &kp A  &kp R  &kp S  &kp T  &kp G               &kp M  &kp N  &kp je     &kp I   &kp O &kp SQT
+                &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
+                                 &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
+                                            &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
+                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &lt FUN DEL
+                                            &lt MEDIA ESC &kp LGUI            &kp RALT &kp K_REDO
+            >;
+        };
+
         nav {
             bindings = <
-                &trans  &trans &kp N7 &kp N8 &kp N9 &trans                &kp F9 &kp F10 &kp F11 &kp F12 &trans &trans
-                &trans  &kp N0 &kp N4 &kp N5 &kp N6 &trans                &kp F5 &kp F6 &kp F7 &kp F8 &trans &trans
-                &trans  &trans &kp N1 &kp N2 &kp N3 &trans                &kp F1 &kp F2 &kp F3 &kp F4 &trans &trans
+                &trans  &trans &trans &trans &trans &trans                &kp K_REDO &kp K_PASTE &kp K_COPY &kp K_CUT &kp K_UNDO &trans
+                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
+                &trans  &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp KC_ENT      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
-                                             &trans &trans                &trans &trans
+                                             &trans  &trans               &trans &trans
                                              &trans  &trans               &trans &trans
                                              &trans  &trans               &trans &trans
             >;
