@@ -5,13 +5,13 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 #define QWERTY 0
-#define COLEMAK_DH
-#define NAV 1
-#define MOUSE 2
-#define MEDIA 3
-#define NUM 4
-#define SYS 5
-#define FUN 6
+#define COLEMAK_DH 1
+#define NAV 2
+#define MOUSE 3
+#define MEDIA 4
+#define NUM 5
+#define SYS 6
+#define FUN 7
 
 &sk {
     release-after-ms = <2000>;
@@ -26,7 +26,7 @@
         combo_esc {
             timeout-ms = <50>;
             key-positions = <42 17>;
-            bindings = <&kp ESC>;
+            bindings = <&kp N1>, <&kp N3>, <&kp B>;
         };
     };
 
