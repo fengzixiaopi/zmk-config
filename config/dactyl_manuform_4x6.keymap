@@ -21,14 +21,7 @@
 / {
 
     
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <42 17>;
-            bindings = <&brc_mac>;
-        };
-    };
+    
 
     behaviors {
         hm: homerow_mods {
@@ -46,6 +39,15 @@
             label = "BRC_MAC";
             #binding-cells = <0>;
             bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <42 17>;
+            bindings = <&brc_mac>;
         };
     };
 
