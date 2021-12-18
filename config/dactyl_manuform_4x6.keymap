@@ -42,14 +42,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <42 17>;
-            bindings = <&brc_mac>;
-        };
-    };
+
 
     keymap {
         compatible = "zmk,keymap";
@@ -128,7 +121,7 @@
 
         sys {
             bindings = <
-                &trans  &kp LBRC &kp N7 &kp N8 &kp N9 &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &bootloader
+                &brc_mac  &kp LBRC &kp N7 &kp N8 &kp N9 &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &bootloader
                 &kp CAPS  &kp COLON &kp N4 &kp N5 &kp N6 &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp TILDE &kp N1 &kp N2 &kp N3 &kp UNDER           &trans  &trans &trans &trans &trans &trans
                                &trans &trans                                            &trans &trans
