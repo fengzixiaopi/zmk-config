@@ -7,11 +7,11 @@ manifest:
     - name: okke-formsma
       url-base: https://github.com/okke-formsma
   projects:
-    - name: zmk-key-repeat
+    - name: zmk
       remote: petejohanson
       revision: behaviors/key-repeat
       import: app/west.yml
-    - name: zmk-macros
+    - name: zmk
       remote: okke-formsma
       revision: macros
       import: app/west.yml
