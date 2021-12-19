@@ -61,7 +61,7 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &lt FUN DEL
+                                            &key_repeat   &sk LSHIFT             &sk RSHIFT  &lt FUN DEL
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &kp K_REDO
             >;
         };
@@ -73,7 +73,7 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &lt FUN DEL
+                                            &key_repeat   &sk LSHIFT             &sk RSHIFT  &lt FUN DEL
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &kp K_REDO
             >;
         };

@@ -2,9 +2,15 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
     - name: okke-formsma
       url-base: https://github.com/okke-formsma
   projects:
+    - name: zmk
+      remote: petejohanson
+      revision: behaviors/key-repeat
+      import: app/west.yml
     - name: zmk
       remote: okke-formsma
       revision: macros
