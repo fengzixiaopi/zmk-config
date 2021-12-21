@@ -30,11 +30,31 @@
     
 
     behaviors {
-        hm: homerow_mods {
+        hmsf: homerow_mods_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
+            label = "HOMEROW_MODS_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <120>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        hmctrl: homerow_mods_control {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
             tapping-term-ms = <170>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        hmgui: homerow_mods_gui {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_GUI";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -63,7 +83,7 @@
         qwerty {
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp TAB &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHIFT F  &kp G               &kp H  &hm RSHIFT J  &hm RCTRL K     &hm LALT L   &hm RGUI SEMI &kp SQT
+                &kp TAB &hmgui LGUI A  &hmgui LALT S  &hmctrl LCTRL D  &hmsf LSHIFT F  &kp G               &kp H  &hmsf RSHIFT J  &hmctrl RCTRL K     &hmgui LALT L   &hmgui RGUI SEMI &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
@@ -75,7 +95,7 @@
         colemak-dh {
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
-                &kp TAB &hm LGUI A  &hm LALT R  &hm LCTRL S  &hm LSHIFT T  &kp G               &kp M  &hm RSHIFT N  &hm RCTRL E     &hm LALT I   &hm RGUI O &kp SQT
+                &kp TAB &hmgui LGUI A  &hmgui LALT R  &hmctrl LCTRL S  &hmsf LSHIFT T  &kp G               &kp M  &hmsf RSHIFT N  &hmctrl RCTRL E     &hmgui LALT I   &hmgui RGUI O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
