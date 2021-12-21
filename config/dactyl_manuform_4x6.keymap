@@ -62,7 +62,7 @@
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
                                             &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &kp K_REDO
-                                            &lt MEDIA ESC &kp LGUI            &kp RALT &kp &lt FUN DEL
+                                            &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
 
