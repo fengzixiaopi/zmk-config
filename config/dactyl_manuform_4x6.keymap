@@ -13,6 +13,12 @@
 #define SYS 6
 #define FUN 7
 
+#define UNDO LC(Z)
+#define REDO LC(Y)
+#define COPY LC(C)
+#define CUT LC(X)
+#define PASTE LC(V)
+
 &sk {
     release-after-ms = <2000>;
 };
@@ -61,7 +67,7 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp LC(Z)   &sk LSHIFT             &sk RSHIFT  &kp LC(Y)
+                                            &kp UNDO   &sk LSHIFT             &sk RSHIFT  &kp REDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
@@ -73,16 +79,16 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp LC(Z)   &sk LSHIFT             &sk RSHIFT  &kp LC(Y)
+                                            &kp UNDO   &sk LSHIFT             &sk RSHIFT  &kp REDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
 
         nav {
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &kp LC(Y) &kp K_PASTE &kp K_COPY &kp K_CUT &kp LC(Z) &trans
+                &trans  &trans &trans &trans &trans &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
-                &trans  &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
                                              &trans  &trans               &kp BSPC &kp ENTER
                                              &trans  &trans               &trans &kp DEL
@@ -92,9 +98,9 @@
 
         mouse {
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &kp LC(Y) &kp K_PASTE &kp K_COPY &kp K_CUT &kp LC(Z) &trans
+                &trans  &trans &trans &trans &trans &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
-                &trans  &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
                                              &trans  &trans               &kp BSPC &kp ENTER
                                              &trans  &trans               &trans &kp DEL
