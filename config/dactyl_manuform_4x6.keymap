@@ -138,7 +138,7 @@
                 &kp CAPS  &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &trans &trans &trans &trans &trans
                                &trans &trans                                            &trans &trans
-                                             &kp GT &kp RPAR               &trans &trans
+                                             &kp LPAR &kp RPAR               &trans &trans
                                              &kp PIPE  &trans              &trans &trans
                                              &trans  &trans                &trans &trans
             >;
