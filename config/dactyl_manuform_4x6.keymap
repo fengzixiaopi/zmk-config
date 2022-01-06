@@ -105,7 +105,7 @@
         colemak-dh {
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
-                &kp TAB &hmgui LGUI A  &hmgui LALT R  &hmctrl LCTRL S  &hmsf LSHIFT T  &kp G               &kp M  &hmsf RSHIFT N  &hmctrl RCTRL E     &hmgui LALT I   &hmgui RGUI O &kp SQT
+                &kp TAB &hmgui LGUI A  &hmgui LALT R  &hmctrl LCTRL S  &hmsfsl LSHIFT T  &kp G               &kp M  &hmsfsl RSHIFT N  &hmctrl RCTRL E     &hmgui LALT I   &hmgui RGUI O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
