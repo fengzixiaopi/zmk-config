@@ -157,7 +157,7 @@
                 &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &bootloader
                 &kp CAPS  &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &trans &trans &trans &trans &trans
-                               &trans &trans                                            &trans &trans
+                               &trans &trans                                            &to QWERTY &to COLEMAK_DH
                                              &kp LPAR &kp RPAR               &trans &trans
                                              &kp PIPE  &trans              &trans &trans
                                              &trans  &trans                &trans &trans
