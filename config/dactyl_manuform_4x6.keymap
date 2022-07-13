@@ -82,22 +82,8 @@
             bindings = <&kp>, <&kp>;
         };
 
-        brc_mac: brc_mac {
-            compatible = "zmk,behavior-macro";
-            label = "BRC_MAC";
-            #binding-cells = <0>;
-            bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
-        };
     };
 
-    combos {
-        compatible = "zmk,combos";
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <42 17>;
-            bindings = <&brc_mac>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -109,7 +95,7 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp UNDO   &sk LSHIFT             &sk RSHIFT  &kp REDO
+                                            &key_repeat   &sk LSHIFT             &sk RSHIFT  &kp REDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
@@ -121,7 +107,7 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp UNDO   &sk LSHIFT             &sk RSHIFT  &kp REDO
+                                            &key_repeat   &sk LSHIFT             &sk RSHIFT  &kp REDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
@@ -133,7 +119,7 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV_MAC SPACE  &lt MOUSE_MAC TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp MUNDO   &sk LSHIFT             &sk RSHIFT  &kp MREDO
+                                            &key_repeat   &sk LSHIFT             &sk RSHIFT  &kp MREDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
@@ -145,7 +131,7 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV_MAC SPACE  &lt MOUSE_MAC TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp MUNDO   &sk LSHIFT             &sk RSHIFT  &kp MREDO
+                                            &key_repeat   &sk LSHIFT             &sk RSHIFT  &kp MREDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
