@@ -176,8 +176,8 @@
 
         nav-mac {
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &kp MREDO &kp MCUT &kp MCOPY &kp MPASTE &kp MUNDO &trans
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
+                &trans  &trans &trans &kp LG(W) &kp LG(R) &trans                &kp MREDO &kp MCUT &kp MCOPY &kp MPASTE &kp MUNDO &trans
+                &trans  &kp LGUI &kp LG(LG(D)) &kp LG(S) &kp LG(D) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
                 &trans  &kp MUNDO &kp MCUT &kp MCOPY &kp MPASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
                                              &trans  &trans               &kp BSPC &kp ENTER
