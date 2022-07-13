@@ -116,9 +116,9 @@
 
         nav {
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &trans  &trans &trans &trans &trans &trans                &kp REDO &kp K_CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
-                &trans  &kp UNDO &kp K_CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                &trans  &kp UNDO &kp K_K_CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
                                              &trans  &trans               &kp BSPC &kp ENTER
                                              &trans  &trans               &trans &trans
@@ -128,9 +128,9 @@
 
         mouse {
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &trans  &trans &trans &trans &trans &trans                &kp REDO &kp K_CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
-                &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                &trans  &kp UNDO &kp K_CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
                                              &trans  &trans               &kp DEL &kp SPACE
                                              &trans  &trans               &trans &trans
