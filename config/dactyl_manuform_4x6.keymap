@@ -13,11 +13,6 @@
 #define SYS 6
 #define FUN 7
 
-#define UNDO LC(Z)
-#define REDO LC(Y)
-#define COPY LC(C)
-#define CUT LC(X)
-#define PASTE LC(V)
 
 &sk {
     release-after-ms = <2000>;
