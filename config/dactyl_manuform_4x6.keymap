@@ -10,10 +10,26 @@
 #define COLEMAK_DH_MAC 3
 #define NAV 4
 #define MOUSE 5
-#define MEDIA 6
-#define NUM 7
-#define SYS 8
-#define FUN 9
+#define NAV_MAC 6
+#define MOUSE_MAC 7
+#define MEDIA 8
+#define NUM 9
+#define SYS 10
+#define FUN 11
+
+
+#define UNDO LC(Z)
+#define REDO LC(Y)
+#define COPY LC(C)
+#define CUT LC(X)
+#define PASTE LC(V)
+
+
+#define MUNDO LG(Z)
+#define MREDO LG(LS(Z))
+#define MCOPY LG(C)
+#define MCUT LG(X)
+#define MPASTE LG(V)
 
 &sk {
     release-after-ms = <2000>;
@@ -22,8 +38,8 @@
 
 / {
 
-    
-    
+   
+     
 
     behaviors {
         hmsf: homerow_mods_shift {
@@ -93,7 +109,7 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &kp K_REDO
+                                            &kp UNDO   &sk LSHIFT             &sk RSHIFT  &kp REDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
@@ -105,7 +121,7 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &kp K_REDO
+                                            &kp UNDO   &sk LSHIFT             &sk RSHIFT  &kp REDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
@@ -116,8 +132,8 @@
                 &kp TAB &hmctrl LCTRL A  &hmgui LALT S  &hmgui LGUI D  &hmsf LSHIFT F  &kp G               &kp H  &hmsf RSHIFT J  &hmgui RGUI K     &hmgui LALT L   &hmctrl RCTRL SEMI &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
-                                            &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &kp K_REDO
+                                            &lt NAV_MAC SPACE  &lt MOUSE_MAC TAB           &lt SYS BSPC  &lt NUM ENTER
+                                            &kp MUNDO   &sk LSHIFT             &sk RSHIFT  &kp MREDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
@@ -128,35 +144,60 @@
                 &kp TAB &hmctrl LCTRL A  &hmgui LALT R  &hmgui LGUI S  &hmsfsl LSHIFT T  &kp G               &kp M  &hmsfsl RSHIFT N  &hmgui RGUI E     &hmgui LALT I   &hmctrl RCTRL O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
-                                            &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &kp K_REDO
+                                            &lt NAV_MAC SPACE  &lt MOUSE_MAC TAB           &lt SYS BSPC  &lt NUM ENTER
+                                            &kp MUNDO   &sk LSHIFT             &sk RSHIFT  &kp MREDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
 
         nav {
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &kp K_REDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_UNDO &trans
+                &trans  &trans &trans &trans &trans &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
-                &trans  &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
                                              &trans  &trans               &kp BSPC &kp ENTER
-                                             &trans  &trans               &trans &trans
+                                             &trans  &trans               &trans &kp DEL
                                              &trans  &trans               &trans &trans
             >;
         };
 
         mouse {
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &kp K_REDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_UNDO &trans
+                &trans  &trans &trans &trans &trans &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
-                &trans  &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
-                                             &trans  &trans               &kp DEL &kp SPACE
-                                             &trans  &trans               &trans &trans
+                                             &trans  &trans               &kp BSPC &kp ENTER
+                                             &trans  &trans               &trans &kp DEL
                                              &trans  &trans               &trans &trans
             >;
         };
+
+        nav-mac {
+            bindings = <
+                &trans  &trans &trans &trans &trans &trans                &kp MREDO &kp MCUT &kp MCOPY &kp MPASTE &kp MUNDO &trans
+                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
+                &trans  &kp MUNDO &kp MCUT &kp MCOPY &kp MPASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                               &trans &trans                                            &trans &trans
+                                             &trans  &trans               &kp BSPC &kp ENTER
+                                             &trans  &trans               &trans &kp DEL
+                                             &trans  &trans               &trans &trans
+            >;
+        };
+
+        mouse-mac {
+            bindings = <
+                &trans  &trans &trans &trans &trans &trans                &kp MREDO &kp MCUT &kp MCOPY &kp MPASTE &kp MUNDO &trans
+                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
+                &trans  &kp MUNDO &kp MCUT &kp MCOPY &kp MPASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                               &trans &trans                                            &trans &trans
+                                            &trans  &trans               &kp BSPC &kp ENTER
+                                             &trans  &trans               &trans &kp DEL
+                                             &trans  &trans               &trans &trans
+            >;
+        };
+
 
         media {
             bindings = <
