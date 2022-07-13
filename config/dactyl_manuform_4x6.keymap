@@ -6,12 +6,14 @@
 
 #define QWERTY 0
 #define COLEMAK_DH 1
-#define NAV 2
-#define MOUSE 3
-#define MEDIA 4
-#define NUM 5
-#define SYS 6
-#define FUN 7
+#define QWERTY_MAC 2
+#define COLEMAK_DH_MAC 3
+#define NAV 4
+#define MOUSE 5
+#define MEDIA 6
+#define NUM 7
+#define SYS 8
+#define FUN 9
 
 &sk {
     release-after-ms = <2000>;
@@ -108,6 +110,30 @@
             >;
         };
 
+        qwerty-mac {
+            bindings = <
+                &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
+                &kp TAB &hmctrl LCTRL A  &hmgui LALT S  &hmgui LGUI D  &hmsf LSHIFT F  &kp G               &kp H  &hmsf RSHIFT J  &hmgui RGUI K     &hmgui LALT L   &hmctrl RCTRL SEMI &kp SQT
+                &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
+                                 &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
+                                            &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
+                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &kp K_REDO
+                                            &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
+            >;
+        };
+
+        colemak-dh-mac {
+            bindings = <
+                &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
+                &kp TAB &hmctrl LCTRL A  &hmgui LALT R  &hmgui LGUI S  &hmsfsl LSHIFT T  &kp G               &kp M  &hmsfsl RSHIFT N  &hmgui RGUI E     &hmgui LALT I   &hmctrl RCTRL O &kp SQT
+                &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
+                                 &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
+                                            &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
+                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &kp K_REDO
+                                            &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
+            >;
+        };
+
         nav {
             bindings = <
                 &trans  &trans &trans &trans &trans &trans                &kp K_REDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_UNDO &trans
@@ -160,7 +186,7 @@
             bindings = <
                 &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &bootloader
                 &kp CAPS  &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
-                &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &trans &to QWERTY &to COLEMAK_DH &trans &trans
+                &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &to QWERTY_MAC &to QWERTY &to COLEMAK_DH &to COLEMAK_DH_MAC &trans
                                &trans &trans                                            &to QWERTY &to COLEMAK_DH
                                              &kp LPAR &kp RPAR               &trans &trans
                                              &kp PIPE  &trans              &trans &trans
