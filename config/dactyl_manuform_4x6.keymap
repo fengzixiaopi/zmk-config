@@ -97,7 +97,7 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &kp REDO
+                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &kp K_REDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
@@ -109,14 +109,14 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &kp REDO
+                                            &kp K_UNDO   &sk LSHIFT             &sk RSHIFT  &kp K_REDO
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
 
         nav {
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &kp REDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_UNDO &trans
+                &trans  &trans &trans &trans &trans &trans                &kp K_REDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_UNDO &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
                 &trans  &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
@@ -128,7 +128,7 @@
 
         mouse {
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &kp REDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_UNDO &trans
+                &trans  &trans &trans &trans &trans &trans                &kp K_REDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp K_UNDO &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
                 &trans  &kp K_UNDO &kp K_CUT &kp K_COPY &kp K_PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
