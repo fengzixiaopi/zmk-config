@@ -152,8 +152,8 @@
 
         nav {
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
+                &trans  &trans &trans &kp LC(W) &trans &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &trans  &kp LGUI &kp LALT &kp LC(S) &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
                                              &trans  &trans               &kp BSPC &kp ENTER
@@ -176,8 +176,8 @@
 
         nav-mac {
             bindings = <
-                &trans  &trans &kp LG(LS(D)) &kp LG(W) &kp LG(D) &trans                &kp MREDO &kp MCUT &kp MCOPY &kp MPASTE &kp MUNDO &trans
-                &trans  &kp LGUI &kp LG(R) &kp LG(S) &kp LG(B) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
+                &trans  &trans &trans &kp LG(W) &kp LG(R) &trans                &kp MREDO &kp MCUT &kp MCOPY &kp MPASTE &kp MUNDO &trans
+                &trans  &kp LGUI &kp LG(LS(F)) &kp LG(S) &kp LG(F) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
                 &trans  &kp MUNDO &kp MCUT &kp MCOPY &kp MPASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
                                              &trans  &trans               &kp BSPC &kp ENTER
@@ -189,7 +189,7 @@
         mouse-mac {
             bindings = <
                 &trans  &trans &trans &trans &trans &trans                &kp MREDO &kp MCUT &kp MCOPY &kp MPASTE &kp MUNDO &trans
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
+                &trans  &kp LGUI &kp LG(LS(D)) &kp LG(B) &kp LG(D) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
                 &trans  &kp MUNDO &kp MCUT &kp MCOPY &kp MPASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
                                             &trans  &trans               &kp BSPC &kp ENTER
