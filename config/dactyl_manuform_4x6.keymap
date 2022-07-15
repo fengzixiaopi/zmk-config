@@ -6,16 +6,12 @@
 
 #define QWERTY 0
 #define COLEMAK_DH 1
-#define QWERTY_MAC 2
-#define COLEMAK_DH_MAC 3
-#define NAV 4
-#define MOUSE 5
-#define NAV_MAC 6
-#define MOUSE_MAC 7
-#define MEDIA 8
-#define NUM 9
-#define SYS 10
-#define FUN 11
+#define NAV 2
+#define MOUSE 3
+#define MEDIA 4
+#define NUM 5
+#define SYS 6
+#define FUN 7
 
 
 #define UNDO LC(Z)
@@ -23,13 +19,6 @@
 #define COPY LC(C)
 #define CUT LC(X)
 #define PASTE LC(V)
-
-
-#define MUNDO LG(Z)
-#define MREDO LG(LS(Z))
-#define MCOPY LG(C)
-#define MCUT LG(X)
-#define MPASTE LG(V)
 
 &sk {
     release-after-ms = <2000>;
@@ -128,37 +117,12 @@
             >;
         };
 
-        qwerty-mac {
-            label = "QWERTY-MAC";
-            bindings = <
-                &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp TAB &hmctrl LCTRL A  &hmgui LALT S  &hmgui LGUI D  &hmsf LSHIFT F  &kp G               &kp H  &hmsf RSHIFT J  &hmgui RGUI K     &hmgui LALT L   &hmctrl RCTRL SEMI &kp SQT
-                &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                                 &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
-                                            &lt NAV_MAC SPACE  &lt MOUSE_MAC TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &key_repeat   &sk LSHIFT             &sk RSHIFT  &kp MREDO
-                                            &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
-            >;
-        };
-
-        colemak-dh-mac {
-            label = "COLEMAK-DH-MAC";
-            bindings = <
-                &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
-                &kp TAB &hmctrl LCTRL A  &hmgui LALT R  &hmgui LGUI S  &hmsfsl LSHIFT T  &kp G               &kp M  &hmsfsl RSHIFT N  &hmgui RGUI E     &hmgui LALT I   &hmctrl RCTRL O &kp SQT
-                &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                                 &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
-                                            &lt NAV_MAC SPACE  &lt MOUSE_MAC TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &key_repeat   &sk LSHIFT             &sk RSHIFT  &kp MREDO
-                                            &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
-            >;
-        };
 
         nav {
             label = "NAV";
             bindings = <
                 &trans  &trans &trans &kp LC(W) &kp LC(R) &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
-                &trans  &kp LGUI &kp LALT &kp LC(S) &kp LC(F) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
+                &trans  &kp LGUI &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
                                              &trans  &trans               &kp BSPC &kp ENTER
@@ -171,36 +135,10 @@
             label = "MOUSE";
             bindings = <
                 &trans  &trans &trans &trans &trans &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
-                &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
+                &trans  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LG(ENTER)      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
                                              &trans  &trans               &kp BSPC &kp ENTER
-                                             &trans  &trans               &trans &kp DEL
-                                             &trans  &trans               &trans &trans
-            >;
-        };
-
-        nav-mac {
-            label = "NAV-MAC";
-            bindings = <
-                &trans  &trans &trans &kp LG(W) &kp LG(R) &trans                &kp MREDO &kp MCUT &kp MCOPY &kp MPASTE &kp MUNDO &trans
-                &trans  &kp LGUI &kp LG(LS(F)) &kp LG(S) &kp LG(F) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
-                &trans  &kp MUNDO &kp MCUT &kp MCOPY &kp MPASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
-                               &trans &trans                                            &trans &trans
-                                             &trans  &trans               &kp BSPC &kp ENTER
-                                             &trans  &trans               &trans &kp DEL
-                                             &trans  &trans               &trans &trans
-            >;
-        };
-
-        mouse-mac {
-            label = "MOUSE-MAC";
-            bindings = <
-                &trans  &trans &trans &trans &trans &trans                &kp MREDO &kp MCUT &kp MCOPY &kp MPASTE &kp MUNDO &trans
-                &trans  &kp LGUI &kp LG(LS(D)) &kp LG(B) &kp LG(D) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
-                &trans  &kp MUNDO &kp MCUT &kp MCOPY &kp MPASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
-                               &trans &trans                                            &trans &trans
-                                            &trans  &trans               &kp BSPC &kp ENTER
                                              &trans  &trans               &trans &kp DEL
                                              &trans  &trans               &trans &trans
             >;
