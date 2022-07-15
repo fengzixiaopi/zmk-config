@@ -103,6 +103,7 @@
         compatible = "zmk,keymap";
 
         qwerty {
+            label = "QWERTY";
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
                 &kp TAB &hmgui LGUI A  &hmgui LALT S  &hmctrl LCTRL D  &hmsf LSHIFT F  &kp G               &kp H  &hmsf RSHIFT J  &hmctrl RCTRL K     &hmgui LALT L   &hmgui RGUI SEMI &kp SQT
@@ -115,6 +116,7 @@
         };
 
         colemak-dh {
+            label = "COLEMAK-DH";
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
                 &kp TAB &hmgui LGUI A  &hmgui LALT R  &hmctrl LCTRL S  &hmsfsl LSHIFT T  &kp G               &kp M  &hmsfsl RSHIFT N  &hmctrl RCTRL E     &hmgui LALT I   &hmgui RGUI O &kp SQT
@@ -127,6 +129,7 @@
         };
 
         qwerty-mac {
+            label = "QWERTY-MAC";
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
                 &kp TAB &hmctrl LCTRL A  &hmgui LALT S  &hmgui LGUI D  &hmsf LSHIFT F  &kp G               &kp H  &hmsf RSHIFT J  &hmgui RGUI K     &hmgui LALT L   &hmctrl RCTRL SEMI &kp SQT
@@ -139,6 +142,7 @@
         };
 
         colemak-dh-mac {
+            label = "COLEMAK-DH-MAC";
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
                 &kp TAB &hmctrl LCTRL A  &hmgui LALT R  &hmgui LGUI S  &hmsfsl LSHIFT T  &kp G               &kp M  &hmsfsl RSHIFT N  &hmgui RGUI E     &hmgui LALT I   &hmctrl RCTRL O &kp SQT
@@ -151,6 +155,7 @@
         };
 
         nav {
+            label = "NAV";
             bindings = <
                 &trans  &trans &trans &kp LC(W) &kp LC(R) &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LALT &kp LC(S) &kp LC(F) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
@@ -163,6 +168,7 @@
         };
 
         mouse {
+            label = "MOUSE";
             bindings = <
                 &trans  &trans &trans &trans &trans &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
@@ -175,6 +181,7 @@
         };
 
         nav-mac {
+            label = "NAV-MAC";
             bindings = <
                 &trans  &trans &trans &kp LG(W) &kp LG(R) &trans                &kp MREDO &kp MCUT &kp MCOPY &kp MPASTE &kp MUNDO &trans
                 &trans  &kp LGUI &kp LG(LS(F)) &kp LG(S) &kp LG(F) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
@@ -187,6 +194,7 @@
         };
 
         mouse-mac {
+            label = "MOUSE-MAC";
             bindings = <
                 &trans  &trans &trans &trans &trans &trans                &kp MREDO &kp MCUT &kp MCOPY &kp MPASTE &kp MUNDO &trans
                 &trans  &kp LGUI &kp LG(LS(D)) &kp LG(B) &kp LG(D) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
@@ -200,6 +208,7 @@
 
 
         media {
+            label = "MEDIA";
             bindings = <
                 &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans  &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
@@ -212,6 +221,7 @@
         };
 
         num {
+            label = "NUM";
             bindings = <
                 &trans  &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT             &trans  &bt BT_PRV &bt BT_CLR &bt BT_NXT &trans &reset
                 &kp CAPS  &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
@@ -224,6 +234,7 @@
         };
 
         sys {
+            label = "SYS";
             bindings = <
                 &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &bootloader
                 &kp CAPS  &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
@@ -236,6 +247,7 @@
         };
 
         fun {
+            label = "FUN";
             bindings = <
                 &trans  &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN              &trans  &trans &trans &trans &trans &trans
                 &trans  &kp F11 &kp F4 &kp F5 &kp F6 &kp SLCK               &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
