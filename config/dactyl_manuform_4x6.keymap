@@ -152,7 +152,7 @@
 
         nav {
             bindings = <
-                &trans  &trans &trans &kp LC(W) &LC(R) &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &trans  &trans &trans &kp LC(W) &kp LC(R) &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LALT &kp LC(S) &kp LC(F) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
