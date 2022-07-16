@@ -2487,28 +2487,51 @@
             bindings = <&kp>, <&kp>;
         };
 
-        brc_mac: brc_mac {
-            compatible = "zmk,behavior-macro";
-            label = "BRC_MAC";
-            #binding-cells = <0>;
-            bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
-        };
-
-
     };
 
     combos {
         compatible = "zmk,combos";
-        combo_esc {
+
+        combo_the {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <42 17>;
-            bindings = <&brc_mac>;
+            key-positions = <P_NUM P_D>;
+            bindings = <&m_the>;
         };
 
-        combo_wr {
+        combo_with {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_W P_R>;
-            bindings = <&m_among>;
+            key-positions = <P_NUM P_S>;
+            bindings = <&m_with>;
+        };
+
+        combo_that {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <P_NUM P_F>;
+            bindings = <&m_that>;
+        };
+
+        combo_people {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <P_NUM P_G>;
+            bindings = <&m_people>;
+        };
+
+        combo_and {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <P_NUM P_W>;
+            bindings = <&m_and>;
+        };
+
+        combo_have {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <P_NUM P_R>;
+            bindings = <&m_have>;
+        };
+
+        combo_which {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <P_NUM P_E>;
+            bindings = <&m_which>;
         };
     };
 
