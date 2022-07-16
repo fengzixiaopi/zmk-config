@@ -20,6 +20,14 @@
 #define CUT LC(X)
 #define PASTE LC(V)
 
+#define P_ESC 0
+#define P_Q 1
+#define P_W 2
+#define P_E 3
+#define P_R 4 
+#define P_T 5
+
+
 &sk {
     release-after-ms = <2000>;
 };
@@ -2438,7 +2446,7 @@
             bindings = <&kp LBRC>, <&kp RBRC>, <&kp LEFT>;
         };
 
-        
+
     };
 
     combos {
@@ -2448,6 +2456,12 @@
             key-positions = <42 17>;
             bindings = <&brc_mac>;
         };
+
+        combo_wr {
+            timeout-ms = <50>;
+            key-positions = <P_W P_R>;
+            bindings = <&m_among>;
+        }
     };
 
     keymap {
