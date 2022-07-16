@@ -2524,19 +2524,19 @@
 
         combo_have {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_NUM P_R>;
+            key-positions = <P_NUM 4>;
             bindings = <&m_late>;
         };
 
         combo_which {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_NUM P_E>;
+            key-positions = <P_NUM 3>;
             bindings = <&m_run>;
         };
 
         combo_about {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_NUM P_T>;
+            key-positions = <P_NUM 5>;
             bindings = <&m_among>;
         };
     };
