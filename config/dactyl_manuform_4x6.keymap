@@ -2539,6 +2539,12 @@
             key-positions = <P_NUM 5>;
             bindings = <&m_among>;
         };
+
+        combo_language {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <P_NUM P_C>;
+            bindings = <&m_language>;
+        };
     };
 
     keymap {
