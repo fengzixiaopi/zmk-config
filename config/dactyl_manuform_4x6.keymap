@@ -2464,7 +2464,7 @@
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <P_W P_R>;
             bindings = <&m_among>;
-        }
+        };
     };
 
     keymap {
