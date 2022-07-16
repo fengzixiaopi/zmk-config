@@ -2305,6 +2305,141 @@
         tap-ms = <MACRO_TAP>;
         bindings = <&kp I &kp S &kp L &kp A &kp N &kp D &kp SPACE>;
     )
+    ZMK_MACRO(m_yet,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp Y &kp E &kp T &kp SPACE>;
+    )
+    ZMK_MACRO(m_busy,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp B &kp U &kp S &kp Y &kp SPACE>;
+    )
+    ZMK_MACRO(m_record,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp R &kp E &kp C &kp O &kp R &kp D &kp SPACE>;
+    )
+    ZMK_MACRO(m_boat,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp B &kp O &kp A &kp T &kp SPACE>;
+    )
+    ZMK_MACRO(m_common,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp C &kp O &kp M &kp M &kp O &kp N &kp SPACE>;
+    )
+    ZMK_MACRO(m_gold,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp G &kp O &kp L &kp D &kp SPACE>;
+    )
+    ZMK_MACRO(m_possible,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp P &kp O &kp S &kp S &kp I &kp B &kp L &kp E &kp SPACE>;
+    )
+    ZMK_MACRO(m_plane,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp P &kp L &kp A &kp N &kp E &kp SPACE>;
+    )
+    ZMK_MACRO(m_age,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp A &kp G &kp E &kp SPACE>;
+    )
+    ZMK_MACRO(m_wonder,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp W &kp O &kp N &kp D &kp E &kp R &kp SPACE>;
+    )
+    ZMK_MACRO(m_laugh,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp L &kp A &kp U &kp G &kp H &kp SPACE>;
+    )
+    ZMK_MACRO(m_thousand,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp T &kp H &kp O &kp U &kp S &kp A &kp N &kp D &kp SPACE>;
+    )
+    ZMK_MACRO(m_ago,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp A &kp G &kp O &kp SPACE>;
+    )
+    ZMK_MACRO(m_ran,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp R &kp A &kp N &kp SPACE>;
+    )
+    ZMK_MACRO(m_check,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp C &kp H &kp E &kp C &kp K &kp SPACE>;
+    )
+    ZMK_MACRO(m_game,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp G &kp A &kp M &kp E &kp SPACE>;
+    )
+    ZMK_MACRO(m_shape,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp S &kp H &kp A &kp P &kp E &kp SPACE>;
+    )
+    ZMK_MACRO(m_yes,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp Y &kp E &kp S &kp SPACE>;
+    )
+    ZMK_MACRO(m_brought,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp B &kp R &kp O &kp U &kp G &kp H &kp T &kp SPACE>;
+    )
+    ZMK_MACRO(m_heat,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp H &kp E &kp A &kp T &kp SPACE>;
+    )
+    ZMK_MACRO(m_snow,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp S &kp N &kp O &kp W &kp SPACE>;
+    )
+    ZMK_MACRO(m_bed,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp B &kp E &kp D &kp SPACE>;
+    )
+    ZMK_MACRO(m_bring,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp B &kp R &kp I &kp N &kp G &kp SPACE>;
+    )
+    ZMK_MACRO(m_perhaps,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp P &kp E &kp R &kp H &kp A &kp P &kp S &kp SPACE>;
+    )
+    ZMK_MACRO(m_weight,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp W &kp E &kp I &kp G &kp H &kp T &kp SPACE>;
+    )
+    ZMK_MACRO(m_language,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp L &kp A &kp N &kp G &kp U &kp A &kp G &kp E &kp SPACE>;
+    )
+    ZMK_MACRO(m_among,
+        wait-ms = <MACRO_WAIT>;
+        tap-ms = <MACRO_TAP>;
+        bindings = <&kp A &kp M &kp O &kp N &kp G &kp SPACE>;
+    )
 
     // MACROS END
   };
@@ -2390,19 +2525,19 @@
         combo_have {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <P_NUM P_R>;
-            bindings = <&m_have>;
+            bindings = <&m_late>;
         };
 
         combo_which {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <P_NUM P_E>;
-            bindings = <&m_which>;
+            bindings = <&m_run>;
         };
 
         combo_about {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <P_NUM P_T>;
-            bindings = <&m_about>;
+            bindings = <&m_among>;
         };
     };
 
