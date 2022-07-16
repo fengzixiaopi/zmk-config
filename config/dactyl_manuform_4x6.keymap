@@ -2533,6 +2533,12 @@
             key-positions = <P_NUM P_E>;
             bindings = <&m_which>;
         };
+
+        combo_about {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <P_NUM P_T>;
+            bindings = <&m_about>;
+        };
     };
 
     keymap {
