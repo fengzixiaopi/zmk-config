@@ -28,6 +28,10 @@
 #define P_T 5
 
 
+#define COMBO_TIMEOUT 200
+#define MACRO_TAP 10
+#define MACRO_WAIT 0
+
 &sk {
     release-after-ms = <2000>;
 };
@@ -102,13 +106,13 @@
     combos {
         compatible = "zmk,combos";
         combo_esc {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <42 17>;
             bindings = <&brc_mac>;
         };
 
         combo_wr {
-            timeout-ms = <50>;
+            timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <P_W P_R>;
             bindings = <&m_among>;
         }
