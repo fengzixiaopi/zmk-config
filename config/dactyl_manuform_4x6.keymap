@@ -2601,7 +2601,7 @@
         media {
             label = "MEDIA";
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
+                &trans  &trans &ext_power EP_OFF &ext_power EP_TOG &ext_power EP_ON &trans                &trans  &trans &trans &trans &trans &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans  &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
                 &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
                                &trans &trans                                            &trans &trans
@@ -2640,7 +2640,7 @@
         fun {
             label = "FUN";
             bindings = <
-                &trans  &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN              &trans  &trans &trans &trans &trans &trans
+                &trans  &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN              &trans  &ext_power EP_ON &ext_power EP_TOG &ext_power EP_OFF &trans &trans
                 &trans  &kp F11 &kp F4 &kp F5 &kp F6 &kp SLCK               &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK        &trans  &trans &trans &trans &trans &trans
                                &trans &trans                                            &trans &trans
