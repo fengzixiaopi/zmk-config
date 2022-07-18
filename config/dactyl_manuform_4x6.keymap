@@ -2447,24 +2447,24 @@
      
 
     behaviors {
-        lh_hmsf: left_hand_positional_hold_tap {
+        lh_hmsf: left_hand_homerow_mods_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <120>;                       
-            quick-tap-ms = <0>;
+            quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;    
         };
 
-        rh_hmsf: left_hand_positional_hold_tap {
+        rh_hmsf: right_hand_homerow_mods_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <120>;                       
-            quick-tap-ms = <0>;
+            quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;   
         };
@@ -2491,57 +2491,7 @@
 
     };
 
-    combos {
-        compatible = "zmk,combos";
 
-        combo_the {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_NUM P_D>;
-            bindings = <&m_the>;
-        };
-
-        combo_with {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_NUM P_S>;
-            bindings = <&m_with>;
-        };
-
-        combo_that {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_NUM P_F>;
-            bindings = <&m_that>;
-        };
-
-        combo_people {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_NUM P_G>;
-            bindings = <&m_people>;
-        };
-
-        combo_and {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_NUM P_W>;
-            bindings = <&m_and>;
-        };
-
-        combo_have {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_NUM P_R>;
-            bindings = <&m_have>;
-        };
-
-        combo_which {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_NUM P_E>;
-            bindings = <&m_which>;
-        };
-
-        combo_about {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <P_NUM P_T>;
-            bindings = <&m_about>;
-        };
-    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -2576,7 +2526,7 @@
         nav {
             label = "NAV";
             bindings = <
-                &trans  &trans &trans &kp LC(W) &kp LC(R) &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &reset  &trans &trans &kp LC(W) &kp LC(R) &trans                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC      &kp CAPS &kp LEFT &kp UP &kp DOWN &kp RIGHT &trans
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
