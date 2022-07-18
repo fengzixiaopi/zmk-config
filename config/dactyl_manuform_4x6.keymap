@@ -79,6 +79,7 @@
 
 &sk {
     release-after-ms = <2000>;
+    quick-release;
 };
 
 
@@ -2504,7 +2505,7 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
-                                            &sk LSHIFT   &sk LSHIFT             &kp REDO  &sk RSHIFT
+                                            &sk LSHIFT   &key_repeat             &kp REDO  &sk RSHIFT
                                             &lt MEDIA ESC &kp LGUI            &kp RALT &lt FUN DEL
             >;
         };
