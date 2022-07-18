@@ -2447,24 +2447,26 @@
      
 
     behaviors {
-        hmsf: homerow_mods_shift {
+        lh_hmsf: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_SHIFT";
+            label = "LEFT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <120>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <120>;                       
+            quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;    
         };
 
-        hmsfsl: homerow_mods_shift_slow {
+        rh_hmsf: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_SHIFT_SLOW";
+            label = "RIGHT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick_tap_ms = <0>;
-            flavor = "tap-preferred";
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <120>;                       
+            quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;   
         };
 
         hmctrl: homerow_mods_control {
@@ -2548,7 +2550,7 @@
             label = "QWERTY";
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp TAB &hmgui LGUI A  &hmgui LALT S  &hmctrl LCTRL D  &hmsf LSHIFT F  &kp G               &kp H  &hmsf RSHIFT J  &hmctrl RCTRL K     &hmgui LALT L   &hmgui RGUI SEMI &kp SQT
+                &kp TAB &hmgui LGUI A  &hmgui LALT S  &hmctrl LCTRL D  &lf_hmsf LSHIFT F  &kp G               &kp H  &rh_hmsf RSHIFT J  &hmctrl RCTRL K     &hmgui LALT L   &hmgui RGUI SEMI &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
@@ -2561,7 +2563,7 @@
             label = "COLEMAK-DH";
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
-                &kp TAB &hmgui LGUI A  &hmgui LALT R  &hmctrl LCTRL S  &hmsfsl LSHIFT T  &kp G               &kp M  &hmsfsl RSHIFT N  &hmctrl RCTRL E     &hmgui LALT I   &hmgui RGUI O &kp SQT
+                &kp TAB &hmgui LGUI A  &hmgui LALT R  &hmctrl LCTRL S  &lf_hmsf LSHIFT T  &kp G               &kp M  &rh_hmsf RSHIFT N  &hmctrl RCTRL E     &hmgui LALT I   &hmgui RGUI O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp UP &kp DOWN                                      &kp LEFT &kp RIGHT
                                             &lt NAV SPACE  &lt MOUSE TAB           &lt SYS BSPC  &lt NUM ENTER
