@@ -2,12 +2,10 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: bezmi
-      url-base: https://github.com/bezmi
   projects:
     - name: zmk
-      remote: bezmi
-      revision: multi_peripheral
+      remote: zmkfirmware
+      revision: main
       import: app/west.yml
   self:
     path: config
