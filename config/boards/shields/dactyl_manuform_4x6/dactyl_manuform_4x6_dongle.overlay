@@ -4,8 +4,10 @@
     col-offset = <12>;
 };
 
-&kscan0 {
-    col-gpios
-        = <&pro_micro 15 GPIO_ACTIVE_HIGH>
-        ;
+/ {
+	kscan0: kscan {
+		compatible = "zmk,kscan-gpio-direct";
+		label = "KSCAN";
+		input-gpios = <&gpio0 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+	};
 };
