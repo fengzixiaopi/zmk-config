@@ -1,13 +1,1 @@
 #include "dactyl_manuform_4x6.dtsi"
-
-&default_transform {
-    col-offset = <12>;
-};
-
-/ {
-	kscan0: kscan {
-		compatible = "zmk,kscan-gpio-direct";
-		label = "KSCAN";
-		input-gpios = <&gpio0 15 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-	};
-};

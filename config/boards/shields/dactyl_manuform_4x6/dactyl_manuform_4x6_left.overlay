@@ -1,6 +1,8 @@
 #include "dactyl_manuform_4x6.dtsi" // Notice that the main dtsi files are included in the overlay.
 
 &kscan0 {
+    compatible = "zmk,kscan-gpio-matrix";
+    label = "KSCAN";
     diode-direction = "col2row";
     row-gpios
         = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
