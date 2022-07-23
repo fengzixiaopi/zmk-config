@@ -83,6 +83,12 @@
 };
 
 
+&lt { 
+    flavor = "hold-preferred";
+    tapping-term-ms = <220>;
+    quick_tap_ms = <200>; 
+};
+
 / {
 
    macros {
@@ -2445,11 +2451,7 @@
     // MACROS END
   };
 
-    &lt { 
-        flavor = "hold-preferred";
-        tapping-term-ms = <220>;
-        quick_tap_ms = <200>; 
-    };
+
      
 
     behaviors {
