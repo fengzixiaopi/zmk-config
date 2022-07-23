@@ -2445,6 +2445,11 @@
     // MACROS END
   };
 
+    &lt { 
+        flavor = "hold-preferred";
+        tapping-term-ms = <220>;
+        quick_tap_ms = <200>; 
+    };
      
 
     behaviors {
@@ -2492,11 +2497,7 @@
 
     };
 
-    &lt { 
-        flavor = "hold-preferred";
-        tapping-term-ms = <220>;
-        quick_tap_ms = <200>; 
-    };
+
 
     keymap {
         compatible = "zmk,keymap";
