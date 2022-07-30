@@ -1,7 +1,7 @@
 if SHIELD_DACTYL_MANUFORM_4x6_DONGLE
 
     config ZMK_KEYBOARD_NAME
-        default "DM-4x6"
+        default "DM-4x6-nrf52840"
 
     config ZMK_SPLIT_BLE_ROLE_CENTRAL
         default y
