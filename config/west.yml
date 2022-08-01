@@ -2,12 +2,12 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: bezmi
-      url-base: https://github.com/bezmi
+    - name: slicemk
+      url-base: https://github.com/slicemk
   projects:
     - name: zmk
-      remote: bezmi
-      revision: multi_peripheral
+      remote: slicemk
+      revision: dongle-pr
       import: app/west.yml
   self:
     path: config
