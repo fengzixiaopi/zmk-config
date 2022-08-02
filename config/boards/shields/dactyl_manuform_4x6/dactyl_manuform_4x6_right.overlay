@@ -1,12 +1,16 @@
 #include "dactyl_manuform_4x6.dtsi"
 
-&default_transform { // The matrix transform for this board is 6 columns over because the left half is 6 columns wide according to the matrix.
-    col-offset = <6>;
+&default_transform {
+    col-offset = <7>;
 };
 
-&kscan0 {
-    diode-direction = "col2row";
-    row-gpios
+/ {
+    kscan0: kscan {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
+        diode-direction = "row2col";
+
+        row-gpios
         = <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
@@ -22,4 +26,5 @@
         , <&pro_micro 5 GPIO_ACTIVE_HIGH>
         , <&pro_micro 4 GPIO_ACTIVE_HIGH>
         ;
+    };
 };
