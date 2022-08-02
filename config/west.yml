@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: slicemk
-      url-base: https://github.com/wdtamagi/slicemk
+      url-base: https://github.com/wdtamagi/slice-zmk
   projects:
     - name: zmk
       remote: slicemk
