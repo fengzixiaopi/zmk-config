@@ -3,11 +3,11 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: slicemk
-      url-base: https://github.com/wdtamagi/slicemk
+      url-base: https://github.com/slicemk
   projects:
     - name: zmk
       remote: slicemk
-      revision: v20220204-dactyl
+      revision: dongle-pr
       import: app/west.yml
   self:
     path: config
