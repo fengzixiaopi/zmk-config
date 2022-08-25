@@ -24,4 +24,4 @@ include:
   - board: nice_nano_v2
     shield: slicemk_ergodox_right
   - board: nordic_nrf52840_dongle_slicemk 
-    shield: dactyl_manuform_4x6_dongle
+    shield: slicemk_ergodox_dongle
