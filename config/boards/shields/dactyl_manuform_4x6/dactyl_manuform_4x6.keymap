@@ -14,6 +14,7 @@
 
         default_layer {
             bindings = <
+                                                            &bootloader
                 &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp MINUS
                 &kp LSHFT &kp A  &kp S  &kp D  &kp F  &kp G               &kp H  &kp J  &kp K     &kp L   &kp SEMI &kp SQT
                 &kp LCTRL &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
@@ -26,6 +27,7 @@
 
         lower_layer {
             bindings = <
+                                                            &bootloader
                 &trans  &trans &trans &trans &trans &trans                &trans &trans   &trans   &trans &trans    &trans
                 &trans  &trans &trans &trans &trans &trans                &trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
                 &trans  &trans &trans &trans &trans &trans                &trans &trans   &trans   &trans &trans    &trans
@@ -38,6 +40,7 @@
 
         raise_layer {
             bindings = <
+                                                            &bootloader
                 &trans  &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &kp K_VOL_UP
                 &trans  &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &kp K_VOL_DN
                 &trans  &trans &trans &trans &trans &trans                &trans &trans &trans &trans &trans &kp K_MUTE
@@ -50,6 +53,7 @@
 
         adjust_layer {
             bindings = <
+                                                            &bootloader
                 &none &bt BT_SEL 1 &out OUT_USB &none &reset &none            &none       &reset &none &none &none &none
                 &none &bt BT_SEL 2 &none        &none &none  &none            &none       &none  &none &none &none &none
                 &none &bt BT_SEL 3 &bt BT_CLR   &none &none  &bootloader      &bootloader &none  &none &none &none &none
