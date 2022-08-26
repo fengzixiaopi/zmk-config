@@ -11,14 +11,6 @@
 		zmk,kscan = &kscan0;
 	};
 
-	kscan0: kscan {
-		compatible = "zmk,kscan-gpio-direct";
-		label = "KSCAN";
-
-		input-gpios
-			= <&pro_micro 4 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-			;
-	};
 
 };
 
