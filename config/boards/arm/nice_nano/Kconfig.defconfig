@@ -33,9 +33,3 @@ if BOARD_NICE_NANO
 
 endif # BOARD_NICE_NANO
 
-if BOARD_NICE_NANO_V2
-
-config ZMK_BATTERY_NRF_VDDH
-	default y
-
-endif # BOARD_NICE_NANO_V2
