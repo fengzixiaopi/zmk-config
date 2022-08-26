@@ -141,7 +141,7 @@
         qwerty {
             label = "QWERTY";
             bindings = <
-                                                            &bootloader
+                                                            &reset
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
                 &kp TAB &hmgui LGUI A  &hmgui LALT S  &hmctrl LCTRL D  &lh_hmsf LSHIFT F  &kp G               &kp H  &rh_hmsf RSHIFT J  &hmctrl RCTRL K     &hmgui LALT L   &hmgui RGUI SEMI &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
@@ -155,7 +155,7 @@
         colemak-dh {
             label = "COLEMAK-DH";
             bindings = <
-                                                            &bootloader
+                                                            &reset
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
                 &kp TAB &hmgui LGUI A  &hmgui LALT R  &hmctrl LCTRL S  &lh_hmsf LSHIFT T  &kp G               &kp M  &rh_hmsf RSHIFT N  &hmctrl RCTRL E     &hmgui LALT I   &hmgui RGUI O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
