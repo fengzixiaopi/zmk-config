@@ -10,7 +10,10 @@
 		zephyr,flash = &flash0;
 	};
 
-
+	kscan0: kscan {
+		compatible = "zmk,kscan-gpio-direct";
+		label = "KSCAN";
+	};
 };
 
 &adc {
