@@ -14,11 +14,4 @@
 		control-gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
 	};
 
-	vbatt {
-		compatible = "zmk,battery-voltage-divider";
-		label = "BATTERY";
-		io-channels = <&adc 2>;
-		output-ohms = <2000000>;
-		full-ohms = <(2000000 + 806000)>;
-	};
 };
