@@ -35,4 +35,9 @@ config ZMK_SPLIT_BLE_ROLE_CENTRAL
 
 endif
 
+if !SHIELD_SLICEMK_ERGODOX_DONGLE
 
+config ZMK_BATTERY_VOLTAGE_DIVIDER
+	default y
+
+endif
