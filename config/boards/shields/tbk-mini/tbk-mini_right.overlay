@@ -1,4 +1,4 @@
-#include "dactyl_manuform_4x6.dtsi"
+#include "tbk-mini.dtsi"
 
 &default_transform {
     col-offset = <6>;
