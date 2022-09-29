@@ -1,0 +1,8 @@
+config TBK-MINI_LEFT
+    def_bool $(shields_list_contains,tbk-mini_left)
+
+config TBK-MINI_RIGHT
+    def_bool $(shields_list_contains,tbk-mini_right)
+
+config TBK-MINI_DONGLE
+    def_bool $(shields_list_contains,tbk-mini_dongle)
