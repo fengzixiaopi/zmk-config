@@ -6,7 +6,7 @@ if SHIELD_TBK-MINI_DONGLE
     config ZMK_SPLIT_BLE_ROLE_CENTRAL
         default y
 
-#endif
+endif
 
 if SHIELD_TBK-MINI_LEFT
 
