@@ -1,20 +1,20 @@
-#if SHIELD_TBK-MINI_DONGLE
+if SHIELD_TBK-MINI_DONGLE
 
-#    config ZMK_KEYBOARD_NAME
-#        default "TBK-Mini"
+    config ZMK_KEYBOARD_NAME
+        default "TBK-Mini"
 
-#    config ZMK_SPLIT_BLE_ROLE_CENTRAL
-#        default y
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
 
-#endif
+endif
 
 if SHIELD_TBK-MINI_LEFT
 
     config ZMK_KEYBOARD_NAME
         default "TBK-Mini(Left)"
 
-     config ZMK_SPLIT_BLE_ROLE_CENTRAL
-        default y
+#     config ZMK_SPLIT_BLE_ROLE_CENTRAL
+#        default y
 endif
 
 if SHIELD_TBK-MINI_RIGHT
