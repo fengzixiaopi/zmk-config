@@ -1,7 +1,7 @@
 if SHIELD_TBK-MINI_DONGLE
 
     config ZMK_KEYBOARD_NAME
-        default "TBK-Mini-nrf52840"
+        default "TBK-Mini"
 
     config ZMK_SPLIT_BLE_ROLE_CENTRAL
         default y
