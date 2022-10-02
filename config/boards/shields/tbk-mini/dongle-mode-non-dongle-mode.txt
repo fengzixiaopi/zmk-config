@@ -1,0 +1,76 @@
+if SHIELD_TBK-MINI_DONGLE
+
+    config ZMK_KEYBOARD_NAME
+        default "TBK-Mini"
+
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
+
+endif
+
+if SHIELD_TBK-MINI_LEFT
+
+    config ZMK_KEYBOARD_NAME
+        default "TBK-Mini(Left)"
+
+#     config ZMK_SPLIT_BLE_ROLE_CENTRAL
+#        default y
+endif
+
+if SHIELD_TBK-MINI_RIGHT
+
+    config ZMK_KEYBOARD_NAME
+        default "TBK-Mini(Right)"
+
+endif
+
+if SHIELD_TBK-MINI_DONGLE || SHIELD_TBK-MINI_LEFT || SHIELD_TBK-MINI_RIGHT
+
+    config ZMK_SPLIT
+        default y
+
+endif
+
+
+
+
+
+
+
+======================================================
+
+
+
+
+#if SHIELD_TBK-MINI_DONGLE
+
+#    config ZMK_KEYBOARD_NAME
+#        default "TBK-Mini"
+
+#    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+#        default y
+
+#endif
+
+if SHIELD_TBK-MINI_LEFT
+
+    config ZMK_KEYBOARD_NAME
+        default "TBK-Mini(Left)"
+
+     config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
+endif
+
+if SHIELD_TBK-MINI_RIGHT
+
+    config ZMK_KEYBOARD_NAME
+        default "TBK-Mini(Right)"
+
+endif
+
+if SHIELD_TBK-MINI_DONGLE || SHIELD_TBK-MINI_LEFT || SHIELD_TBK-MINI_RIGHT
+
+    config ZMK_SPLIT
+        default y
+
+endif
