@@ -203,8 +203,6 @@
     };
 
 
-
-/ {
     keymap {
         compatible = "zmk,keymap";
 
