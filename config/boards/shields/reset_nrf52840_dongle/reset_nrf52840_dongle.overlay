@@ -8,16 +8,9 @@
 
 / {
 	chosen {
-                zmk,kscan = &kscan;
-        };
+		zmk,kscan = &kscan0;
+	};
 
-        kscan: kscan {
-                compatible = "zmk,kscan-mock";
-                label = "KSCAN_MOCK";
-                rows = <1>;
-                columns = <1>;
-                events = <>;
-        };
 
 };
 
