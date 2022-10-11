@@ -2,11 +2,207 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
 
+#define QWERTY 0
+#define COLEMAK_DH 1
+#define NAV 2
+#define MOUSE 3
+#define MEDIA 4
+#define NUM 5
+#define SYS 6
+#define FUN 7
+
+
+#define UNDO LC(Z)
+#define REDO LC(Y)
+#define COPY LC(C)
+#define CUT LC(X)
+#define PASTE LC(V)
+
+#define P_ESC 0
+#define P_Q 1
+#define P_W 2
+#define P_E 3
+#define P_R 4 
+#define P_T 5
+#define P_Y 6
+#define P_U 7
+#define P_I 8 
+#define P_O 9
+#define P_P 10
+#define P_BSPC 11
+#define P_TAB 12
+#define P_A 13
+#define P_S 14
+#define P_D 15
+#define P_F 16
+#define P_G 17
+#define P_H 18
+#define P_J 19
+#define P_K 20
+#define P_L 21
+#define P_SEMI 22
+#define P_SQT 23
+#define P_CAPS 24
+#define P_Z 25
+#define P_X 26
+#define P_C 27
+#define P_V 28
+#define P_B 29
+#define P_N 30
+#define P_M 31
+#define P_COMMA 32
+#define P_DOT 33
+#define P_FSLH 34
+#define P_BSLH 35
+#define P_UP 36
+#define P_DOWN 37
+#define P_LEFT 38
+#define P_RIGHT 39
+#define P_NAV 40
+#define P_MOUSE 41
+#define P_SYS 42
+#define P_NUM 43
+#define P_LSHIFT 44
+#define P_UNDO 45
+#define P_REDO 46
+#define P_RSHIFT 47
+#define P_MEDIA 48
+#define P_LGUI 49
+#define P_RALT 50
+#define P_FUN 51
+
+#define COMBO_TIMEOUT 200
+#define MACRO_TAP 10
+#define MACRO_WAIT 0
+
+
+    
 #define DEFAULT 0
 #define LWR 1
 #define RSE 2
 #define ADJ 3
+
+&sk {
+    release-after-ms = <2000>;
+    quick-release;
+};
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS>;
+};
+
+&lt { 
+    flavor = "hold-preferred";
+    tapping-term-ms = <220>;
+    quick_tap_ms = <200>; 
+};
+
+/ {
+
+    macros {
+        ZMK_MACRO(m_BSPCDOT,
+            wait-ms = <MACRO_WAIT>;
+            tap-ms = <MACRO_TAP>;
+            bindings = <&kp BSPC &kp DOT &kp SPACE>;
+        )
+        ZMK_MACRO(m_the,
+            wait-ms = <MACRO_WAIT>;
+            tap-ms = <MACRO_TAP>;
+            bindings = <&kp T &kp H &kp E &kp SPACE>;
+        )
+        ZMK_MACRO(m_and,
+            wait-ms = <MACRO_WAIT>;
+            tap-ms = <MACRO_TAP>;
+            bindings = <&kp A &kp N &kp D &kp SPACE>;
+        )
+        ZMK_MACRO(m_with,
+            wait-ms = <MACRO_WAIT>;
+            tap-ms = <MACRO_TAP>;
+            bindings = <&kp W &kp I &kp T &kp H &kp SPACE>;
+        )
+        ZMK_MACRO(m_have,
+            wait-ms = <MACRO_WAIT>;
+            tap-ms = <MACRO_TAP>;
+            bindings = <&kp H &kp A &kp V &kp E &kp SPACE>;
+        )
+        ZMK_MACRO(m_people,
+            wait-ms = <MACRO_WAIT>;
+            tap-ms = <MACRO_TAP>;
+            bindings = <&kp P &kp E &kp O &kp P &kp L &kp E &kp SPACE>;
+        )
+        ZMK_MACRO(m_that,
+            wait-ms = <MACRO_WAIT>;
+            tap-ms = <MACRO_TAP>;
+            bindings = <&kp T &kp H &kp A &kp T &kp SPACE>;
+        )
+        ZMK_MACRO(m_which,
+            wait-ms = <MACRO_WAIT>;
+            tap-ms = <MACRO_TAP>;
+            bindings = <&kp W &kp H &kp I &kp C &kp H &kp SPACE>;
+        )
+        ZMK_MACRO(m_about,
+            wait-ms = <MACRO_WAIT>;
+            tap-ms = <MACRO_TAP>;
+            bindings = <&kp A &kp B &kp O &kp U &kp T &kp SPACE>;
+        )
+    // MACROS END
+    };
+
+
+     
+
+    behaviors {
+        lh_hmsf: left_hand_homerow_mods_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LEFT_HOMEROW_MODS_SHIFT";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <150>;                       
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35>;    
+        };
+
+        rh_hmsf: right_hand_homerow_mods_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RIGHT_HOMEROW_MODS_SHIFT";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <150>;                       
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29>;   
+        };
+
+        hmctrl: homerow_mods_control {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_CONTROL";
+            #binding-cells = <2>;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+        hmgui: homerow_mods_gui {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_GUI";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+
+    };
+
+
 
 / {
     keymap {
@@ -14,9 +210,9 @@
 
         default_layer {
             bindings = <
-                &kp TAB   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp MINUS
-                &kp LSHFT &kp A  &kp S  &kp D  &kp F  &kp G               &kp H  &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LCTRL &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
+                &bt BT_CLR   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp MINUS
+                &bt BT_NXT &kp A  &kp S  &kp D  &kp F  &kp G               &kp H  &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+                &bt BT_PRV &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                                  &kp LBKT &kp RBKT   &kp SPACE            &kp RET  &kp PLUS &kp EQUAL
             >;
         };
