@@ -230,7 +230,7 @@
         nav {
             label = "NAV";
             bindings = <
-                &reset  &trans &trans &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &reset  &trans &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                              &trans  &trans  &trans  &trans  &kp BSPC &kp ENTER
@@ -240,7 +240,7 @@
         mouse {
             label = "MOUSE";
             bindings = <
-                &trans  &trans &trans &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &trans  &trans &kp LC(LS(4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LC(ENTER)      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                               &trans  &trans  &trans  &trans  &kp BSPC &kp ENTER
