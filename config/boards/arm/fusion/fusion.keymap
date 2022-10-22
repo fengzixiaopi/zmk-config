@@ -1,0 +1,151 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include "../steno/impl/zmk/steno_keys.h"
+
+/ {
+    behaviors {
+        // My Modtap
+        mm: behavior_mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_TAP";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            bindings = <&kp>, <&kp>;
+        };
+        // My Layertap
+        ml: behavior_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <150>;
+            bindings = <&mo>, <&kp>;
+        };
+    };
+    combos {
+        compatible = "zmk,combos";
+#define CONCAT2(x, y) x ## y
+#define CONCAT(x, y) CONCAT2(x, y)
+#define COMBO(pos, k) CONCAT(combo, __COUNTER__) { key-positions = <pos>; bindings = <&kp k>; layers = <0 1 2 3 4>; timeout-ms = <60>; };
+        COMBO(0 1, PERCENT)
+        COMBO(1 2, BSLH)
+        COMBO(2 3, LBKT)
+        COMBO(6 7, RBKT)
+        COMBO(7 8, EQUAL)
+        COMBO(8 9, PLUS)
+
+        COMBO(11 12, CARET)
+        COMBO(12 13, DOLLAR)
+        COMBO(13 14, LPAR)
+        COMBO(17 18, RPAR)
+        COMBO(18 19, SEMI)
+        COMBO(19 20, COLON)
+
+        COMBO(22 23, EXCL)
+        COMBO(23 24, AT)
+        COMBO(24 25, LBRC)
+        COMBO(28 29, RBRC)
+        COMBO(29 30, FSLH)
+        COMBO(30 31, QMARK)
+
+        COMBO(1 12, GRAVE)
+        COMBO(2 13, AMPS)
+        COMBO(3 14, STAR)
+        COMBO(6 17, UNDER)
+        COMBO(7 18, DQT)
+        COMBO(8 19, SQT)
+
+        COMBO(12 23, TILDE)
+        COMBO(13 24, PIPE)
+        COMBO(14 25, HASH)
+        COMBO(17 28, MINUS)
+        COMBO(18 29, LT)
+        COMBO(19 30, GT)
+    };
+#define BASE  0
+#define COLA  1
+#define LOWER 2
+#define RAISE 3
+#define GAME  4
+#define STENO 5
+#define LOCK  6
+
+    keymap0: keymap {
+        compatible = "zmk,keymap";
+        base {
+            bindings = <
+&kp Q        &kp W       &kp E        &kp R         &kp T         &kp Y         &kp U         &kp I        &kp O         &kp P       &none
+&kp A        &kp S       &kp D        &kp F         &kp G         &kp H         &kp N         &kp K        &kp L         &kp B       &none
+&kp Z        &kp X       &kp C        &kp V         &none         &none         &kp M         &kp COMMA    &kp DOT       &kp J
+                         &mm LGUI DEL &mm LCTRL TAB &ml RAISE ESC &ml LOWER RET &mm LSHFT SPC &mm LALT BSPC
+&mo LOCK
+            >;
+        };
+        colemak {
+            bindings = <
+&kp Q        &kp W       &kp L        &kp D         &kp K         &kp J         &kp H         &kp U        &kp Y         &kp V       &none
+&kp A        &kp R       &kp S        &kp T         &kp G         &kp F         &kp N         &kp E        &kp I         &kp O       &none
+&kp Z        &kp B       &kp C        &kp P         &none         &none         &kp M         &kp COMMA    &kp DOT       &kp X
+                         &mm LGUI DEL &mm LCTRL TAB &ml RAISE ESC &ml LOWER RET &mm LSHFT SPC &mm LALT BSPC
+            >;
+        };
+        lower {
+            bindings = <
+&kp LG(N1)   &kp LG(N2)  &kp LG(N3)   &kp LG(N4)    &kp LG(N5)    &kp LG(N6)    &kp LG(N7)    &kp LG(N8)   &kp F11       &kp F12     &none
+&kp N1       &kp N2      &kp N3       &kp N4        &kp N5        &kp N6        &kp N7        &kp N8       &kp N9        &kp N0      &none
+&kp F1       &kp F2      &kp F3       &kp F4        &kp F5        &kp F6        &kp F7        &kp F8       &kp F9        &kp F10
+                         &trans       &trans        &trans        &trans        &trans        &trans
+&trans
+            >;
+        };
+
+        raise {
+            bindings = <
+&kp C_BRI_DN &kp C_MUTE  &kp C_VOL_DN &kp C_VOL_UP  &kp C_BRI_UP  &kp HOME      &kp PG_DN     &kp PG_UP    &kp END       &kp PRSC    &tog COLA
+&out OUT_BLE &tog STENO  &bt BT_SEL 0 &bt BT_SEL 1  &bt BT_SEL 2  &kp LEFT      &kp DOWN      &kp UP       &kp RIGHT     &none       &tog GAME
+&out OUT_USB &kp K_PREV  &kp K_PP     &kp K_NEXT    &bt BT_CLR    &kp LC(LEFT)  &kp LC(DOWN)  &kp LC(UP)   &kp LC(RIGHT) &none
+                         &trans       &trans        &trans        &trans        &trans        &trans
+&trans
+            >;
+        };
+
+        game {
+            bindings = <
+&kp Q        &kp W       &kp E        &kp R         &kp T         &kp Y         &kp U         &kp I        &kp O         &kp P       &none
+&kp A        &kp S       &kp D        &kp F         &kp G         &kp H         &kp J         &kp K        &kp L         &kp SEMI    &tog GAME
+&kp Z        &kp X       &kp C        &kp V         &kp B         &kp N         &kp M         &kp COMMA    &kp DOT       &kp FSLH
+                         &kp LALT     &kp LCTRL     &kp ESC       &trans        &trans        &trans
+&trans
+            >;
+        };
+
+        steno {
+            bindings = <
+&stn STN_S_  &stn STN_T_ &stn STN_P_  &stn STN_H_   &stn STN_STAR &stn STN_STAR &stn STN__F   &stn STN__P  &stn STN__L   &stn STN__T &stn STN__D
+&stn STN_S_  &stn STN_K_ &stn STN_W_  &stn STN_R_   &stn STN_STAR &stn STN_STAR &stn STN__R   &stn STN__B  &stn STN__G   &stn STN__S &stn STN__Z
+&none        &none       &none        &none         &none         &none         &none         &none        &none         &none
+                         &tog STENO   &stn STN_A    &stn STN_O    &stn STN_E    &stn STN_U    &stn STN_NUM
+&trans
+            >;
+        };
+
+        lock {
+            bindings = <
+&none        &none       &none        &none         &none         &none         &none         &none        &none         &none       &none      
+&none        &none       &none        &none         &none         &none         &none         &none        &none         &none       &none
+&none        &none       &none        &none         &none         &none         &none         &none        &none         &none
+                         &none        &none         &none         &none         &none         &none
+&trans
+            >;
+        };
+    };
+};

@@ -1,0 +1,296 @@
+/*
+ * Copyright (c) 2020 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/dts-v1/;
+#include <nordic/nrf52840_qiaa.dtsi>
+#include <dt-bindings/zmk/matrix_transform.h>
+
+/ {
+    model = "fusion";
+    compatible = "fusion";
+
+    chosen {
+        zephyr,code-partition = &code_partition;
+        zephyr,sram = &sram0;
+        zephyr,flash = &flash0;
+        zephyr,display = &sharp;
+        zmk,kscan = &composite_kscan;
+        zmk,matrix_transform = &transform;
+        zmk,steno_flash = &spi_flash;
+        zmk,led-widgets-dev = &leds;
+    };
+
+    transform: transform {
+        compatible = "zmk,matrix-transform";
+        columns = <11>;
+        rows = <4>;
+        map = <
+RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4)  RC(4,4) RC(4,3) RC(4,2) RC(4,1) RC(4,0) RC(7,1)
+RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4)  RC(5,4) RC(5,3) RC(5,2) RC(5,1) RC(5,0) RC(7,0)
+RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4)  RC(6,4) RC(6,3) RC(6,2) RC(6,1) RC(6,0)
+                RC(3,2) RC(3,3) RC(3,4)  RC(7,4) RC(7,3) RC(7,2)
+RC(8,0)
+        >;
+    };
+
+    composite_kscan: kscan {
+        compatible = "zmk,kscan-composite";
+        label = "composite_kscan";
+        rows = <9>;
+        columns = <5>;
+        matrix_kscan {
+            label = "matrix_kscan";
+            kscan = <&matrix_kscan>;
+        };
+        button_kscan {
+            label = "button_kscan";
+            kscan = <&button_kscan>;
+            row-offset = <8>;
+        };
+    };
+
+    button_kscan: kscan1 {
+        compatible = "zmk,kscan-gpio-direct";
+        label = "button_kscan";
+        input-gpios = <&gpio0 10 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    };
+
+    matrix_kscan: kscan0 {
+        compatible = "zmk,kscan-gpio-matrix";
+        label = "matrix_kscan";
+        diode-direction = "row2col";
+        row-gpios
+            = <&gpio1  6 GPIO_ACTIVE_HIGH>
+            , <&gpio1  4 GPIO_ACTIVE_HIGH>
+            , <&gpio1  2 GPIO_ACTIVE_HIGH>
+            , <&gpio1  1 GPIO_ACTIVE_HIGH>
+            , <&gpio1  3 GPIO_ACTIVE_HIGH>
+            , <&gpio1  0 GPIO_ACTIVE_HIGH>
+            , <&gpio1  9 GPIO_ACTIVE_HIGH>
+            , <&gpio1 15 GPIO_ACTIVE_HIGH>
+            ;
+        col-gpios
+            = <&gpio1 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0  3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+    };
+
+    leds: leds {
+        compatible = "pwm-leds";
+        red_led: led_r {
+            pwms = <&pwm0 23>;
+            label = "Red LED";
+        };
+        green_led: led_g {
+            pwms = <&pwm0 21>;
+            label = "Green LED";
+        };
+        blue_led: led_b {
+            pwms = <&pwm0 19>;
+            label = "Blue LED";
+        };
+    };
+
+    vbatt {
+        compatible = "zmk,battery-voltage-divider";
+        label = "BATTERY";
+        io-channels = <&adc 7>;
+        output-ohms = <1>;
+        full-ohms = <(1 + 1)>;
+    };
+
+    led-widgets {
+        compatible = "zmk,led-widgets";
+        boot {
+            boot {
+                priority = <100>;
+                blue { len-ms = <100>; brightness = <0 0 50>; };
+                off { len-ms = <100>; };
+                blue2 { len-ms = <100>; brightness = <0 0 50>; };
+            };
+        };
+        battery {
+            low {
+                arg = <30>;
+                priority = <50>;
+                period-ms = <30000>;
+                green { len-ms = <100>; brightness = <0 20 0>; };
+                red { len-ms = <200>; brightness = <100 0 0>; };
+            };
+            mid {
+                arg = <70>;
+                priority = <50>;
+                period-ms = <30000>;
+                green { len-ms = <100>; brightness = <0 20 0>; };
+                yellow { len-ms = <200>; brightness = <100 100 0>; };
+            };
+            high {
+                arg = <100>;
+                priority = <50>;
+                period-ms = <30000>;
+                green { len-ms = <50>; brightness = <0 100 0>; };
+            };
+        };
+        layer {
+            lower {
+                arg = <1>;
+                priority = <20>;
+                stat { brightness = <0 0 20>; };
+            };
+            raise {
+                arg = <2>;
+                priority = <20>;
+                stat { brightness = <0 20 0>; };
+            };
+            game {
+                arg = <3>;
+                priority = <20>;
+                stat { brightness = <0 0 50>; };
+            };
+            steno {
+                arg = <4>;
+                priority = <20>;
+                stat { brightness = <50 0 0>; };
+            };
+        };
+        output {
+            usb {
+                arg = <0>;
+                priority = <100>;
+                stat { len-ms = <200>; brightness = <0 75 0>; };
+            };
+            ble {
+                arg = <1>;
+                priority = <100>;
+                stat { len-ms = <200>; brightness = <0 0 100>; };
+            };
+        };
+        profile {
+            0 {
+                arg = <0>;
+                priority = <90>;
+                head { len-ms = <50>; brightness = <0 0 50>; };
+                off { len-ms = <150>; };
+                tail { len-ms = <100>; brightness = <100 0 0>; };
+            };
+            1 {
+                arg = <1>;
+                priority = <90>;
+                head { len-ms = <50>; brightness = <0 0 50>; };
+                off { len-ms = <150>; };
+                tail { len-ms = <100>; brightness = <0 100 0>; };
+            };
+            2 {
+                arg = <2>;
+                priority = <90>;
+                head { len-ms = <50>; brightness = <0 0 50>; };
+                off { len-ms = <150>; };
+                tail { len-ms = <100>; brightness = <0 0 100>; };
+            };
+        };
+    };
+};
+
+&pwm0 {
+    status = "okay";
+    ch0-pin = <23>;
+    ch1-pin = <21>;
+    ch2-pin = <19>;
+    ch0-inverted;
+    ch1-inverted;
+    ch2-inverted;
+};
+
+&adc {
+    status = "okay";
+};
+
+&gpiote {
+    status = "okay";
+};
+
+&gpio0 {
+    status = "okay";
+};
+
+&gpio1 {
+    status = "okay";
+};
+
+&usbd {
+    status = "okay";
+};
+
+
+&flash0 {
+    /*
+     * For more information, see:
+     * http://docs.zephyrproject.org/latest/devices/dts/flash_partitions.html
+     */
+    partitions {
+        compatible = "fixed-partitions";
+        #address-cells = <1>;
+        #size-cells = <1>;
+
+        code_partition: partition@0 {
+            label = "code_partition";
+            reg = <0x00000000 0x000e0000>;
+        };
+
+        /*
+         * Storage partition will be used by FCB/LittleFS/NVS
+         * if enabled.
+         */
+        storage_partition: partition@e0000 {
+            label = "storage";
+            reg = <0x000e0000 0x00020000>;
+        };
+    };
+};
+
+&spi0 {
+    compatible = "nordic,nrf-spim";
+    status = "okay";
+    sck-pin = <7>;
+    mosi-pin = <5>;
+    miso-pin = <4>;
+
+    cs-gpios = <&gpio0 2 GPIO_ACTIVE_HIGH>, <&gpio0 12 GPIO_ACTIVE_LOW>, <&gpio0 30 GPIO_ACTIVE_LOW>;
+    sharp: sharp_lcd@0 {
+        compatible = "sharp,ls0xx";
+        label = "DISPLAY";
+        reg = <0>;
+        status = "okay";
+        spi-max-frequency = <1000000>;
+        height = <168>;
+        width = <144>;
+    };
+    spi_flash: flash@1 {
+        compatible = "jedec,spi-nor";
+        status = "okay";
+        reg = <1>;
+        spi-max-frequency = <8000000>;
+        label = "MT25Q";
+        jedec-id = [ef 40 18];
+        size = <0x8000000>;
+        has-dpd;
+        t-enter-dpd = <3000>;
+        t-exit-dpd = <30000>;
+    };
+    trackpad@2 {
+        compatible = "cirque,pinnacle";
+        status = "okay";
+        reg = <2>;
+        spi-max-frequency = <10000000>;
+        dr-gpios = <&gpio0 22 GPIO_ACTIVE_HIGH>;
+        invert-x;
+        sleep;
+        /* no-taps; */
+    };
+};
