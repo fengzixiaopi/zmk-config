@@ -6,12 +6,14 @@
 
 #define QWERTY 0
 #define COLEMAK_DH 1
-#define NAV 2
-#define MOUSE 3
-#define MEDIA 4
-#define NUM 5
-#define SYS 6
-#define FUN 7
+#define LEFTMOD 2
+#define RIGHTMOD 3
+#define NAV 4
+#define MOUSE 5
+#define MEDIA 6
+#define NUM 7
+#define SYS 8
+#define FUN 9
 
 
 #define UNDO LC(Z)
@@ -76,13 +78,6 @@
 #define COMBO_TIMEOUT 200
 #define MACRO_TAP 10
 #define MACRO_WAIT 0
-
-
-    
-#define DEFAULT 0
-#define LWR 1
-#define RSE 2
-#define ADJ 3
 
 &sk {
     release-after-ms = <2000>;
@@ -212,7 +207,7 @@
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
                 &sk LSHIFT &hmgui LGUI A  &hmgui LALT S  &hmctrl LCTRL D  &lh_hmsf LSHIFT F  &kp G               &kp H  &rh_hmsf RSHIFT J  &hmctrl RCTRL K     &hmgui LALT L   &hmgui RGUI SEMI &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                        &lt NAV SPACE  &lt MOUSE TAB &key_repeat          &kp REDO &lt SYS BSPC  &lt NUM ENTER
+                        &lt NAV SPACE  &lt MOUSE TAB &mo RIGHTMOD          &mo LEFTMOD &lt SYS BSPC  &lt NUM ENTER
             >;
         };
 
@@ -222,7 +217,27 @@
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
                 &kp TAB &hmgui LGUI A  &hmgui LALT R  &hmctrl LCTRL S  &lh_hmsf LSHIFT T  &kp G               &kp M  &rh_hmsf RSHIFT N  &hmctrl RCTRL E     &hmgui LALT I   &hmgui RGUI O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                                    &lt NAV SPACE  &lt MOUSE TAB  &key_repeat          &kp REDO  &lt SYS BSPC  &lt NUM ENTER
+                                    &lt NAV SPACE  &lt MOUSE TAB  &mo RIGHTMOD          &mo LEFTMOD  &lt SYS BSPC  &lt NUM ENTER
+            >;
+        };
+
+        leftmod {
+            label = "LEFTMOD";
+            bindings = <
+                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
+                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
+                &trans  &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
+                                             &kp SPACE  &kp TAB  &trans  &trans  &kp BSPC &kp ENTER
+            >;
+        };
+
+        rightmod {
+            label = "RIGHTMOD";
+            bindings = <
+                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
+                &trans  &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans      &trans &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
+                &trans  &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
+                                             &kp SPACE  &kp TAB  &trans  &trans  &kp BSPC &kp ENTER
             >;
         };
 
