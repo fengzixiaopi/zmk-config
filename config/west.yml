@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: tongfeng
-      revision: main
+      revision: PointingDevice
       import: app/west.yml
   self:
     path: config
