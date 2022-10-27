@@ -257,7 +257,7 @@
             bindings = <
                 &trans  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
-                &trans  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LC(ENTER)      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                &kp LG(LA(ENTER))  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LC(ENTER)      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                               &trans  &trans  &trans  &trans  &kp BSPC &kp ENTER
             >;
         };
