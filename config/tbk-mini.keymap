@@ -89,9 +89,10 @@
 };
 
 &lt { 
-    flavor = "hold-preferred";
+    flavor = "balanced";
     tapping-term-ms = <220>;
-    quick_tap_ms = <200>; 
+    quick_tap_ms = <150>; 
+    global-quick-tap;
 };
 
 / {
