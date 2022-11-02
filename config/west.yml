@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: tongfeng
-      revision: ptdevice
+      revision: batteryReport
       import: app/west.yml
   self:
     path: config
