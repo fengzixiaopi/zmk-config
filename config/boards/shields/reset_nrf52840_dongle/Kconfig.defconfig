@@ -1,0 +1,10 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_RESET_NRF52840_DONGLE
+
+config ZMK_KEYBOARD_NAME
+	default "RESET DONGLE"
+
+endif
+
