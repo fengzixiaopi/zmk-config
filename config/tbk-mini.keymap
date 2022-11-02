@@ -89,8 +89,8 @@
 };
 
 &lt { 
-    flavor = "balanced";
-    tapping-term-ms = <220>;
+    flavor = "hold-preferred";
+    tapping-term-ms = <175>;
     quick_tap_ms = <175>; 
     global-quick-tap;
 };
