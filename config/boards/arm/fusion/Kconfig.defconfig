@@ -1,0 +1,66 @@
+# Copyright (c) 2020 Pete Johanson
+# SPDX-License-Identifier: MIT
+
+if BOARD_FUSION
+
+config BOARD
+    default "Fusion"
+
+config ZMK_KEYBOARD_NAME
+    default "Fusion"
+
+if USB
+
+config USB_NRFX
+    default y
+
+config USB_DEVICE_STACK
+    default y
+
+endif # USB
+
+config BT_CTLR
+    default BT
+
+config ZMK_BLE
+    default y
+
+config ZMK_USB
+    default y
+
+config ZMK_BATTERY_VOLTAGE_DIVIDER
+    default y
+
+if ZMK_DISPLAY
+
+config LS0XX
+    default y
+
+endif # ZMK_DISPLAY
+
+if LVGL
+
+config LVGL_HOR_RES_MAX
+    default 144
+
+config LVGL_VER_RES_MAX
+    default 168
+
+config LVGL_VDB_SIZE
+    default 50
+
+config LVGL_DPI
+    default 148
+
+config LVGL_BITS_PER_PIXEL
+    default 1
+
+choice LVGL_COLOR_DEPTH
+    default LVGL_COLOR_DEPTH_1
+endchoice
+
+endif
+
+source "/home/steven/gitproj/zmk/app/steno/Kconfig"
+
+endif # BOARD_FUSION
