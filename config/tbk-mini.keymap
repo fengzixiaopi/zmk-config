@@ -225,7 +225,7 @@
         leftmod {
             label = "LEFTMOD";
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
+                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &reset
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
                                              &kp SPACE  &kp TAB  &trans  &trans  &kp BSPC &kp ENTER
@@ -235,7 +235,7 @@
         rightmod {
             label = "RIGHTMOD";
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
+                &reset  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
                 &trans  &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans      &trans &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
                                              &kp SPACE  &kp TAB  &trans  &trans  &kp BSPC &kp ENTER
