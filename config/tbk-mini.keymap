@@ -218,7 +218,7 @@
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
                 &kp LSHIFT &hmgui LGUI A  &hmgui LALT R  &hmctrl LCTRL S  &lh_hmsf LSHIFT T  &kp G               &kp M  &rh_hmsf RSHIFT N  &hmctrl RCTRL E     &hmgui LALT I   &hmgui RGUI O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                                    &lt NAV SPACE  &lt MOUSE TAB &lt ESC RIGHTMOD          &lt DEL LEFTMOD &lt SYS BSPC  &lt NUM ENTER
+                        &lt NAV SPACE  &lt MOUSE TAB &lt RIGHTMOD ESC          &lt LEFTMOD DEL &lt SYS BSPC  &lt NUM ENTER
             >;
         };
 
