@@ -29,3 +29,9 @@ include:
     shield: tbk-mini_right
   - board: nordic_nrf52840_dongle_slicemk 
     shield: tbk-mini_dongle
+  - board: nice_nano_v2
+    shield: cmini_left
+  - board: nice_nano_v2
+    shield: cmini_right
+  - board: nordic_nrf52840_dongle_slicemk 
+    shield: cmini_dongle
