@@ -41,8 +41,8 @@
         reg = <0>;
         label = "Pixart PMW3360";
         cs-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>; // P0.06
-        motswk-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>; // P1.00 = 32 + 0
-        spi-max-frequency = <10000000>;
+        irq-gpios = <&gpio1 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        spi-max-frequency = <2000000>;
         cpi = <600>;
     };
 };
