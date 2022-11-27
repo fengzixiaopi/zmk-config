@@ -27,22 +27,17 @@
     };
 };
 
-&pro_micro_spi {
-    compatible = "nordic,nrf-spim";
-    status = "okay";
 
-    miso-pin = <17>; // P0.17
-    mosi-pin = <20>; // P0.20
-    sck-pin = <8>; // P0.08
-    cs-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>; // P0.06
+/* Enable spi2 bus and the trackball, and define their pins */
+&spi2 {
+  status = "okay";
+  sck-pin = <8>;
+  mosi-pin = <20>;
+  miso-pin = <17>; // same as mosi (3-wire spi)
+  cs-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;
+};
 
-    trackball: trackball@0 {
-        compatible = "pixart,pmw33xx";
-        reg = <0>;
-        label = "Pixart PMW3360";
-        cs-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>; // P0.06
-        motswk-gpios = <&gpio1 0 GPIO_ACTIVE_LOW>; // P1.00 = 32 + 0
-        spi-max-frequency = <10000000>;
-        cpi = <600>;
-    };
+&trackball {
+  status = "okay";
+  irq-gpios = <&gpio0 13 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
 };
