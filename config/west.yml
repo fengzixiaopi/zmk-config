@@ -1,13 +1,11 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: tongfeng
-      url-base: https://github.com/fengzixiaopi
+    - name: zmk
+      url-base: https://github.com/drorchen
   projects:
     - name: zmk
-      remote: tongfeng
-      revision: ufan-blade
+      remote: zmk
+      revision: dracula-test
       import: app/west.yml
   self:
     path: config
