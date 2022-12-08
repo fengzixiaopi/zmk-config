@@ -38,7 +38,7 @@
         reg = <0>;
         label = "Cirque Trackpad";
         spi-max-frequency = <10000000>;
-        irq-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
+        dr-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
         invert-x;
         sleep;
         /* no-taps; */
