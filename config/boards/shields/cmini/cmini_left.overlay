@@ -27,10 +27,10 @@
 &spi0 {
     compatible = "nordic,nrf-spim";
     status = "okay";
-    miso-pin = <17>; // P0.17
-    mosi-pin = <20>; // should not be used 
-    sck-pin = <8>; // P0.08
-    cs-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>; // P0.06
+    miso-pin = <2>; // P0.17
+    mosi-pin = <e>; // should not be used 
+    sck-pin = <0>; // P0.08
+    cs-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH >; // P0.06
 
     trackpad@0 {
         compatible = "cirque,pinnacle";
