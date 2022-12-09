@@ -28,7 +28,7 @@
     compatible = "nordic,nrf-spim";
     status = "okay";
     miso-pin = <2>; // P0.17
-    mosi-pin = <e>; // should not be used 
+    mosi-pin = <3>; // should not be used 
     sck-pin = <0>; // P0.08
     cs-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH >; // P0.06
 
