@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: tongfeng
-      revision: ufan-blade
+      revision: trackpad-spi
       import: app/west.yml
   self:
     path: config
