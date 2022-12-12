@@ -1,7 +1,7 @@
-if SHIELD_CMINI_LEFT
+if SHIELD_CMINI_TRACKPAD
 
     config ZMK_KEYBOARD_NAME
-        default "CMini(Left)"
+        default "CMini(Trackpad)"
 
 
 endif
