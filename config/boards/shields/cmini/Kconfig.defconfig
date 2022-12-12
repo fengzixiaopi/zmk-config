@@ -1,8 +1,17 @@
+if SHIELD_CMINI_DONGLE
+
+    config ZMK_KEYBOARD_NAME
+        default "CMini"
+
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
+
+endif
+
 if SHIELD_CMINI_TRACKPAD
 
     config ZMK_KEYBOARD_NAME
         default "CMini(Trackpad)"
-
 
 endif
 
