@@ -15,7 +15,7 @@
 include:
 
   - board: nice_nano_v2
-    shield: cmini_left
+    shield: cmini_trackpad
   - board: nice_nano_v2
     shield: cmini_right
   - board: nordic_nrf52840_dongle_slicemk 
