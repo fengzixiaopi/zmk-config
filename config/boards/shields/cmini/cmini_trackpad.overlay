@@ -1,5 +1,9 @@
 #include "cmini.dtsi" // Notice that the main dtsi files are included in the overlay.
 
+&default_transform {
+    row-offset = <4>;
+};
+
 
 / {
     kscan0: kscan {
