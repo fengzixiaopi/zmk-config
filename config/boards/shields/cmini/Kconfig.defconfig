@@ -1,17 +1,38 @@
 if SHIELD_CMINI_DONGLE
 
     config ZMK_KEYBOARD_NAME
-        default "CMini"
+        default "CMini-Dongle"
 
-    config ZMK_SPLIT_BLE_ROLE_CENTRAL
-        default y
+endif
+
+if SHIELD_CMINI_LEFT
+
+    config ZMK_KEYBOARD_NAME
+        default "CMini-Left"
+
+endif
+
+if SHIELD_CMINI_RIGHT
+
+    config ZMK_KEYBOARD_NAME
+        default "CMini-Right"
 
 endif
 
 if SHIELD_CMINI_TRACKPAD
 
     config ZMK_KEYBOARD_NAME
-        default "CMini(Trackpad)"
+        default "CMini-Trackpad"
+
+     config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
+
+endif
+
+if SHIELD_CMINI_TRACKBALL
+
+    config ZMK_KEYBOARD_NAME
+        default "CMini-Trackball"
 
 endif
 
