@@ -24,8 +24,7 @@ if SHIELD_CMINI_TRACKPAD
     config ZMK_KEYBOARD_NAME
         default "CMini-Trackpad"
 
-     config ZMK_SPLIT_BLE_ROLE_CENTRAL
-        default y
+    
 
 endif
 
@@ -33,6 +32,9 @@ if SHIELD_CMINI_TRACKBALL
 
     config ZMK_KEYBOARD_NAME
         default "CMini-Trackball"
+
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
 
 endif
 

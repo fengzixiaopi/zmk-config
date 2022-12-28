@@ -29,4 +29,16 @@
 };
 
 
+&spi0 {
+  status = "okay";
+  sck-pin = <6>;
+  mosi-pin = <20>;
+  miso-pin = <20>; // same as mosi (3-wire spi)
+  cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
+};
+
+&trackball {
+  status = "okay";
+  irq-gpios = <&gpio0 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+};
 
