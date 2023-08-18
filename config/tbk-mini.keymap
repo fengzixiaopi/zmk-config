@@ -90,8 +90,8 @@
 
 &lt { 
     flavor = "hold-preferred";
-    tapping-term-ms = <175>;
-    quick_tap_ms = <175>; 
+    tapping-term-ms = <150>;
+    quick_tap_ms = <125>; 
     global-quick-tap;
 };
 

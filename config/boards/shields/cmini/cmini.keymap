@@ -90,9 +90,20 @@
 
 &lt { 
     flavor = "hold-preferred";
-    tapping-term-ms = <175>;
-    quick_tap_ms = <175>; 
-    global-quick-tap;
+    tapping-term-ms = <150>;
+    quick-tap-ms = <125>; 
+};
+
+&mmv {
+    time-to-max-speed-ms = <500>;
+    delay-ms = <0>;
+    acceleration-exponent = <1>;
+};
+
+&mwh {
+    delay-ms = <0>;
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <0>;
 };
 
 / {
@@ -212,7 +223,6 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                         &lt NAV SPACE  &lt MOUSE TAB                       &lt SYS BSPC  &lt NUM ENTER
             >;
-            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp UP DOWN>;
             trackball-bindings = <&tmv_coarse>;
         };
 
@@ -228,7 +238,6 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                         &lt NAV SPACE  &lt MOUSE TAB                       &lt SYS BSPC  &lt NUM ENTER
             >;
-            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp UP DOWN>;
             trackball-bindings = <&tmv_coarse>;
         };
 
@@ -237,11 +246,11 @@
             bindings = <
                 &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &reset
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
-                &trans  &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
+                &trans  &trans &trans &trans &trans &trans      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
                                              &kp SPACE  &kp TAB  &trans  &trans  &kp BSPC &kp ENTER
                 &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &reset
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
-                &trans  &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
+                &trans  &trans &trans &trans &trans &trans      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
                                              &kp SPACE  &kp TAB          &kp BSPC &kp ENTER
             >;
             trackball-bindings = <&tsl>;
@@ -250,44 +259,42 @@
         rightmod {
             label = "RIGHTMOD";
             bindings = <
-                &reset  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
-                &trans  &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans      &trans &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
-                &trans  &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
+                &reset  &trans &trans &trans &trans &kp LC(DEL)                &trans  &trans &trans &trans &trans &trans
+                &trans  &kp UP &kp LEFT &kp RIGHT &kp DOWN &kp LC(BSPC)      &trans &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
+                &trans  &trans &trans &trans &trans &kp LC(ENTER)       &trans  &trans &trans &trans &trans &trans
                                              &kp SPACE  &kp TAB  &trans  &trans  &kp BSPC &kp ENTER
-                &reset  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
-                &trans  &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans      &trans &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
-                &trans  &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
+                &reset  &trans &trans &trans &trans &kp LC(DEL)                  &trans  &trans &trans &trans &trans &trans
+                &trans  &kp UP &kp LEFT &kp RIGHT &kp DOWN &kp LC(BSPC)        &trans &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
+                &trans  &trans &trans &trans &trans &kp LC(ENTER)        &trans  &trans &trans &trans &trans &trans
                                              &kp SPACE  &kp TAB         &kp BSPC &kp ENTER
             >;
-            trackball-bindings = <&tsl>;
+            trackball-bindings = <&tkp_dt LG(RIGHT) LG(LEFT) LC(MINUS) LC(PLUS)>;
         };
-
-
         nav {
             label = "NAV";
             bindings = <
-                &reset  &trans &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
-                &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
-                &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
-                                             &trans  &trans  &trans  &trans  &kp BSPC &kp ENTER
-                &reset  &trans &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
-                &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
-                &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
-                                             &trans  &trans                &kp BSPC &kp ENTER
+                &reset  &trans &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &mwh SCROLL_UP &mwh SCROLL_LEFT &mwh SCROLL_RIGHT &mwh SCROLL_DOWN &trans
+                &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC     &trans &mkp MB4 &mkp MCLK &mkp MB5 &mkp MB5 &trans
+                &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
+                                             &trans  &trans  &trans  &trans  &kp LC(BSPC) &kp LC(ENTER)
+                &reset  &trans &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &mwh SCROLL_UP &mwh SCROLL_LEFT &mwh SCROLL_RIGHT &mwh SCROLL_DOWN &trans
+                &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC      &trans &mkp MB4 &mkp MCLK &mkp MB5 &mkp MB5 &trans
+                &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
+                                             &trans  &trans                &kp LC(BSPC) &kp LC(ENTER)
             >;
-            trackball-bindings = <&tsl>;
+            trackball-bindings = <&tmv_fine>;
         };
 
         mouse {
             label = "MOUSE";
             bindings = <
-                &trans  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &mkp SCROLL_UP &mkp SCROLL_LEFT &mkp SCROLL_RIGHT &mkp SCROLL_DOWN &trans
-                &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &mkp LCLK &mkp MCLK &mkp RCLK &kp DOWN &trans
-                &kp LG(LA(ENTER))  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LC(ENTER)      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
+                &kp LG(LA(ENTER))  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LC(ENTER)      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
                                               &trans  &trans  &trans  &trans  &kp BSPC &kp ENTER
-                &trans  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &mkp SCROLL_UP &mkp SCROLL_LEFT &mkp SCROLL_RIGHT &mkp SCROLL_DOWN &trans
-                &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &mkp LCLK &mkp MCLK &mkp RCLK &kp DOWN &trans
-                &kp LG(LA(ENTER))  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LC(ENTER)      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
+                &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
+                &kp LG(LA(ENTER))  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LC(ENTER)         &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
                                               &trans  &trans                     &kp BSPC &kp ENTER
             >;
             trackball-bindings = <&tsl>;
@@ -327,11 +334,11 @@
         sys {
             label = "SYS";
             bindings = <
-                &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &bootloader
+                &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &reset
                 &kp CAPS  &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &trans &to QWERTY &to COLEMAK_DH &trans &trans
                                              &kp LPAR &kp RPAR &kp PIPE  &trans &trans &trans
-                &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &bootloader
+                &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &reset
                 &kp CAPS  &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &trans &to QWERTY &to COLEMAK_DH &trans &trans
                                              &kp LPAR &kp RPAR                 &trans &trans
@@ -351,7 +358,7 @@
                 &trans  &kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK        &trans  &trans &trans &trans &trans &trans
                                              &kp SPACE &kp TAB              &trans &trans
             >;
-            trackball-bindings = <&tsl>;
+            trackball-bindings = <&tsl>;    
         };
 
     };
