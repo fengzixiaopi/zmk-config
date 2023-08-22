@@ -85,9 +85,9 @@
 };
 
 &lt { 
-    flavor = "hold-preferred";
-    tapping-term-ms = <150>;
-    quick-tap-ms = <125>; 
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <175>;
 };
 
 &mmv {
@@ -109,46 +109,79 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <150>;                       
-            quick-tap-ms = <125>;
-            global-quick-tap;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            global-quick-tap;        
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            //hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmsf: right_hand_homerow_mods_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <150>;                       
-            quick-tap-ms = <125>;
-            global-quick-tap;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            global-quick-tap;         
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            //hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        hmctrl: homerow_mods_control {
+        lh_hmctrl: homerow_mods_control {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            global-quick-tap;        
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            //hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        hmgui: homerow_mods_gui {
+        rh_hmctrl: homerow_mods_control {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_CONTROL";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            global-quick-tap;         
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            //hold-trigger-on-release;             // delay positional check until key-release
+        };
+
+        lh_hmgui: homerow_mods_gui {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_GUI";
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <125>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
             global-quick-tap;
-            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            //hold-trigger-on-release;             // delay positional check until key-release
         };
 
+        rh_hmgui: homerow_mods_gui {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_GUI";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            //hold-trigger-on-release;             // delay positional check until key-release
+        };
     };
 
 
@@ -159,11 +192,11 @@
             label = "QWERTY";
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp LSHIFT &hmgui LGUI A  &hmgui LALT S  &hmctrl LCTRL D  &lh_hmsf LSHIFT F  &kp G               &kp H  &rh_hmsf RSHIFT J  &hmctrl RCTRL K     &hmgui LALT L   &hmgui RGUI SEMI &kp SQT
+                &kp LSHIFT &lh_hmgui LGUI A  &lh_hmgui LALT S  &lh_hmctrl LCTRL D  &lh_hmsf LSHIFT F  &kp G               &kp H  &rh_hmsf RSHIFT J  &rh_hmctrl RCTRL K     &rh_hmgui LALT L   &rh_hmgui RGUI SEMI &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                         &lt NAV SPACE  &lt MOUSE TAB &lt RIGHTMOD ESC          &lt LEFTMOD DEL &lt SYS BSPC  &lt NUM ENTER
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp LSHIFT &hmgui LGUI A  &hmgui LALT S  &hmctrl LCTRL D  &lh_hmsf LSHIFT F  &kp G               &kp H  &rh_hmsf RSHIFT J  &hmctrl RCTRL K     &hmgui LALT L   &hmgui RGUI SEMI &kp SQT
+                &kp LSHIFT &lh_hmgui LGUI A  &lh_hmgui LALT S  &lh_hmctrl LCTRL D  &lh_hmsf LSHIFT F  &kp G               &kp H  &rh_hmsf RSHIFT J  &rh_hmctrl RCTRL K     &rh_hmgui LALT L   &rh_hmgui RGUI SEMI &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                         &lt NAV SPACE  &lt MOUSE TAB                       &lt SYS BSPC  &lt NUM ENTER
             >;
@@ -174,11 +207,11 @@
             label = "COLEMAK-DH";
             bindings = <
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
-                &kp LSHIFT &hmgui LGUI A  &hmgui LALT R  &hmctrl LCTRL S  &lh_hmsf LSHIFT T  &kp G               &kp M  &rh_hmsf RSHIFT N  &hmctrl RCTRL E     &hmgui LALT I   &hmgui RGUI O &kp SQT
+                &kp LSHIFT &lh_hmgui LGUI A  &lh_hmgui LALT R  &lh_hmctrl LCTRL S  &lh_hmsf LSHIFT T  &kp G               &kp M  &rh_hmsf RSHIFT N  &rh_hmctrl RCTRL E     &rh_hmgui LALT I   &rh_hmgui RGUI O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                         &lt NAV SPACE  &lt MOUSE TAB &lt RIGHTMOD ESC          &lt LEFTMOD DEL &lt SYS BSPC  &lt NUM ENTER
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
-                &kp LSHIFT &hmgui LGUI A  &hmgui LALT R  &hmctrl LCTRL S  &lh_hmsf LSHIFT T  &kp G               &kp M  &rh_hmsf RSHIFT N  &hmctrl RCTRL E     &hmgui LALT I   &hmgui RGUI O &kp SQT
+                &kp LSHIFT &lh_hmgui LGUI A  &lh_hmgui LALT R  &lh_hmctrl LCTRL S  &lh_hmsf LSHIFT T  &kp G               &kp M  &rh_hmsf RSHIFT N  &rh_hmctrl RCTRL E     &rh_hmgui LALT I   &rh_hmgui RGUI O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                         &lt NAV SPACE  &lt MOUSE TAB                       &lt SYS BSPC  &lt NUM ENTER
             >;
