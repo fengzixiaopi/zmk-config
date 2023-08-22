@@ -28,43 +28,43 @@
 #define P_E 3 47
 #define P_R 4 48
 #define P_T 5 49
-#define P_Y 6 50
-#define P_U 7 51
-#define P_I 8 52
-#define P_O 9 53
-#define P_P 10 54
-#define P_BSPC 11 55
+#define P_Y 11 55
+#define P_U 10 54
+#define P_I 9 53
+#define P_O 8 52
+#define P_P 7 51
+#define P_BSPC 6 50
 #define P_TAB 12 56
 #define P_A 13 57
 #define P_S 14 58
 #define P_D 15 59
 #define P_F 16 60
 #define P_G 17 61
-#define P_H 18 62
-#define P_J 19 63
-#define P_K 20 64
-#define P_L 21 65
-#define P_SEMI 22 66
-#define P_SQT 23 67
+#define P_H 23 67
+#define P_J 22 66
+#define P_K 21 65
+#define P_L 20 64
+#define P_SEMI 19 63
+#define P_SQT 18 62
 #define P_CAPS 24 68
 #define P_Z 25 69
 #define P_X 26 70
 #define P_C 27 71
 #define P_V 28 72
 #define P_B 29 73
-#define P_N 30 74
-#define P_M 31 75
-#define P_COMMA 32 76
-#define P_DOT 33 77
-#define P_FSLH 34 78
-#define P_BSLH 35 79
+#define P_N 35 79
+#define P_M 34 78
+#define P_COMMA 33 77
+#define P_DOT 32 76
+#define P_FSLH 31 75
+#define P_BSLH 30 74
 
-#define P_NAV 36 81
-#define P_MOUSE 37 82
-#define P_RIGHT 38
-#define P_SYS 42 87
-#define P_NUM 44 88
-#define P_LEFT 43
+#define P_NAV 39 88
+#define P_MOUSE 40 89
+#define P_RIGHT 41
+#define P_SYS 45 94
+#define P_NUM 47 95
+#define P_LEFT 46
 
 
 #define KEYS_L P_ESC P_Q P_W P_E P_R P_T P_TAB P_A P_S P_D P_F P_G P_CAPS P_Z P_X P_C P_V P_B 
