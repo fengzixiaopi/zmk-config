@@ -14,6 +14,7 @@
 #define NUM 7
 #define SYS 8
 #define FUN 9
+#define AUTOMOUSE 10
 
 
 #define UNDO LC(Z)
@@ -22,49 +23,49 @@
 #define CUT LC(X)
 #define PASTE LC(V)
 
-#define P_ESC 0 48
-#define P_Q 1 49
-#define P_W 2 50
-#define P_E 3 51
-#define P_R 4 52
-#define P_T 5 53
-#define P_Y 11 58
-#define P_U 10 58
-#define P_I 9 57
-#define P_O 8 56
-#define P_P 7 55
-#define P_BSPC 6 54
-#define P_TAB 12 60
-#define P_A 13 61
-#define P_S 14 62
-#define P_D 15 63
-#define P_F 16 64
-#define P_G 17 65
-#define P_H 23 71
-#define P_J 22 70
-#define P_K 21 69
-#define P_L 20 68
-#define P_SEMI 19 67
-#define P_SQT 18 66
-#define P_CAPS 24 72
-#define P_Z 25 73
-#define P_X 26 74
-#define P_C 27 75
-#define P_V 28 76
-#define P_B 29 77
-#define P_N 35 83
-#define P_M 34 82
-#define P_COMMA 33 81
-#define P_DOT 32 80
-#define P_FSLH 31 79
-#define P_BSLH 30 78
+#define P_ESC 0 42
+#define P_Q 1 43
+#define P_W 2 44
+#define P_E 3 45
+#define P_R 4 46
+#define P_T 5 47
+#define P_Y 6 48
+#define P_U 7 49
+#define P_I 8 50
+#define P_O 9 51
+#define P_P 10 52
+#define P_BSPC 11 53
+#define P_TAB 12 54
+#define P_A 13 55
+#define P_S 14 56
+#define P_D 15 57
+#define P_F 16 58
+#define P_G 17 59
+#define P_H 18 60
+#define P_J 19 61
+#define P_K 20 62
+#define P_L 21 63
+#define P_SEMI 22 64
+#define P_SQT 23 65
+#define P_CAPS 24 66
+#define P_Z 25 67
+#define P_X 26 68
+#define P_C 27 69
+#define P_V 28 70
+#define P_B 29 71
+#define P_N 30 72
+#define P_M 31 73
+#define P_COMMA 32 74
+#define P_DOT 33 75
+#define P_FSLH 34 76
+#define P_BSLH 35 77
 
-#define P_NAV 39 88
-#define P_MOUSE 40 89
-#define P_RIGHT 41
-#define P_SYS 45 94
-#define P_NUM 47 95
-#define P_LEFT 46
+#define P_NAV 36 78
+#define P_MOUSE 37 79
+#define P_RIGHT 38
+#define P_SYS 41 81
+#define P_NUM 40 80
+#define P_LEFT 39
 
 #define KEYS_L P_ESC P_Q P_W P_E P_R P_T P_TAB P_A P_S P_D P_F P_G P_CAPS P_Z P_X P_C P_V P_B 
 #define KEYS_R P_Y P_U P_I P_O P_P P_BSPC P_H P_J P_K P_L P_SEMI P_SQT P_N P_M P_COMMA P_DOT P_FSLH P_BSLH 
@@ -84,9 +85,9 @@
 };
 
 &lt { 
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <175>;
+    flavor = "hold-preferred";
+    tapping-term-ms = <125>;
+    quick-tap-ms = <200>; 
 };
 
 &mmv {
@@ -108,10 +109,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
-            global-quick-tap;        
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <150>;                       
+            quick-tap-ms = <125>;
+            global-quick-tap;     
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             //hold-trigger-on-release;             // delay positional check until key-release
@@ -121,10 +122,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
-            global-quick-tap;         
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <150>;                       
+            quick-tap-ms = <125>;
+            global-quick-tap;       
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             //hold-trigger-on-release;             // delay positional check until key-release
@@ -134,10 +135,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
-            global-quick-tap;        
+            tapping-term-ms = <170>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";    
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             //hold-trigger-on-release;             // delay positional check until key-release
@@ -147,10 +148,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
-            global-quick-tap;         
+            tapping-term-ms = <170>;
+            quick-tap-ms = <125>;
+            global-quick-tap;
+            flavor = "tap-preferred";       
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             //hold-trigger-on-release;             // delay positional check until key-release
@@ -160,10 +161,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_GUI";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            tapping-term-ms = <220>;
+            quick-tap-ms = <125>;
             global-quick-tap;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
             //hold-trigger-on-release;             // delay positional check until key-release
@@ -173,10 +174,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_GUI";
             #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            tapping-term-ms = <220>;
+            quick-tap-ms = <125>;
             global-quick-tap;
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             //hold-trigger-on-release;             // delay positional check until key-release
@@ -335,6 +336,21 @@
                                              &kp SPACE &kp TAB              &trans &trans
             >;
             trackball-bindings = <&tsl>;    
+        };
+
+        autoMouse {
+            label = "AUTOMOUSE";
+            bindings = <
+                &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
+                &kp LG(LA(ENTER))  &mkp MB5 &mkp RCLK &mkp MCLK &mkp LCLK &mkp MB4      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
+                                              &trans  &trans  &trans  &trans  &kp BSPC &kp ENTER
+                &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
+                &kp LG(LA(ENTER))  &mkp MB5 &mkp RCLK &mkp MCLK &mkp LCLK &mkp MB4         &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
+                                              &trans  &trans                     &kp BSPC &kp ENTER
+            >;
+            trackball-bindings = <&tmv_fine>;
         };
 
     };
