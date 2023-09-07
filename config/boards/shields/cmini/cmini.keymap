@@ -344,11 +344,11 @@
                 &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &kp LG(LA(ENTER))  &mkp MB5 &mkp RCLK &mkp MCLK &mkp LCLK &mkp MB4      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
-                                              &trans  &trans  &trans  &trans  &kp BSPC &kp ENTER
+                                              &mkp LCLK  &mkp RCLK  &mkp MCLK  &mkp MCLK  &mkp RCLK &mkp LCLK
                 &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &kp LG(LA(ENTER))  &mkp MB5 &mkp RCLK &mkp MCLK &mkp LCLK &mkp MB4         &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
-                                              &trans  &trans                     &kp BSPC &kp ENTER
+                                              &mkp LCLK  &mkp RCLK                     &mkp RCLK &mkp LCLK
             >;
             trackball-bindings = <&tmv_fine>;
         };
