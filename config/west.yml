@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: tongfeng
-      revision: ufan-blade
+      revision: trackball
       import: app/west.yml
   self:
     path: config
