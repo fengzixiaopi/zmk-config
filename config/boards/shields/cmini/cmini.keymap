@@ -6,15 +6,12 @@
 #include <dt-bindings/zmk/mouse.h>
 #define QWERTY 0
 #define COLEMAK_DH 1
-#define LEFTMOD 2
-#define RIGHTMOD 3
-#define NAV 4
-#define MOUSE 5
-#define MEDIA 6
-#define NUM 7
-#define SYS 8
-#define FUN 9
-#define AUTOMOUSE 10
+#define NAV 2
+#define MOUSE 3
+#define MEDIA 4
+#define NUM 5
+#define SYS 6
+#define FUN 7
 
 
 #define UNDO LC(Z)
@@ -194,7 +191,7 @@
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
                 &kp LSHIFT &lh_hmgui LGUI A  &lh_hmgui LALT S  &lh_hmctrl LCTRL D  &lh_hmsf LSHIFT F  &kp G               &kp H  &rh_hmsf RSHIFT J  &rh_hmctrl RCTRL K     &rh_hmgui LALT L   &rh_hmgui RGUI SEMI &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                        &lt NAV SPACE  &lt MOUSE TAB &lt RIGHTMOD ESC          &lt LEFTMOD DEL &lt SYS BSPC  &lt NUM ENTER
+                        &lt NAV SPACE  &lt MOUSE TAB &lt MEDIA ESC          &lt FUN DEL &lt SYS BSPC  &lt NUM ENTER
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
                 &kp LSHIFT &lh_hmgui LGUI A  &lh_hmgui LALT S  &lh_hmctrl LCTRL D  &lh_hmsf LSHIFT F  &kp G               &kp H  &rh_hmsf RSHIFT J  &rh_hmctrl RCTRL K     &rh_hmgui LALT L   &rh_hmgui RGUI SEMI &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
@@ -209,7 +206,7 @@
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
                 &kp LSHIFT &lh_hmgui LGUI A  &lh_hmgui LALT R  &lh_hmctrl LCTRL S  &lh_hmsf LSHIFT T  &kp G               &kp M  &rh_hmsf RSHIFT N  &rh_hmctrl RCTRL E     &rh_hmgui LALT I   &rh_hmgui RGUI O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                        &lt NAV SPACE  &lt MOUSE TAB &lt RIGHTMOD ESC          &lt LEFTMOD DEL &lt SYS BSPC  &lt NUM ENTER
+                        &lt NAV SPACE  &lt MOUSE TAB &lt MEDIA ESC          &lt FUN DEL &lt SYS BSPC  &lt NUM ENTER
                 &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
                 &kp LSHIFT &lh_hmgui LGUI A  &lh_hmgui LALT R  &lh_hmctrl LCTRL S  &lh_hmsf LSHIFT T  &kp G               &kp M  &rh_hmsf RSHIFT N  &rh_hmctrl RCTRL E     &rh_hmgui LALT I   &rh_hmgui RGUI O &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
@@ -218,44 +215,15 @@
             trackball-bindings = <&tmv_coarse>;
         };
 
-        leftmod {
-            label = "LEFTMOD";
-            bindings = <
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &reset
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
-                &trans  &trans &trans &trans &trans &trans      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
-                                             &kp SPACE  &kp TAB  &trans  &trans  &kp BSPC &kp ENTER
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &reset
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
-                &trans  &trans &trans &trans &trans &trans      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
-                                             &kp SPACE  &kp TAB          &kp BSPC &kp ENTER
-            >;
-            trackball-bindings = <&tsl>;
-        };
-
-        rightmod {
-            label = "RIGHTMOD";
-            bindings = <
-                &reset  &trans &trans &trans &trans &kp LC(DEL)                &trans  &trans &trans &trans &trans &trans
-                &trans  &kp UP &kp LEFT &kp RIGHT &kp DOWN &kp LC(BSPC)      &trans &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
-                &trans  &trans &trans &trans &trans &kp LC(ENTER)       &trans  &trans &trans &trans &trans &trans
-                                             &kp SPACE  &kp TAB  &trans  &trans  &kp BSPC &kp ENTER
-                &reset  &trans &trans &trans &trans &kp LC(DEL)                  &trans  &trans &trans &trans &trans &trans
-                &trans  &kp UP &kp LEFT &kp RIGHT &kp DOWN &kp LC(BSPC)        &trans &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
-                &trans  &trans &trans &trans &trans &kp LC(ENTER)        &trans  &trans &trans &trans &trans &trans
-                                             &kp SPACE  &kp TAB         &kp BSPC &kp ENTER
-            >;
-            trackball-bindings = <&tkp_dt LG(RIGHT) LG(LEFT) LC(MINUS) LC(PLUS)>;
-        };
         nav {
             label = "NAV";
             bindings = <
                 &reset  &trans &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &mwh SCROLL_UP &mwh SCROLL_LEFT &mwh SCROLL_RIGHT &mwh SCROLL_DOWN &trans
-                &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC     &trans &mkp MB4 &mkp MCLK &mkp MB5 &mkp MB5 &trans
+                &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &mkp LCLK &kp BSPC     &trans &mkp MB4 &mkp MCLK &mkp MB5 &mkp MB5 &trans
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
                                              &trans  &trans  &trans  &trans  &kp LC(BSPC) &kp LC(ENTER)
                 &reset  &trans &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &mwh SCROLL_UP &mwh SCROLL_LEFT &mwh SCROLL_RIGHT &mwh SCROLL_DOWN &trans
-                &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC      &trans &mkp MB4 &mkp MCLK &mkp MB5 &mkp MB5 &trans
+                &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &mkp LCLK &kp BSPC      &trans &mkp MB4 &mkp MCLK &mkp MB5 &mkp MB5 &trans
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
                                              &trans  &trans                &kp LC(BSPC) &kp LC(ENTER)
             >;
@@ -265,12 +233,12 @@
         mouse {
             label = "MOUSE";
             bindings = <
-                &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
-                &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
+                &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp LG(RIGHT)                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &trans  &kp LC(LS(D)) &kp LC(D) &kp LC(B) &mkp LCLK &kp LG(LEFT)      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &kp LG(LA(ENTER))  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LC(ENTER)      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
                                               &trans  &trans  &trans  &trans  &kp BSPC &kp ENTER
-                &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
-                &trans  &kp LGUI &kp LC(LS(D)) &kp LC(B) &kp LC(D) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
+                &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp LG(RIGHT)                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &trans  &kp LC(LS(D)) &kp LC(D) &kp LC(B) &mkp LCLK &kp LG(LEFT)      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &kp LG(LA(ENTER))  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LC(ENTER)         &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
                                               &trans  &trans                     &kp BSPC &kp ENTER
             >;
@@ -282,15 +250,15 @@
             label = "MEDIA";
             bindings = <
                 &trans  &trans &ext_power EP_OFF &ext_power EP_TOG &ext_power EP_ON &trans                &trans  &trans &trans &trans &trans &trans
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans  &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
+                &trans  &trans &mkp RCLK &mkp MCLK &mkp LCLK &mkp MB4      &trans  &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
+                &trans  &trans &kp CUT &kp COPY &kp PASTE &mkp MB5                &trans  &trans &trans &trans &trans &trans
                                              &trans  &trans  &trans  &trans  &kp K_STOP2 &kp K_PP
                 &trans  &trans &ext_power EP_OFF &ext_power EP_TOG &ext_power EP_ON &trans                &trans  &trans &trans &trans &trans &trans
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans  &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
+                &trans  &trans &mkp RCLK &mkp MCLK &mkp LCLK &mkp MB4      &trans  &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
+                &trans  &trans &kp CUT &kp COPY &kp PASTE &mkp MB5                &trans  &trans &trans &trans &trans &trans
                                              &trans  &trans               &kp K_STOP2 &kp K_PP
             >;
-            trackball-bindings = <&tsl>;
+            trackball-bindings = <&tmv_coarse>;
         };
 
         num {
@@ -336,21 +304,6 @@
                                              &kp SPACE &kp TAB              &trans &trans
             >;
             trackball-bindings = <&tsl>;    
-        };
-
-        autoMouse {
-            label = "AUTOMOUSE";
-            bindings = <
-                &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
-                &trans  &mkp MB5 &mkp RCLK &mkp MCLK &mkp LCLK &mkp MB4      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
-                &mkp MB5  &mkp MB4 &kp CUT &kp COPY &kp PASTE &mkp RCLK      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
-                                              &trans  &trans  &trans         &trans  &trans  &trans
-                &reset  &trans &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
-                &trans  &mkp MB5 &mkp RCLK &mkp MCLK &mkp LCLK &mkp MB4       &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
-                &mkp MB5  &mkp MB4 &kp CUT &kp COPY &kp PASTE &mkp RCLK         &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
-                                              &trans  &trans                     &trans  &trans 
-            >;
-            trackball-bindings = <&tmv_fine>;
         };
 
     };
