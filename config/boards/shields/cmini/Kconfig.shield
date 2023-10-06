@@ -3,13 +3,7 @@ config SHIELD_CMINI_LEFT
 
 config SHIELD_CMINI_RIGHT
     def_bool $(shields_list_contains,cmini_right)
-
-config SHIELD_CMINI_TRACKPAD
-    def_bool $(shields_list_contains,cmini_trackpad)
-
-config SHIELD_CMINI_TRACKBALL
-    def_bool $(shields_list_contains,cmini_trackball)
-
+    
 config SHIELD_CMINI_DONGLE
     def_bool $(shields_list_contains,cmini_dongle)
 

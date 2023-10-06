@@ -1,4 +1,4 @@
-#include "cmini.dtsi"
+#include "cmini-pt.dtsi"
 
 &default_transform {
     row-offset = <4>;
