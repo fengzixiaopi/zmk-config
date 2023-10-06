@@ -265,11 +265,11 @@
             label = "NUM";
             bindings = <
                 &trans  &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT             &trans  &bt BT_PRV &bt BT_CLR &bt BT_NXT &trans &reset
-                &kp CAPS  &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
+                &kp CAPS  &kp SQT &kp N4 &kp N5 &kp N6 &kp EQUAL          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp GRAVE &kp N1 &kp N2 &kp N3 &kp MINUS           &trans  &trans &trans &trans &trans &trans
                                              &kp DOT &kp N0 &kp BSLH &trans &trans &trans
                 &trans  &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT             &trans  &bt BT_PRV &bt BT_CLR &bt BT_NXT &trans &reset
-                &kp CAPS  &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
+                &kp CAPS  &kp SQT &kp N4 &kp N5 &kp N6 &kp EQUAL          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp GRAVE &kp N1 &kp N2 &kp N3 &kp MINUS           &trans  &trans &trans &trans &trans &trans
                                              &kp DOT &kp N0                &trans &trans
             >;
@@ -280,11 +280,11 @@
             label = "SYS";
             bindings = <
                 &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &reset
-                &kp CAPS  &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
+                &kp CAPS  &kp DQT &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &trans &to QWERTY &to COLEMAK_DH &trans &trans
                                              &kp LPAR &kp RPAR &kp PIPE  &trans &trans &trans
                 &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &reset
-                &kp CAPS  &kp COLON &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
+                &kp CAPS  &kp DQT &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &trans &to QWERTY &to COLEMAK_DH &trans &trans
                                              &kp LPAR &kp RPAR                 &trans &trans
             >;

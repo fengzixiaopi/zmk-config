@@ -9,6 +9,9 @@ if SHIELD_CMINI_LEFT
 
     config ZMK_KEYBOARD_NAME
         default "CMini-Left"
+        
+    config ZMK_SPLIT_BLE_ROLE_CENTRAL
+        default y
 
 endif
 
