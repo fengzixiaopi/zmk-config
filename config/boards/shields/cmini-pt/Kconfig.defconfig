@@ -1,24 +1,24 @@
 
-if SHIELD_CMINI_TRACKPAD
+if SHIELD_CMINI-PT_TRACKPAD
 
     config ZMK_KEYBOARD_NAME
-        default "CMini-Pt-Trackpad"
+        default "CMini-Pt-Tp"
 
     
 
 endif
 
-if SHIELD_CMINI_TRACKBALL
+if SHIELD_CMINI-PT_TRACKBALL
 
     config ZMK_KEYBOARD_NAME
-        default "CMini-Pt-Trackball"
+        default "CMini-Pt-Tb"
 
     config ZMK_SPLIT_BLE_ROLE_CENTRAL
         default y
 
 endif
 
-if SHIELD_CMINI_TRACKPAD || SHIELD_CMINI_TRACKBALL
+if SHIELD_CMINI-PT_TRACKPAD || SHIELD_CMINI-PT_TRACKBALL
 
     config ZMK_SPLIT
         default y
