@@ -123,7 +123,7 @@
             //hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        lh_hmctrl: homerow_mods_control {
+        lh_hmctrl: left_hand_homerow_mods_control {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
@@ -136,7 +136,7 @@
             //hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        rh_hmctrl: homerow_mods_control {
+        rh_hmctrl: right_hand_homerow_mods_control {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
@@ -149,7 +149,7 @@
             //hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        lh_hmgui: homerow_mods_gui {
+        lh_hmgui: left_hand_homerow_mods_gui {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_GUI";
             #binding-cells = <2>;
@@ -162,7 +162,7 @@
             //hold-trigger-on-release;             // delay positional check until key-release
         };
 
-        rh_hmgui: homerow_mods_gui {
+        rh_hmgui: right_hand_homerow_mods_gui {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS_GUI";
             #binding-cells = <2>;
