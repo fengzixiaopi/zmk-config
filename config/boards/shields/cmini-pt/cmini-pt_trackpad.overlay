@@ -43,11 +43,11 @@
 };
 
 &spi0 {
-    compatible = "nordic,nrf-spim";
     status = "okay";
-    miso-pin = <8>; // P0.08
-    mosi-pin = <20>; // should not be used 
-    sck-pin = <17>; // P0.17
+    compatible = "nordic,nrf-spim";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>; // P0.06
 
     trackpad@0 {
