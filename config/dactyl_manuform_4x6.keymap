@@ -229,7 +229,7 @@
         nav {
             label = "NAV";
             bindings = <
-                &reset  &trans &trans &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &sys_reset  &trans &trans &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                &trans &trans                                            &trans &trans
@@ -269,7 +269,7 @@
         num {
             label = "NUM";
             bindings = <
-                &trans  &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT             &trans  &bt BT_PRV &bt BT_CLR &bt BT_NXT &trans &reset
+                &trans  &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT             &trans  &bt BT_PRV &bt BT_CLR &bt BT_NXT &trans &sys_reset
                 &kp CAPS  &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp GRAVE &kp N1 &kp N2 &kp N3 &kp MINUS           &trans  &trans &trans &trans &trans &trans
                                &trans &trans                                            &trans &trans
