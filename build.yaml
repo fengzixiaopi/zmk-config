@@ -28,3 +28,9 @@ include:
     shield: settings_reset
   - board: nordic_nrf52840_dongle_slicemk 
     shield: reset_nrf52840_dongle
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    uses: petejohanson/zmk/.github/workflows/build-user-config.yml@core/zephyr-3.5-update
