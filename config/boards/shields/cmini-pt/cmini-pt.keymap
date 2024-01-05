@@ -205,7 +205,7 @@
         nav {
             label = "NAV";
             bindings = <
-                &sys_reset  &sys_reset &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &mwh SCROLL_UP &mwh SCROLL_LEFT &mwh SCROLL_RIGHT &mwh SCROLL_DOWN &trans
+                &sys_reset  &sys_reset &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO&kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &mkp LCLK &kp BSPC      &trans &mkp MB4 &mkp MCLK &mkp MB5 &mkp MB5 &trans
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
                                              &trans  &trans                &kp LC(BSPC) &kp LC(ENTER)
