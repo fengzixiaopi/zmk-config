@@ -188,7 +188,6 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                         &lt NAV SPACE  &lt MOUSE TAB                       &lt SYS BSPC  &lt NUM ENTER
             >;
-            trackball-bindings = <&tmv_coarse>;
         };
 
         colemak-dh {
@@ -199,7 +198,6 @@
                 &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
                         &lt NAV SPACE  &lt MOUSE TAB                       &lt SYS BSPC  &lt NUM ENTER
             >;
-            trackball-bindings = <&tmv_coarse>;
         };
 
         nav {
@@ -210,7 +208,6 @@
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
                                              &trans  &trans                &kp LC(BSPC) &kp LC(ENTER)
             >;
-            trackball-bindings = <&tmv_fine>;
         };
 
         mouse {
@@ -221,7 +218,6 @@
                 &kp LG(LA(ENTER))  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LC(ENTER)         &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
                                               &trans  &trans                     &kp BSPC &kp ENTER
             >;
-            trackball-bindings = <&tsl>;
         };
 
 
@@ -233,7 +229,6 @@
                 &trans  &trans &kp CUT &kp COPY &kp PASTE &mkp MB5                &trans  &trans &trans &trans &trans &trans
                                              &trans  &trans               &kp K_STOP2 &kp K_PP
             >;
-            trackball-bindings = <&tmv_coarse>;
         };
 
         num {
@@ -244,7 +239,6 @@
                 &trans  &kp GRAVE &kp N1 &kp N2 &kp N3 &kp MINUS           &trans  &trans &trans &trans &trans &trans
                                              &kp DOT &kp N0                &trans &trans
             >;
-            trackball-bindings = <&tsl>;
         };
 
         sys {
@@ -255,7 +249,6 @@
                 &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &trans &to QWERTY &to COLEMAK_DH &trans &trans
                                              &kp LPAR &kp RPAR                 &trans &trans
             >;
-            trackball-bindings = <&tsl>;
         };
 
         fun {
@@ -265,8 +258,7 @@
                 &trans  &kp F11 &kp F4 &kp F5 &kp F6 &kp SLCK               &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK        &trans  &trans &trans &trans &trans &trans
                                              &kp SPACE &kp TAB              &trans &trans
-            >;
-            trackball-bindings = <&tsl>;    
+            >; 
         };
 
     };
