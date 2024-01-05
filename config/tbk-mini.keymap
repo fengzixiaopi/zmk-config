@@ -225,7 +225,7 @@
         leftmod {
             label = "LEFTMOD";
             bindings = <
-                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &reset
+                &trans  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &sys_reset
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHFT &trans      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
                                              &kp SPACE  &kp TAB  &trans  &trans  &kp BSPC &kp ENTER
@@ -235,7 +235,7 @@
         rightmod {
             label = "RIGHTMOD";
             bindings = <
-                &reset  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
+                &sys_reset  &trans &trans &trans &trans &trans                &trans  &trans &trans &trans &trans &trans
                 &trans  &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans      &trans &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &trans &trans &trans &trans &trans      &trans  &trans &trans &trans &trans &trans
                                              &kp SPACE  &kp TAB  &trans  &trans  &kp BSPC &kp ENTER
@@ -246,7 +246,7 @@
         nav {
             label = "NAV";
             bindings = <
-                &reset  &trans &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
+                &sys_reset  &trans &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
                 &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &kp INSERT &kp HOME &kp PAGE_UP &kp PAGE_DOWN &kp END &trans
                                              &trans  &trans  &trans  &trans  &kp BSPC &kp ENTER
@@ -277,7 +277,7 @@
         num {
             label = "NUM";
             bindings = <
-                &trans  &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT             &trans  &bt BT_PRV &bt BT_CLR &bt BT_NXT &trans &reset
+                &trans  &kp LBKT &kp N7 &kp N8 &kp N9 &kp RBKT             &trans  &bt BT_PRV &bt BT_CLR &bt BT_NXT &trans &sys_reset
                 &kp CAPS  &kp SEMI &kp N4 &kp N5 &kp N6 &kp EQUAL          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp GRAVE &kp N1 &kp N2 &kp N3 &kp MINUS           &trans  &trans &trans &trans &trans &trans
                                              &kp DOT &kp N0 &kp BSLH &trans &trans &trans
