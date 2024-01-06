@@ -1,24 +1,10 @@
 if SHIELD_CMINI_DONGLE
 
     config ZMK_KEYBOARD_NAME
-        default "CMini-Dongle"
+        default "CMini"
         
     config ZMK_SPLIT_BLE_ROLE_CENTRAL
         default y
-
-endif
-
-if SHIELD_CMINI_LEFT
-
-    config ZMK_KEYBOARD_NAME
-        default "CMini-Left"
-
-endif
-
-if SHIELD_CMINI_RIGHT
-
-    config ZMK_KEYBOARD_NAME
-        default "CMini-Right"
 
 endif
 
