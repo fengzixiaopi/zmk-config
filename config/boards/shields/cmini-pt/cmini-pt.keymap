@@ -125,7 +125,7 @@
 
         lh_hmctrl: left_hand_homerow_mods_control {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_CONTROL";
+            label = "LEFT_HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             quick-tap-ms = <125>;
@@ -138,7 +138,7 @@
 
         rh_hmctrl: right_hand_homerow_mods_control {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_CONTROL";
+            label = "RIGHT_HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
             tapping-term-ms = <170>;
             quick-tap-ms = <125>;
@@ -151,7 +151,7 @@
 
         lh_hmgui: left_hand_homerow_mods_gui {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_GUI";
+            label = "LEFT_HOMEROW_MODS_GUI";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
             quick-tap-ms = <125>;
@@ -164,7 +164,7 @@
 
         rh_hmgui: right_hand_homerow_mods_gui {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_GUI";
+            label = "RIGHT_HOMEROW_MODS_GUI";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
             quick-tap-ms = <125>;
