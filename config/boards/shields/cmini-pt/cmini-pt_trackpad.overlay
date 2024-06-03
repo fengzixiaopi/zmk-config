@@ -63,7 +63,7 @@
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>; // P0.06
 
-    trackpad@0 {
+    trackpad: trackpad@0 {
         compatible = "cirque,pinnacle";
         status = "okay";
         reg = <0>;
