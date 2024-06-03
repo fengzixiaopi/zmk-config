@@ -1,13 +1,16 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: tongfeng
       url-base: https://github.com/fengzixiaopi
+    - name: inorichi
+      url-base: https://github.com/inorichi
   projects:
     - name: zmk
-      remote: tongfeng
-      revision: trackball
+      remote: zmkfirmware
+      revision: pt-3.5
       import: app/west.yml
+    - name: zmk-pmw3610-driver
+      remote: inorichi
+      revision: main
   self:
     path: config

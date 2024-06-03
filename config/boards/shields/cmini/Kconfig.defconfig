@@ -1,0 +1,16 @@
+if SHIELD_CMINI_DONGLE
+
+    config ZMK_KEYBOARD_NAME
+        default "CMini"
+        
+    config ZMK_SPLIT_ROLE_CENTRAL
+        default y
+
+endif
+
+if SHIELD_CMINI_DONGLE || SHIELD_CMINI_LEFT || SHIELD_CMINI_RIGHT 
+
+    config ZMK_SPLIT
+        default y
+
+endif
