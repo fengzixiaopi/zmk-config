@@ -18,5 +18,8 @@ manifest:
     - name: zmk-input-behavior-listener
       remote: badjeff
       revision: main
+    - name: cirque-input-module
+      remote: badjeff
+      revision: main
   self:
     path: config
