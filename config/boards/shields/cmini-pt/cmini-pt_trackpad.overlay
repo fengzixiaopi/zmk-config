@@ -63,16 +63,13 @@
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>; // P0.06
 
-    trackpad: trackpad@0 {
+    trackpad: glidepoint@0 {
         compatible = "cirque,pinnacle";
         status = "okay";
         reg = <0>;
         label = "Cirque Trackpad";
         spi-max-frequency = <10000000>;
         dr-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
         invert-x;
         sleep;
         /* no-taps; */
