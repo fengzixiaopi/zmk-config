@@ -15,6 +15,16 @@
 
 
 / {
+    mock_kscan: kscan_0 {
+        compatible = "zmk,kscan-mock";
+        columns = <0>;
+        rows = <0>;
+        events = <0>;
+    };
+};
+
+
+/ {
 	/* define virtual input, will be resurrected for emitting input event */
 	/* NOTE: set `device = <&trackball>` in `zmk,input-listener` */
 	trackball: virtual_input {
