@@ -157,8 +157,6 @@
   trackpad_listener { 
     compatible = "zmk,input-listener";
     device = <&trackpad>;
-    x-input-code = <INPUT_REL_Y>;
-    y-input-code = <INPUT_REL_X>;
   };
 };
 
@@ -169,8 +167,8 @@
         device = <&trackpad>;
         layers = <0 1 2 3 4>;
     evt-type = <INPUT_EV_REL>;
-    x-input-code = <INPUT_REL_X>;
-    y-input-code = <INPUT_REL_WHEEL>;
+    x-input-code = <INPUT_REL_HWHEEL>;
+    y-input-code = <INPUT_REL_HWHEEL>;
     scale-multiplier = <1>;
     scale-divisor = <1>;
         bindings = <&ib_tog_layer 5>;
