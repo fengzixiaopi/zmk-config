@@ -157,6 +157,8 @@
   trackpad_listener { 
     compatible = "zmk,input-listener";
     device = <&trackpad>;
+    x-input-code = <INPUT_REL_Y>;
+    y-input-code = <INPUT_REL_X>;
   };
 };
 
