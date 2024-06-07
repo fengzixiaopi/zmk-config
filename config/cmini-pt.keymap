@@ -95,6 +95,60 @@
 
 
 / {
+    /* define virtual input, will be resurrected for emitting input event */
+    /* NOTE: set `device = <&trackball>` in `zmk,input-listener` */
+    trackball: virtual_input {
+        compatible = "zmk,virtual-input";
+    };
+};
+
+/{
+  trackball_listener { 
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+  };
+};
+
+/{
+  trackball_peripheral_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&trackball>;
+        layers = <0 1 2 3 4 5 6 7>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+   };
+};
+
+/ {
+  /* define virtual input, will be resurrected for emitting input event */
+  /* NOTE: set `device = <&trackpad>` in `zmk,input-listener` */
+  trackpad: virtual_input {
+    compatible = "zmk,virtual-input";
+  };
+};
+
+/{
+  trackpad_listener { 
+    compatible = "zmk,input-listener";
+    device = <&trackpad>;
+  };
+};
+
+/{
+  /* auto toggle mouse key layer */
+  trackpad_peripheral_scroll_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&trackpad>;
+        layers = <0 1 2 3 4 5 6 7>;
+        evt-type = <INPUT_EV_MSC>;
+        x-input-code = <INPUT_REL_MISC>;
+        y-input-code = <INPUT_REL_MISC>;
+   };
+};
+
+
+/ {
 
     behaviors {
         lh_hmsf: left_hand_homerow_mods_shift {
