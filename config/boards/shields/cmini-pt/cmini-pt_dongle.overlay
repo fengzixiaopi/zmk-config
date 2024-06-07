@@ -51,12 +51,7 @@
 	};
 };
 
-/{
-  trackball_listener { 
-    compatible = "zmk,input-listener";
-    device = <&virtual_trackball>;
-  };
-};
+
 
 /{
   trackball_peripheral_listener {
@@ -92,12 +87,6 @@
   };
 };
 
-/{
-  trackpad_listener { 
-    compatible = "zmk,input-listener";
-    device = <&virtual_trackpad>;
-  };
-};
 
 /{
   /* auto toggle mouse key layer */

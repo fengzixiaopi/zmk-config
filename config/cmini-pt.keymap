@@ -93,6 +93,20 @@
     acceleration-exponent = <1>;
 };
 
+/{
+  trackpad_listener { 
+    compatible = "zmk,input-listener";
+    device = <&virtual_trackpad>;
+  };
+};
+
+/{
+  trackball_listener { 
+    compatible = "zmk,input-listener";
+    device = <&virtual_trackball>;
+  };
+};
+
 
 / {
 
