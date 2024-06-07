@@ -130,8 +130,8 @@
         device = <&virtual_trackball>;
         layers = <0 1 2 3 4 5 6 7>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
+        x-input-code = <INPUT_REL_Y>;
+        y-input-code = <INPUT_REL_X>;
    };
 };
 
