@@ -104,9 +104,9 @@
   trackpad_peripheral_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&trackpad>;
-        evt-type = <INPUT_EV_REL>;
+        evt-type = <INPUT_EV_MSC>;
         x-input-code = <INPUT_REL_MISC>;
-        y-input-code = <INPUT_REL_WHEEL>;
+        y-input-code = <INPUT_REL_MISC>;
    };
 };
 
