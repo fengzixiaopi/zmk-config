@@ -71,18 +71,6 @@
 #define COMBO_TIMEOUT 200
 #define MACRO_TAP 10
 #define MACRO_WAIT 0
-#define INPUT_EV_KEY 0x01               /**< Key event */
-#define INPUT_EV_REL 0x02               /**< Relative coordinate event */
-#define INPUT_EV_ABS 0x03               /**< Absolute coordinate event */
-#define INPUT_EV_MSC 0x04               /**< Miscellaneous event */
-#define INPUT_EV_VENDOR_START 0xf0      /**< Vendor specific event start */
-#define INPUT_EV_VENDOR_STOP 0xff       /**< Vendor specific event stop */
-
-#define INPUT_REL_X 0x00                /**< Relative X coordinate */
-#define INPUT_REL_Y 0x01                /**< Relative Y coordinate */
-#define INPUT_REL_WHEEL 0x08            /**< Relative wheel coordinate */
-#define INPUT_REL_HWHEEL 0x06           /**< Relative horizontal wheel coordinate */
-#define INPUT_REL_MISC 0x09             /**< Relative misc coordinate */
 &sk {
     release-after-ms = <2000>;
     quick-release;
@@ -104,59 +92,6 @@
     acceleration-exponent = <1>;
 };
 
-/ {
-    /* define virtual input, will be resurrected for emitting input event */
-    /* NOTE: set `device = <&trackball>` in `zmk,input-listener` */
-    virtual_trackball: virtual_input {
-        compatible = "zmk,virtual-input";
-    };
-};
-
-/ {
-  /* define virtual input, will be resurrected for emitting input event */
-  /* NOTE: set `device = <&trackpad>` in `zmk,input-listener` */
-  virtual_trackpad: virtual_input {
-    compatible = "zmk,virtual-input";
-  };
-};
-
-
-/{
-  trackpad_listener { 
-    compatible = "zmk,input-listener";
-    device = <&virtual_trackpad>;
-  };
-};
-
-/{
-  trackball_listener { 
-    compatible = "zmk,input-listener";
-    device = <&virtual_trackball>;
-  };
-};
-
-/{
-  trackball_peripheral_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&virtual_trackball>;
-        layers = <0 1 2 3 4 5 6 7>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_Y>;
-        y-input-code = <INPUT_REL_X>;
-   };
-};
-
-/{
-  /* auto toggle mouse key layer */
-  trackpad_peripheral_scroll_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&virtual_trackpad>;
-        layers = <0 1 2 3 4 5 6 7>;
-        evt-type = <INPUT_EV_MSC>;
-        x-input-code = <INPUT_REL_MISC>;
-        y-input-code = <INPUT_REL_MISC>;
-   };
-};
 
 
 / {
