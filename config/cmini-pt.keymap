@@ -93,6 +93,23 @@
     acceleration-exponent = <1>;
 };
 
+/ {
+    /* define virtual input, will be resurrected for emitting input event */
+    /* NOTE: set `device = <&trackball>` in `zmk,input-listener` */
+    virtual_trackball: virtual_input {
+        compatible = "zmk,virtual-input";
+    };
+};
+
+/ {
+  /* define virtual input, will be resurrected for emitting input event */
+  /* NOTE: set `device = <&trackpad>` in `zmk,input-listener` */
+  virtual_trackpad: virtual_input {
+    compatible = "zmk,virtual-input";
+  };
+};
+
+
 /{
   trackpad_listener { 
     compatible = "zmk,input-listener";
