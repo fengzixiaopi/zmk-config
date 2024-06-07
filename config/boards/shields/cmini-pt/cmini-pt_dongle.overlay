@@ -32,7 +32,7 @@
 / {
 	/* define virtual input, will be resurrected for emitting input event */
 	/* NOTE: set `device = <&trackball>` in `zmk,input-listener` */
-	trackball: virtual_input {
+	virtual_trackball: virtual_input {
 		compatible = "zmk,virtual-input";
 	};
 };
@@ -47,21 +47,21 @@
 		relay-channel = <102>;
 
 		/* virtual input device on central, which used to emit input event as an agent device */
-		device = <&trackball>;
+		device = <&virtual_trackball>;
 	};
 };
 
 /{
   trackball_listener { 
     compatible = "zmk,input-listener";
-    device = <&trackball>;
+    device = <&virtual_trackball>;
   };
 };
 
 /{
   trackball_peripheral_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
+        device = <&virtual_trackball>;
         layers = <0 1 2 3 4 5 6 7>;
 		evt-type = <INPUT_EV_REL>;
 		x-input-code = <INPUT_REL_X>;
@@ -73,7 +73,7 @@
 / {
   /* define virtual input, will be resurrected for emitting input event */
   /* NOTE: set `device = <&trackpad>` in `zmk,input-listener` */
-  trackpad: virtual_input {
+  virtual_trackpad: virtual_input {
     compatible = "zmk,virtual-input";
   };
 };
@@ -88,14 +88,14 @@
     relay-channel = <103>;
 
     /* virtual input device on central, which used to emit input event as an agent device */
-    device = <&trackpad>;
+    device = <&virtual_trackpad>;
   };
 };
 
 /{
   trackpad_listener { 
     compatible = "zmk,input-listener";
-    device = <&trackpad>;
+    device = <&virtual_trackpad>;
   };
 };
 
@@ -103,7 +103,7 @@
   /* auto toggle mouse key layer */
   trackpad_peripheral_scroll_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackpad>;
+        device = <&virtual_trackpad>;
         layers = <0 1 2 3 4 5 6 7>;
         evt-type = <INPUT_EV_MSC>;
         x-input-code = <INPUT_REL_MISC>;
