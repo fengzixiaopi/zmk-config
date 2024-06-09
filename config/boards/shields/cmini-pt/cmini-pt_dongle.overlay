@@ -1,20 +1,6 @@
 #include "cmini-pt.dtsi"
 
 
-#define INPUT_EV_KEY 0x01               /**< Key event */
-#define INPUT_EV_REL 0x02               /**< Relative coordinate event */
-#define INPUT_EV_ABS 0x03               /**< Absolute coordinate event */
-#define INPUT_EV_MSC 0x04               /**< Miscellaneous event */
-#define INPUT_EV_VENDOR_START 0xf0      /**< Vendor specific event start */
-#define INPUT_EV_VENDOR_STOP 0xff       /**< Vendor specific event stop */
-
-#define INPUT_REL_X 0x00                /**< Relative X coordinate */
-#define INPUT_REL_Y 0x01                /**< Relative Y coordinate */
-#define INPUT_REL_WHEEL 0x08            /**< Relative wheel coordinate */
-#define INPUT_REL_HWHEEL 0x06           /**< Relative horizontal wheel coordinate */
-#define INPUT_REL_MISC 0x09             /**< Relative misc coordinate */
-
-
 / {
     chosen {
         zmk,kscan = &mock_kscan;
@@ -76,27 +62,5 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                   RC(2,11) RC(2,
     /* virtual input device on central, which used to emit input event as an agent device */
     device = <&vtrackpad>;
   };
-};
-
-
-
-/{
-  trackball_peripheral_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
-        layers = <0 1 2 3 4 5 6 7>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-   };
-
-  trackpad_peripheral_scroll_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackpad>;
-        layers = <0 1 2 3 4 5 6 7>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_HWHEEL>;
-   };
 };
 
