@@ -44,11 +44,11 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                   RC(2,11) RC(2,
 };
 
 / {
-  vtrackball: virtual_input {
+  vtrackball: virtual_input_trackball {
       compatible = "zmk,virtual-input";
   };
 
-  vtrackpad: virtual_input {
+  vtrackpad: virtual_input_trackpad {
     compatible = "zmk,virtual-input";
   };
 };
