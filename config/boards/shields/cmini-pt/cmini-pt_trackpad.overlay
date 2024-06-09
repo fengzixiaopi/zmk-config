@@ -70,9 +70,6 @@
         label = "Cirque Trackpad";
         spi-max-frequency = <10000000>;
         dr-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_WHEEL>;
-        y-input-code = <INPUT_REL_MISC>;
         rotate-90;
         no-smoothing;
         no-taps;
@@ -83,9 +80,9 @@
     cirque_listener {
       compatible = "zmk,input-listener";
       device = <&trackpad>;
-      y-invert;
-      scale-multiplier = <3>;
-      scale-divisor = <1>;
+      evt-type = <INPUT_EV_REL>;
+      x-input-code = <INPUT_REL_WHEEL>;
+      y-input-code = <INPUT_REL_MISC>;
     };
   };
 
