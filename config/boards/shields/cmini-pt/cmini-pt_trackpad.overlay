@@ -71,6 +71,7 @@
         spi-max-frequency = <10000000>;
         dr-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
         rotate-90;
+        no-smoothing;
         no-taps;
     };
 };
