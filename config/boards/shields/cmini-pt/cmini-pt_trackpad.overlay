@@ -80,6 +80,16 @@
 };
 
 / {
+    cirque_listener {
+      compatible = "zmk,input-listener";
+      device = <&trackpad>;
+      y-invert;
+      scale-multiplier = <3>;
+      scale-divisor = <1>;
+    };
+  };
+
+/ {
   vtrackpad: virtual_input_trackpad {
     compatible = "zmk,virtual-input";
   };
