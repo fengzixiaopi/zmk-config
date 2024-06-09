@@ -76,10 +76,6 @@
 
 
 / {
-  trackball: virtual_input {
-      compatible = "zmk,virtual-input";
-  };
-
   trackpad: virtual_input {
     compatible = "zmk,virtual-input";
   };
