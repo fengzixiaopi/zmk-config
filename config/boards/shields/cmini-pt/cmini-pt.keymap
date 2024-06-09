@@ -88,6 +88,16 @@
 };
 
 /{
+
+  trackpad_peripheral_scroll_listener {
+        compatible = "zmk,input-behavior-listener";
+        device = <&vtrackpad>;
+        layers = <0 1 2 3 4 5 6 7>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_WHEEL>;
+        y-input-code = <INPUT_REL_MISC>;
+   };
+   
   trackball_peripheral_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
@@ -104,15 +114,6 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
-   };
-
-  trackpad_peripheral_scroll_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackpad>;
-        layers = <0 1 2 3 4 5 6 7>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_WHEEL>;
-        y-input-code = <INPUT_REL_MISC>;
    };
 };
 
