@@ -44,11 +44,11 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                   RC(2,11) RC(2,
 };
 
 / {
-  trackball: virtual_input {
+  vtrackball: virtual_input {
       compatible = "zmk,virtual-input";
   };
 
-  trackpad: virtual_input {
+  vtrackpad: virtual_input {
     compatible = "zmk,virtual-input";
   };
 };
@@ -63,7 +63,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                   RC(2,11) RC(2,
 		relay-channel = <102>;
 
 		/* virtual input device on central, which used to emit input event as an agent device */
-		device = <&trackball>;
+		device = <&vtrackball>;
 	};
 
   input_relay_config_trackpad {
@@ -74,7 +74,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                   RC(2,11) RC(2,
     relay-channel = <103>;
 
     /* virtual input device on central, which used to emit input event as an agent device */
-    device = <&trackpad>;
+    device = <&vtrackpad>;
   };
 };
 
@@ -83,7 +83,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                   RC(2,11) RC(2,
 /{
   trackball_peripheral_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
+        device = <&vtrackball>;
         layers = <0 1 2 3 4 5 6 7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
@@ -92,7 +92,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                   RC(2,11) RC(2,
 
   trackpad_peripheral_scroll_listener {
         compatible = "zmk,input-behavior-listener";
-        device = <&trackpad>;
+        device = <&vtrackpad>;
         layers = <0 1 2 3 4 5 6 7>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
