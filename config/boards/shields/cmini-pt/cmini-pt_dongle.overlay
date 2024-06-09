@@ -95,7 +95,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                   RC(2,11) RC(2,
         device = <&vtrackpad>;
         layers = <0 1 2 3 4 5 6 7>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_WHEEL>;
+        x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_HWHEEL>;
    };
 };
