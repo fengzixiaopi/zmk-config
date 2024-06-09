@@ -84,13 +84,6 @@
 };
 
 / {
-  trackball: virtual_input {
-      compatible = "zmk,virtual-input";
-  };
-};
-
-
-/ {
     input_relay_config_trackball {
         compatible = "zmk,split-peripheral-input-relay";
         
