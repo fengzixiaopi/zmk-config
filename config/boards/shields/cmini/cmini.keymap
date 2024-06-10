@@ -81,7 +81,7 @@
 };
 
 &lt { 
-    flavor = "hold-preferred";
+    flavor = "tap-preferred";
     tapping-term-ms = <135>;
     quick-tap-ms = <185>; 
 };
@@ -195,8 +195,8 @@
         nav {
             label = "NAV";
             bindings = <
-                &sys_reset  &trans &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO &trans &trans &trans &trans &trans
-                &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC     &trans&trans  &trans &trans &trans &trans
+                &sys_reset  &trans &kp LC(LS(R)) &kp LC(W) &trans &kp DEL                &kp REDO &trans &trans &trans &trans &trans
+                &trans  &trans &kp LC(LS(F)) &kp LC(S) &kp LC(F) &kp BSPC     &trans&trans  &trans &trans &trans &trans
                 &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &trans  &trans &trans &trans &trans &trans
                                              &trans  &trans  &trans  &trans  &kp LC(BSPC) &kp LC(ENTER)
             >;
