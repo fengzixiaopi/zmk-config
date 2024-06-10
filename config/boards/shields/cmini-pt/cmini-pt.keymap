@@ -96,7 +96,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_WHEEL>;
         y-input-code = <INPUT_REL_MISC>;
-        bindings = <&ib_wheel_scaler 1 8>;
+        bindings = <&ib_wheel_scaler 8 1>;
    }; 
 
     ib_wheel_scaler: ib_wheel_scaler {
