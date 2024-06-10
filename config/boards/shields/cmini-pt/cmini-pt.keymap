@@ -94,9 +94,9 @@
         device = <&vtrackpad>;
         layers = <0 1 2 3 4 5 6 7>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        //bindings = <&ib_wheel_scaler 1 8>;
+        x-input-code = <INPUT_REL_WHEEL>;
+        y-input-code = <INPUT_REL_MISC>;
+        bindings = <&ib_wheel_scaler 1 8>;
    }; 
 
     ib_wheel_scaler: ib_wheel_scaler {
