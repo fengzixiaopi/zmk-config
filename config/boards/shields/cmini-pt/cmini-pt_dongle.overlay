@@ -57,7 +57,7 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                   RC(2,11) RC(2,
     
     /* channel id, used to filter incoming annotated input event from split peripheral */
     /* NOTE: should matching relay-channel on peripheral overlay */
-    relay-channel = <103>;
+    relay-channel = <203>;
 
     /* virtual input device on central, which used to emit input event as an agent device */
     device = <&vtrackpad>;

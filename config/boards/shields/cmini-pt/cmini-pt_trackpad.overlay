@@ -92,7 +92,7 @@
     
     /* channel id, used to filter incoming annotated input event from split peripheral */
     /* NOTE: should matching relay-channel on peripheral overlay */
-    relay-channel = <103>;
+    relay-channel = <203>;
 
     /* virtual input device on central, which used to emit input event as an agent device */
     device = <&trackpad>;
