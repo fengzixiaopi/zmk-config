@@ -94,8 +94,8 @@
         device = <&vtrackpad>;
         layers = <0 1 2 3 4 5 6 7>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_WHEEL>;
-        y-input-code = <INPUT_REL_MISC>;
+        x-input-code = <INPUT_REL_Y>;
+        y-input-code = <INPUT_REL_X>;
         bindings = <&ib_wheel_scaler 1 8>;
    }; 
 
