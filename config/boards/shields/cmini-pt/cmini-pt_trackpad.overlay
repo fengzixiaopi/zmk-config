@@ -70,7 +70,7 @@
         label = "Cirque Trackpad";
         spi-max-frequency = <10000000>;
         dr-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
-        no-taps;
+        //no-taps;
     };
 };
 
