@@ -6,13 +6,12 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/mouse.h>
 #define QWERTY 0
-#define COLEMAK_DH 1
-#define NAV 2
-#define MOUSE 3
-#define MEDIA 4
-#define NUM 5
-#define SYS 6
-#define FUN 7
+#define NAV 1
+#define MOUSE 2
+#define MEDIA 3
+#define NUM 4
+#define SYS 5
+#define FUN 6
 
 
 #define UNDO LC(Z)
@@ -92,7 +91,7 @@
   trackpad_peripheral_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackpad>;
-        layers = <0 1 2 3 4 5 6 7>;
+        layers = <QWERTY NAV MOUSE MEDIA NUM SYS FUN>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_WHEEL>;
         y-input-code = <INPUT_REL_MISC>;
@@ -101,7 +100,6 @@
 
     ib_wheel_scaler: ib_wheel_scaler {
             compatible = "zmk,input-behavior-scaler";
-            #binding-cells = <2>;
             evt-type = <INPUT_EV_REL>;
             input-code = <INPUT_REL_WHEEL>;
     };
@@ -109,19 +107,10 @@
   trackball_peripheral_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0 1 2 4 5 6 7>;
+        layers = <QWERTY NAV MOUSE MEDIA NUM SYS FUN>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-   };
-
-   trackball_peripheral_scroll_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
-        layers = <3>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_MISC>;
-        y-input-code = <INPUT_REL_WHEEL>;
    };
 };
 
@@ -221,17 +210,7 @@
                         &lt NAV SPACE  &lt MOUSE TAB                       &lt SYS BSPC  &lt NUM ENTER
             >;
         };
-
-        colemak-dh {
-            label = "COLEMAK-DH";
-            bindings = <
-                &kp GRAVE   &kp Q  &kp W  &kp F  &kp P  &kp B               &kp J  &kp L  &kp U     &kp Y   &kp SEMI    &kp BSPC
-                &kp LSHIFT &lh_hmgui LGUI A  &lh_hmgui LALT R  &lh_hmctrl LCTRL S  &lh_hmsf LSHIFT T  &kp G               &kp M  &rh_hmsf RSHIFT N  &rh_hmctrl RCTRL E     &rh_hmgui LALT I   &rh_hmgui RGUI O &kp SQT
-                &caps_word &kp Z  &kp X  &kp C  &kp D  &kp V               &kp K  &kp H  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                        &lt NAV SPACE  &lt MOUSE TAB                       &lt SYS BSPC  &lt NUM ENTER
-            >;
-        };
-
+        
         nav {
             label = "NAV";
             bindings = <
