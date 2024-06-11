@@ -210,7 +210,7 @@
                         &lt NAV SPACE  &lt MOUSE TAB                       &lt SYS BSPC  &lt NUM ENTER
             >;
         };
-        
+
         nav {
             label = "NAV";
             bindings = <
@@ -257,7 +257,7 @@
             bindings = <
                 &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &sys_reset &sys_reset
                 &kp CAPS  &kp DQT &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
-                &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &trans &to QWERTY &to COLEMAK_DH &trans &trans
+                &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &trans &trans &trans &trans &trans
                                              &kp LPAR &kp RPAR                 &trans &trans
             >;
         };
