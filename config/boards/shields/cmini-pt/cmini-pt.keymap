@@ -114,7 +114,7 @@
         y-input-code = <INPUT_REL_Y>;
    };
 
-   trackball_peripheral_listener {
+   trackball_peripheral_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
         layers = <MOUSE>;
