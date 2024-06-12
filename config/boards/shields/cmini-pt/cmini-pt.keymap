@@ -8,10 +8,8 @@
 #define QWERTY 0
 #define NAV 1
 #define MOUSE 2
-#define MEDIA 3
-#define NUM 4
-#define SYS 5
-#define FUN 6
+#define NUM 3
+#define SYS 4
 
 
 #define UNDO LC(Z)
@@ -82,7 +80,7 @@
 
 &lt { 
     flavor = "tap-preferred";
-    tapping-term-ms = <135>;
+    tapping-term-ms = <125>;
     quick-tap-ms = <185>; 
 };
 
@@ -91,7 +89,7 @@
   trackpad_peripheral_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackpad>;
-        layers = <QWERTY NAV MOUSE MEDIA NUM SYS FUN>;
+        layers = <QWERTY NAV MOUSE NUM SYS>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_WHEEL>;
         y-input-code = <INPUT_REL_MISC>;
@@ -108,7 +106,7 @@
   trackball_peripheral_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <QWERTY NAV MEDIA NUM SYS FUN>;
+        layers = <QWERTY NAV NUM SYS>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -224,33 +222,23 @@
         nav {
             label = "NAV";
             bindings = <
-                &sys_reset  &sys_reset &kp LC(LS(R)) &kp LC(W) &kp LC(R) &kp DEL                &kp REDO&kp CUT &kp COPY &kp PASTE &kp UNDO &trans
-                &trans  &kp LC(A) &kp LC(LS(F)) &kp LC(S) &mkp LCLK &kp BSPC      &trans &mkp MB4 &mkp MCLK &mkp MB5 &mkp MB5 &trans
-                &trans  &kp UNDO &kp CUT &kp COPY &kp PASTE &kp ENTER      &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
-                                             &trans  &trans                &kp LC(BSPC) &kp LC(ENTER)
+                &sys_reset  &trans &trans &trans &trans &kp DEL                &kp UNDO &kp CUT &kp COPY &kp PASTE &kp REDO &trans
+                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp BSPC      &kp CAPS &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
+                &trans  &trans &trans &trans &trans &kp ENTER       &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
+                                             &trans  &trans                &kp BSPC &kp ENTER
             >;
         };
 
         mouse {
             label = "MOUSE";
             bindings = <
-                &sys_reset  &sys_reset &kp LC(LS(N4)) &trans &kp LC(GRAVE) &kp LG(RIGHT)                &kp REDO &kp CUT &kp COPY &kp PASTE &kp UNDO &trans
-                &trans  &kp LC(LS(D)) &kp LC(D) &kp LC(B) &mkp LCLK &kp LG(LEFT)      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
-                &kp LG(LA(ENTER))  &kp LG(LA(UP)) &kp LG(LA(LEFT)) &kp LG(LA(RIGHT)) &kp LG(LA(DOWN)) &kp LC(ENTER)         &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
-                                              &trans  &trans                     &kp BSPC &kp ENTER
+                &sys_reset  &trans &trans &trans &trans &kp DEL                &kp UNDO &kp CUT &kp COPY &kp PASTE &kp REDO &trans
+                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp BSPC      &kp CAPS &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
+                &trans  &trans &trans &trans &trans &kp ENTER       &mkp MB4 &mkp LCLK &mkp MCLK &mkp RCLK &mkp MB5 &trans
+                                             &trans  &trans                &kp BSPC &kp ENTER
             >;
         };
 
-
-        media {
-            label = "MEDIA";
-            bindings = <
-                &trans  &sys_reset &ext_power EP_OFF &ext_power EP_TOG &ext_power EP_ON &trans                &trans  &trans &trans &trans &trans &trans
-                &trans  &trans &mkp RCLK &mkp MCLK &mkp LCLK &mkp MB4      &trans  &kp K_PREV &kp K_VOL_DN &kp K_VOL_UP &kp K_NEXT &trans
-                &trans  &trans &kp CUT &kp COPY &kp PASTE &mkp MB5                &trans  &trans &trans &trans &trans &trans
-                                             &trans  &trans               &kp K_STOP2 &kp K_PP
-            >;
-        };
 
         num {
             label = "NUM";
@@ -265,23 +253,12 @@
         sys {
             label = "SYS";
             bindings = <
-                &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &sys_reset &sys_reset
+                &trans  &kp LBRC &kp AMPERSAND &kp ASTERISK &kp LPAR &kp RBRC             &trans  &out OUT_USB &out OUT_TOG &out OUT_BLE &trans &sys_reset
                 &kp CAPS  &kp DQT &kp DOLLAR &kp PERCENT &kp CARET &kp PLUS          &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
                 &trans  &kp TILDE &kp EXCL &kp AT &kp HASH &kp UNDER           &trans  &trans &trans &trans &trans &trans
                                              &kp LPAR &kp RPAR                 &trans &trans
             >;
         };
-
-        fun {
-            label = "FUN";
-            bindings = <
-                &trans  &kp F12 &kp F7 &kp F8 &kp F9 &kp PSCRN              &trans  &ext_power EP_ON &ext_power EP_TOG &ext_power EP_OFF &sys_reset &trans
-                &trans  &kp F11 &kp F4 &kp F5 &kp F6 &kp SLCK               &trans  &kp RSHFT &kp RCTRL &kp LALT &kp RGUI &trans
-                &trans  &kp F10 &kp F1 &kp F2 &kp F3 &kp PAUSE_BREAK        &trans  &trans &trans &trans &trans &trans
-                                             &kp SPACE &kp TAB              &trans &trans
-            >; 
-        };
-
     };
 };
  
