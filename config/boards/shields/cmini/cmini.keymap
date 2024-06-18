@@ -93,57 +93,109 @@
         left_bkt {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <P_W P_R>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
         };
 
         right_bkt {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <P_U P_O>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
         };
 
         left_par {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <P_S P_F>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
         };
 
         right_par {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <P_J P_L>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
         };
 
         left_brace {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <P_X P_V>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
         };
 
         right_brace {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <P_M P_DOT>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
         };
 
         bac {
             bindings = <&kp BACKSLASH>;
             key-positions = <P_B P_N>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
         };
 
         slash {
             bindings = <&kp FSLH>;
             key-positions = <P_G P_H>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
         };
 
         pipe {
             bindings = <&kp PIPE>;
             key-positions = <P_T P_Y>;
-            timeout-ms = <50>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        copy {
+            bindings = <&kp COPY>;
+            key-positions = <P_X P_C>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        paste {
+            bindings = <&kp PASTE>;
+            key-positions = <P_C P_V>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        esc {
+            bindings = <&kp ESC>;
+            key-positions = <P_W P_E>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        delete {
+            bindings = <&kp DEL>;
+            key-positions = <P_E P_R>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <P_S P_D>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <P_D P_F>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
         };
     };
+
 
     behaviors {
         lh_hmsf: left_hand_homerow_mods_shift {
