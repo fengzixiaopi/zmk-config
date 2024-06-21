@@ -62,11 +62,13 @@
 
 #define KEYS_L P_ESC P_Q P_W P_E P_R P_T P_TAB P_A P_S P_D P_F P_G P_CAPS P_Z P_X P_C P_V P_B 
 #define KEYS_R P_Y P_U P_I P_O P_P P_BSPC P_H P_J P_K P_L P_SEMI P_SQT P_N P_M P_COMMA P_DOT P_FSLH P_BSLH 
-#define THUMBS P_NAV P_MOUSE P_SYS P_NUM
+#define THUMBS_L P_NAV P_MOUSE P_RIGHT
+#define THUMBS_R P_SYS P_NUM P_LEFT
 
 #define COMBO_TIMEOUT 200
 #define MACRO_TAP 10
 #define MACRO_WAIT 0
+
 &sk {
     release-after-ms = <2000>;
     quick-release;
@@ -78,8 +80,9 @@
 
 &lt { 
     flavor = "tap-preferred";
-    tapping-term-ms = <125>;
+    tapping-term-ms = <175>;
     quick-tap-ms = <185>; 
+    require-prior-idle-ms = <125>;
 };
 
 /{
@@ -236,10 +239,11 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <175>;                       
             quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
             global-quick-tap;     
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-key-positions = <KEYS_R THUMBS_L>;
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmsf: right_hand_homerow_mods_shift {
@@ -249,10 +253,11 @@
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <175>;                       
             quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
             global-quick-tap;       
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         lh_hmctrl: left_hand_homerow_mods_control {
@@ -261,11 +266,12 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
             global-quick-tap;
             flavor = "tap-preferred";    
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-key-positions = <KEYS_R THUMBS_L>;
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmctrl: right_hand_homerow_mods_control {
@@ -274,11 +280,12 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;
             quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
             global-quick-tap;
             flavor = "tap-preferred";       
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         lh_hmgui: left_hand_homerow_mods_gui {
@@ -287,11 +294,12 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
             global-quick-tap;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-key-positions = <KEYS_R THUMBS_L>;
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmgui: right_hand_homerow_mods_gui {
@@ -300,12 +308,14 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <125>;
+            require-prior-idle-ms = <125>;
             global-quick-tap;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
+            hold-trigger-on-release;             // delay positional check until key-release
         };
+    };
     };
 
 
