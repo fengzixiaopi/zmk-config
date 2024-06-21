@@ -316,7 +316,6 @@
             hold-trigger-on-release;             // delay positional check until key-release
         };
     };
-    };
 
 
     keymap {
