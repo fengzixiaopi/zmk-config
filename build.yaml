@@ -25,8 +25,6 @@ include:
   - board: nice_nano_v2 
     shield: cmini-pt_dongle
   - board: nordic_nrf52840_dongle_slicemk 
-    shield: cmini-pt_dongle
-  - board: nordic_nrf52840_dongle_slicemk 
     shield: cmini_dongle
   - board: nice_nano_v2
     shield: settings_reset
