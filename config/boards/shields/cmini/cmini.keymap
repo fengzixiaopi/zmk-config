@@ -84,7 +84,6 @@
     tapping-term-ms = <280>;
     quick-tap-ms = <175>;                // repeat on tap-into-hold
     require-prior-idle-ms = <150>;
-    hold-trigger-on-release;             // delay positional check until key-release
 };
 
 / {
@@ -209,8 +208,6 @@
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmsf: right_hand_homerow_mods_shift {
@@ -222,8 +219,6 @@
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         lh_hmctrl: left_hand_homerow_mods_control {
@@ -235,8 +230,6 @@
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmctrl: right_hand_homerow_mods_control {
@@ -247,9 +240,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             require-prior-idle-ms = <150>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-            hold-trigger-on-release;             // delay positional check until key-release
+            bindings = <&kp>, <&kp>; 
         };
 
         lh_hmgui: left_hand_homerow_mods_gui {
@@ -261,8 +252,6 @@
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmgui: right_hand_homerow_mods_gui {
@@ -274,8 +263,6 @@
             quick-tap-ms = <175>;                // repeat on tap-into-hold
             require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
     };
     keymap {
