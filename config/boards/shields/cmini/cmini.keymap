@@ -80,9 +80,11 @@
 };
 
 &lt { 
-    flavor = "tap-preferred";
-    tapping-term-ms = <125>;
-    quick-tap-ms = <185>; 
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <175>;                // repeat on tap-into-hold
+    require-prior-idle-ms = <150>;
+    hold-trigger-on-release;             // delay positional check until key-release
 };
 
 / {
@@ -202,78 +204,78 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <175>;                       
-            quick-tap-ms = <125>;
-            global-quick-tap;     
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmsf: right_hand_homerow_mods_shift {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
-            tapping-term-ms = <175>;                       
-            quick-tap-ms = <125>;
-            global-quick-tap;       
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         lh_hmctrl: left_hand_homerow_mods_control {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";    
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmctrl: right_hand_homerow_mods_control {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";       
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         lh_hmgui: left_hand_homerow_mods_gui {
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS_GUI";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmgui: right_hand_homerow_mods_gui {
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_GUI";
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            flavor = "tap-preferred";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <150>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
-            //hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-on-release;             // delay positional check until key-release
         };
     };
     keymap {
