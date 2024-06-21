@@ -234,7 +234,7 @@
             label = "LEFT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <150>;                       
+            tapping-term-ms = <175>;                       
             quick-tap-ms = <125>;
             global-quick-tap;     
             bindings = <&kp>, <&kp>;
@@ -247,7 +247,7 @@
             label = "RIGHT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <150>;                       
+            tapping-term-ms = <175>;                       
             quick-tap-ms = <125>;
             global-quick-tap;       
             bindings = <&kp>, <&kp>;
@@ -259,7 +259,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <125>;
             global-quick-tap;
             flavor = "tap-preferred";    
@@ -272,7 +272,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <125>;
             global-quick-tap;
             flavor = "tap-preferred";       
@@ -285,7 +285,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS_GUI";
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             global-quick-tap;
             flavor = "tap-preferred";
@@ -298,14 +298,14 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_GUI";
             #binding-cells = <2>;
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <125>;
             global-quick-tap;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS>;
             //hold-trigger-on-release;             // delay positional check until key-release
-        };
+        };ks
     };
 
 

@@ -203,7 +203,7 @@
             label = "LEFT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <150>;                       
+            tapping-term-ms = <175>;                       
             quick-tap-ms = <125>;
             global-quick-tap;     
             bindings = <&kp>, <&kp>;
@@ -216,7 +216,7 @@
             label = "RIGHT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
-            tapping-term-ms = <150>;                       
+            tapping-term-ms = <175>;                       
             quick-tap-ms = <125>;
             global-quick-tap;       
             bindings = <&kp>, <&kp>;
@@ -228,7 +228,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <125>;
             global-quick-tap;
             flavor = "tap-preferred";    
@@ -241,7 +241,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_CONTROL";
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <125>;
             global-quick-tap;
             flavor = "tap-preferred";       
