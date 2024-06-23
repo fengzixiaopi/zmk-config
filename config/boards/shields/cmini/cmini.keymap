@@ -293,7 +293,7 @@
                 &kp GRAVE   &kp Q  &kp W  &kp E  &kp R  &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &kp BSPC
                 &kp LSHIFT &lh_hmgui LGUI A  &lh_hmgui LALT S  &lh_hmctrl LCTRL D  &lh_hmsf LSHIFT F  &kp G               &kp H  &rh_hmsf RSHIFT J  &rh_hmctrl RCTRL K     &rh_hmgui LALT L   &rh_hmgui RGUI SEMI &kp SQT
                 &caps_word &kp Z  &kp X  &kp C  &kp V  &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                       &lt MEDIA ESC &lt NAV SPACE  &lt MOUSE TAB           &lt NUM ENTER  &lt FUN DEL &lt SYS BSPC 
+                       &lt NAV SPACE &lt MOUSE TAB &lt MEDIA ESC &lt FUN DEL &lt SYS BSPC &lt NUM ENTER 
             >;
         };
 
@@ -303,7 +303,7 @@
                 &sys_reset  &trans &trans &trans &trans &kp DEL                &kp UNDO &kp CUT &kp COPY &kp PASTE &kp REDO &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp BSPC     &kp CAPS &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &trans &trans &trans &trans &kp ENTER      &kp HOME  &kp PAGE_UP &kp INSERT &kp PAGE_DOWN &kp END &trans
-                                             &trans  &trans  &trans   &kp ENTER &kp DEL &kp BSPC
+                                             &trans  &trans  &trans   &kp DEL &kp BSPC &kp ENTER 
             >;
         };
 
@@ -313,7 +313,7 @@
                 &sys_reset  &trans &trans &trans &trans &trans                &kp UNDO &kp CUT &kp COPY &kp PASTE &kp REDO &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &trans      &kp CAPS &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &trans &trans &trans &trans &trans      &kp HOME  &kp PAGE_UP &kp INSERT &kp PAGE_DOWN &kp END &trans
-                                              &trans  &trans  &trans  &kp ENTER &kp DEL &kp BSPC
+                                              &trans  &trans  &trans  &kp DEL &kp BSPC &kp ENTER
             >;
         };
 
