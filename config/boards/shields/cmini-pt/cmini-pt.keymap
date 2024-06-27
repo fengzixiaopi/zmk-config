@@ -163,7 +163,7 @@
         y-input-code = <INPUT_REL_WHEEL>;
    };
 
-   combos {
+    combos {
         compatible = "zmk,combos";
 
         left_bkt {
@@ -272,6 +272,7 @@
         };
     };
 
+
     behaviors {
         lh_hmsf: left_hand_homerow_mods_shift {
             compatible = "zmk,behavior-hold-tap";
@@ -283,8 +284,7 @@
             require-prior-idle-ms = <125>;
             global-quick-tap;     
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-key-positions = <KEYS_R THUMBS_L THUMBS_R>;
         };
 
         rh_hmsf: right_hand_homerow_mods_shift {
@@ -297,8 +297,7 @@
             require-prior-idle-ms = <125>;
             global-quick-tap;       
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
+            hold-trigger-key-positions = <KEYS_L THUMBS_L THUMBS_R>;
         };
 
         lh_hmctrl: left_hand_homerow_mods_control {
@@ -311,8 +310,6 @@
             global-quick-tap;
             flavor = "tap-preferred";    
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmctrl: right_hand_homerow_mods_control {
@@ -325,8 +322,6 @@
             global-quick-tap;
             flavor = "tap-preferred";       
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         lh_hmgui: left_hand_homerow_mods_gui {
@@ -339,8 +334,6 @@
             global-quick-tap;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmgui: right_hand_homerow_mods_gui {
@@ -353,8 +346,6 @@
             global-quick-tap;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
     };
 

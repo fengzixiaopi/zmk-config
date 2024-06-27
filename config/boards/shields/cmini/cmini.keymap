@@ -210,7 +210,7 @@
             require-prior-idle-ms = <125>;
             global-quick-tap;     
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS_L>;
+            hold-trigger-key-positions = <KEYS_R THUMBS_L THUMBS_R>;
         };
 
         rh_hmsf: right_hand_homerow_mods_shift {
@@ -223,7 +223,7 @@
             require-prior-idle-ms = <125>;
             global-quick-tap;       
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
+            hold-trigger-key-positions = <KEYS_L THUMBS_L THUMBS_R>;
         };
 
         lh_hmctrl: left_hand_homerow_mods_control {
@@ -236,7 +236,6 @@
             global-quick-tap;
             flavor = "tap-preferred";    
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS_L>;
         };
 
         rh_hmctrl: right_hand_homerow_mods_control {
@@ -249,7 +248,6 @@
             global-quick-tap;
             flavor = "tap-preferred";       
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
         };
 
         lh_hmgui: left_hand_homerow_mods_gui {
@@ -262,7 +260,6 @@
             global-quick-tap;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_R THUMBS_L>;
         };
 
         rh_hmgui: right_hand_homerow_mods_gui {
@@ -275,7 +272,6 @@
             global-quick-tap;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS_L>;
         };
     };
     keymap {
