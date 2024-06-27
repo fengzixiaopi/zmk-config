@@ -211,7 +211,6 @@
             global-quick-tap;     
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmsf: right_hand_homerow_mods_shift {
@@ -225,7 +224,6 @@
             global-quick-tap;       
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         lh_hmctrl: left_hand_homerow_mods_control {
@@ -239,7 +237,6 @@
             flavor = "tap-preferred";    
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmctrl: right_hand_homerow_mods_control {
@@ -253,7 +250,6 @@
             flavor = "tap-preferred";       
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         lh_hmgui: left_hand_homerow_mods_gui {
@@ -267,7 +263,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
 
         rh_hmgui: right_hand_homerow_mods_gui {
@@ -281,7 +276,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L THUMBS_L>;
-            hold-trigger-on-release;             // delay positional check until key-release
         };
     };
     keymap {
