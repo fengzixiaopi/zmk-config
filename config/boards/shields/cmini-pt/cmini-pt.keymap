@@ -17,6 +17,11 @@
 #define COPY LC(C)
 #define CUT LC(X)
 #define PASTE LC(V)
+#define CLOSE LC(W)
+#define REFRESH LC(R)
+#define SAVE LC(S)
+#define FIND LC(F)
+#define FINDALL LC(LS(F))
 
 #define P_ESC 0
 #define P_Q 1
@@ -243,30 +248,100 @@
             require-prior-idle-ms = <125>;
         };
 
-        esc {
-            bindings = <&kp ESC>;
+        close {
+            bindings = <&kp CLOSE>;
             key-positions = <P_W P_E>;
             timeout-ms = <80>;
             require-prior-idle-ms = <125>;
         };
 
-        delete {
-            bindings = <&kp DEL>;
+        refresh {
+            bindings = <&kp REFRESH>;
             key-positions = <P_E P_R>;
             timeout-ms = <80>;
             require-prior-idle-ms = <125>;
         };
 
-        grave {
-            bindings = <&kp GRAVE>;
+        findall {
+            bindings = <&kp FINDALL>;
             key-positions = <P_S P_D>;
             timeout-ms = <80>;
             require-prior-idle-ms = <125>;
         };
 
-        minus {
-            bindings = <&kp MINUS>;
+        find {
+            bindings = <&kp FIND>;
             key-positions = <P_D P_F>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        save {
+            bindings = <&kp SAVE>;
+            key-positions = <P_E P_D>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        cut {
+            bindings = <&kp CUT>;
+            key-positions = <P_D P_C>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        caps {
+            bindings = <&kp CAPS>;
+            key-positions = <P_G P_H>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        lClick {
+            bindings = <&mkp LCLK>;
+            key-positions = <P_J P_K>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        rClick {
+            bindings = <&mkp RCLK>;
+            key-positions = <P_K P_L>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        back {
+            bindings = <&mkp MB4>;
+            key-positions = <P_J P_K>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        forward {
+            bindings = <&mkp MB5>;
+            key-positions = <P_K P_L>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        selectAll {
+            bindings = <&kp LC(A)>;
+            key-positions = <P_F P_G>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        undo {
+            bindings = <&kp UNDO>;
+            key-positions = <P_V P_B>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <125>;
+        };
+
+        redo {
+            bindings = <&kp REDO>;
+            key-positions = <P_R P_T>;
             timeout-ms = <80>;
             require-prior-idle-ms = <125>;
         };
