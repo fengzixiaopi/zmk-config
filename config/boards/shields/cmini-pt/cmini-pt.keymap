@@ -344,7 +344,7 @@
             key-positions = <P_R P_T>;
             timeout-ms = <80>;
             require-prior-idle-ms = <125>;
-        };e
+        };
     };
 
 
