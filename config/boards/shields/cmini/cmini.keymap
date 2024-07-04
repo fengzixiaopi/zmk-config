@@ -241,14 +241,14 @@
 
         back {
             bindings = <&mkp MB4>;
-            key-positions = <P_J P_K>;
+            key-positions = <P_M P_COMMA>;
             timeout-ms = <80>;
             require-prior-idle-ms = <125>;
         };
 
         forward {
             bindings = <&mkp MB5>;
-            key-positions = <P_K P_L>;
+            key-positions = <P_COMMA P_DOT>;
             timeout-ms = <80>;
             require-prior-idle-ms = <125>;
         };
