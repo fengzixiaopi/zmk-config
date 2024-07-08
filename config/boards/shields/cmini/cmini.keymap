@@ -396,7 +396,7 @@
             label = "NAV";
             bindings = <
                 &sys_reset  &trans &trans &trans &trans &kp DEL                &kp UNDO &kp CUT &kp COPY &kp PASTE &kp REDO &trans
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp BSPC     &kp CAPS &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
+                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp BSPC     &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &trans &trans &trans &trans &kp ENTER      &kp HOME  &kp PAGE_UP &kp INSERT &kp PAGE_DOWN &kp END &trans
                                              &trans  &trans  &trans   &kp DEL &kp BSPC &kp ENTER 
             >;
@@ -406,7 +406,7 @@
             label = "MOUSE";
             bindings = <
                 &sys_reset  &trans &trans &trans &trans &trans                &kp UNDO &kp CUT &kp COPY &kp PASTE &kp REDO &trans
-                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &trans      &kp CAPS &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
+                &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &trans      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &trans &trans &trans &trans &trans      &kp HOME  &kp PAGE_UP &kp INSERT &kp PAGE_DOWN &kp END &trans
                                               &trans  &trans  &trans  &kp DEL &kp BSPC &kp ENTER
             >;
