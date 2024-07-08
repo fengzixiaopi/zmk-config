@@ -290,13 +290,6 @@
             require-prior-idle-ms = <125>;
         };
 
-        caps {
-            bindings = <&kp CAPS>;
-            key-positions = <P_R P_U>;
-            timeout-ms = <80>;
-            require-prior-idle-ms = <125>;
-        };
-
         grave {
             bindings = <&kp GRAVE>;
             key-positions = <P_D P_K>;
