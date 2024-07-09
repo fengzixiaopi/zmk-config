@@ -255,13 +255,6 @@
             require-prior-idle-ms = <125>;
         };
 
-        ctrl-c {
-            bindings = <&kp LC(C)>;
-            key-positions = <P_E P_R>;
-            timeout-ms = <80>;
-            require-prior-idle-ms = <125>;
-        };
-
         findall {
             bindings = <&kp FINDALL>;
             key-positions = <P_S P_D>;
@@ -360,12 +353,6 @@
             require-prior-idle-ms = <125>;
         };
 
-        redo {
-            bindings = <&kp REDO>;
-            key-positions = <P_R P_T>;
-            timeout-ms = <80>;
-            require-prior-idle-ms = <125>;
-        };
     };
 
 
