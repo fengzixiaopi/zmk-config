@@ -217,23 +217,16 @@
             require-prior-idle-ms = <75>;
         };
 
-        tilde {
-            bindings = <&kp TILDE>;
-            key-positions = <P_C P_COMMA>;
-            timeout-ms = <80>;
-            require-prior-idle-ms = <75>;
-        };
-
         single-quote {
             bindings = <&kp SQT>;
-            key-positions = <P_D P_K>;
+            key-positions = <P_E P_I>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
         };
 
         double-quote {
             bindings = <&kp DQT>;
-            key-positions = <P_D P_K>;
+            key-positions = <P_C P_COMMA>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
         };
