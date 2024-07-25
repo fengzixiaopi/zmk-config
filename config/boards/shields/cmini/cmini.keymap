@@ -259,15 +259,8 @@
             require-prior-idle-ms = <75>;
         };
 
-        selectAll {
-            bindings = <&kp LC(A)>;
-            key-positions = <P_F P_G>;
-            timeout-ms = <80>;
-            require-prior-idle-ms = <75>;
-        };
-
-        undo {
-            bindings = <&kp UNDO>;
+        esc {
+            bindings = <&kp ESC>;
             key-positions = <P_V P_B>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
