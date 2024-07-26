@@ -306,28 +306,28 @@
         };
 
         lt {
-            bindings = <&mkp LS(COMMA)>;
+            bindings = <&kp LS(COMMA)>;
             key-positions = <P_J P_K>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
         };
 
         gt {
-            bindings = <&mkp LS(DOT)>;
+            bindings = <&kp LS(DOT)>;
             key-positions = <P_K P_L>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
         };
 
         colon {
-            bindings = <&mkp LS(SEMI)>;
+            bindings = <&kp LS(SEMI)>;
             key-positions = <P_M P_COMMA>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
         };
 
         semi {
-            bindings = <&mkp SEMI>;
+            bindings = <&kp SEMI>;
             key-positions = <P_COMMA P_DOT>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
