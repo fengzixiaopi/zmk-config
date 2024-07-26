@@ -279,7 +279,7 @@
 
         cut {
             bindings = <&kp CUT>;
-            key-positions = <P_Z P_X>;;
+            key-positions = <P_Z P_X>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
         };
