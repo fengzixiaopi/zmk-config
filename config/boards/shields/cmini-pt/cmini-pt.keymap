@@ -272,14 +272,14 @@
 
         save {
             bindings = <&kp SAVE>;
-            key-positions = <P_E P_D>;
+            key-positions = <P_Z P_V>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
         };
 
         cut {
             bindings = <&kp CUT>;
-            key-positions = <P_D P_C>;
+            key-positions = <P_Z P_X>;;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
         };
@@ -305,30 +305,29 @@
             require-prior-idle-ms = <75>;
         };
 
-
-        lClick {
-            bindings = <&mkp LCLK>;
+        lt {
+            bindings = <&mkp LS(COMMA)>;
             key-positions = <P_J P_K>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
         };
 
-        rClick {
-            bindings = <&mkp RCLK>;
+        gt {
+            bindings = <&mkp LS(DOT)>;
             key-positions = <P_K P_L>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
         };
 
-        back {
-            bindings = <&mkp MB4>;
+        colon {
+            bindings = <&mkp LS(SEMI)>;
             key-positions = <P_M P_COMMA>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
         };
 
-        forward {
-            bindings = <&mkp MB5>;
+        semi {
+            bindings = <&mkp SEMI>;
             key-positions = <P_COMMA P_DOT>;
             timeout-ms = <80>;
             require-prior-idle-ms = <75>;
@@ -436,7 +435,7 @@
         nav {
             label = "NAV";
             bindings = <
-                &sys_reset  &trans &trans &trans &trans &kp DEL                &kp UNDO &kp CUT &kp COPY &kp PASTE &kp REDO &trans
+                &sys_reset  &trans &trans &trans &trans &kp DEL                &kp HOME  &kp PAGE_UP &kp INSERT &kp PAGE_DOWN &kp END &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &trans &trans &trans &trans &kp ENTER       &mkp MCLK &mkp LCLK &mkp RCLK &mkp MB4 &mkp MB5 &trans
                                              &trans  &trans                &kp BSPC &kp ENTER
@@ -446,7 +445,7 @@
         mouse {
             label = "MOUSE";
             bindings = <
-                &sys_reset  &trans &trans &trans &trans &kp DEL                &kp UNDO &kp CUT &kp COPY &kp PASTE &kp REDO &trans
+                &sys_reset  &trans &trans &trans &trans &kp DEL                &kp HOME  &kp PAGE_UP &kp INSERT &kp PAGE_DOWN &kp END &trans
                 &trans  &kp LGUI &kp LALT &kp LCTRL &kp LSHIFT &kp BSPC      &trans &kp UP &kp LEFT &kp RIGHT &kp DOWN &trans
                 &trans  &trans &trans &trans &trans &kp ENTER       &mkp MCLK &mkp LCLK &mkp RCLK &mkp MB4 &mkp MB5 &trans
                                              &trans  &trans                &kp BSPC &kp ENTER
