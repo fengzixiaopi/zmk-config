@@ -274,7 +274,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LEFT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "hold-preferred";
             tapping-term-ms = <125>;                       
             quick-tap-ms = <125>;
             require-prior-idle-ms = <75>;
@@ -287,7 +287,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "RIGHT_HOMEROW_MODS_SHIFT";
             #binding-cells = <2>;
-            flavor = "tap-unless-interrupted";
+            flavor = "hold-preferred";
             tapping-term-ms = <125>;                       
             quick-tap-ms = <125>;
             require-prior-idle-ms = <75>;
