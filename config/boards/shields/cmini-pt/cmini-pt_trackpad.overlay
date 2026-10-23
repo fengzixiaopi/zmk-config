@@ -39,17 +39,17 @@
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 17)>,
+            psels = <NRF_PSEL(SPIM_SCK, 0, 6)>,
                 <NRF_PSEL(SPIM_MOSI, 0, 20)>,
-                <NRF_PSEL(SPIM_MISO, 0, 8)>;
+                <NRF_PSEL(SPIM_MISO, 0, 20)>;
         };
     };
 
     spi0_sleep: spi0_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 0, 17)>,
+            psels = <NRF_PSEL(SPIM_SCK, 0, 6)>,
                 <NRF_PSEL(SPIM_MOSI, 0, 20)>,
-                <NRF_PSEL(SPIM_MISO, 0, 8)>;
+                <NRF_PSEL(SPIM_MISO, 0, 20)>;
             low-power-enable;
         };
     };
@@ -61,19 +61,25 @@
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio0 10 GPIO_ACTIVE_LOW>; // P0.06
+    cs-gpios = <&gpio0 17 GPIO_ACTIVE_LOW>;
 
-    trackpad: glidepoint@0 {
-        compatible = "cirque,pinnacle";
+    trackpad: trackball@0 {
         status = "okay";
+        compatible = "pixart,pmw3610";
         reg = <0>;
-        label = "Cirque Trackpad";
-        spi-max-frequency = <10000000>;
-        dr-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;
-        no-taps;
+        spi-max-frequency = <2000000>;
+        irq-gpios = <&gpio0 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        evt-type = <INPUT_EV_REL>;
+        x-input-code = <INPUT_REL_WHEEL>;
+        y-input-code = <INPUT_REL_MISC>;
+        cpi = <1000>;
+
+        /*   optional features   */
+        // snipe-layers = <1>;
+        // scroll-layers = <2 3>;
+        // automouse-layer = <4>;
     };
 };
-
 
 / {
   vtrackpad: virtual_input_trackpad {
