@@ -29,38 +29,18 @@ RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)                   RC(2,11) RC(2,
     };
 };
 
-/ {
-  vtrackball: virtual_input_trackball {
-      compatible = "zmk,virtual-input";
-  };
-
-  vtrackpad: virtual_input_trackpad {
-    compatible = "zmk,virtual-input";
-  };
+&left_trackball_split {
+    status = "okay";
 };
 
-
-/ {
-	input_relay_config_trackball {
-		compatible = "zmk,split-peripheral-input-relay";
-		
-		/* channel id, used to filter incoming annotated input event from split peripheral */
-		/* NOTE: should matching relay-channel on peripheral overlay */
-		relay-channel = <102>;
-
-		/* virtual input device on central, which used to emit input event as an agent device */
-		device = <&vtrackball>;
-	};
-
-  input_relay_config_trackpad {
-    compatible = "zmk,split-peripheral-input-relay";
-    
-    /* channel id, used to filter incoming annotated input event from split peripheral */
-    /* NOTE: should matching relay-channel on peripheral overlay */
-    relay-channel = <203>;
-
-    /* virtual input device on central, which used to emit input event as an agent device */
-    device = <&vtrackpad>;
-  };
+&right_trackball_split {
+    status = "okay";
 };
 
+&left_trackball_listener {
+    status = "okay";
+};
+
+&right_trackball_listener {
+    status = "okay";
+};

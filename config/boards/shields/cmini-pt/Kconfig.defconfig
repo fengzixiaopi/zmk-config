@@ -8,22 +8,9 @@ if SHIELD_CMINI-PT_DONGLE
 
 endif
 
-if SHIELD_CMINI-PT_TRACKPAD || SHIELD_CMINI-PT_TRACKBALL || SHIELD_CMINI-PT_DONGLE
+if SHIELD_CMINI-PT_LEFT || SHIELD_CMINI-PT_RIGHT || SHIELD_CMINI-PT_DONGLE
 
     config ZMK_SPLIT
         default y
 
 endif
-
-config MOUSE_LAYER_INDEX
-    int "Index of mouse layer"
-    default 4
-
-config SCROLL_LAYER_INDEX
-    int "Index of scroll layer"
-    default 5
-
-config MOUSE_LAYER_ACTIVE_MS
-    int "Amount of milliseconds the mouse layer will be active after using the trackball"
-    default 400
-    

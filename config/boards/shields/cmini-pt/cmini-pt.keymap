@@ -1,10 +1,11 @@
 #include <behaviors.dtsi>
-#include <behaviors/mouse_keys.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 #define QWERTY 0
 #define NAV 1
 #define MOUSE 2
@@ -90,85 +91,38 @@
     require-prior-idle-ms = <75>;
 };
 
-/{
+/* Preserve the old right sensor's swap/invert orientation on both halves. */
+&left_trackball_split {
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+};
 
-    ib_wheel_scaler_x: ib_wheel_scaler_x {
-        compatible = "zmk,input-behavior-scaler";
-        #binding-cells = <2>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_WHEEL>;
-    };
+&right_trackball_split {
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
+};
 
-    ib_wheel_scaler_y: ib_wheel_scaler_y {
-        compatible = "zmk,input-behavior-scaler";
-        #binding-cells = <2>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_HWHEEL>;
-    };
+/* Left ball replaces the trackpad as the dedicated scroll control. */
+&left_trackball_listener {
+    input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 8>;
 
-    ib_move_scaler_x: ib_move_scaler_x {
-        compatible = "zmk,input-behavior-scaler";
-        #binding-cells = <2>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_X>;
-    };
-
-    ib_move_scaler_y: ib_move_scaler_y {
-        compatible = "zmk,input-behavior-scaler";
-        #binding-cells = <2>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_Y>;
-    };
-
-  trackpad_peripheral_scroll_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackpad>;
-        layers = <QWERTY NAV MOUSE>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_WHEEL>;
-        y-input-code = <INPUT_REL_MISC>;
-        bindings = <&ib_wheel_scaler_x 1 8>;
-   }; 
-
-   trackpad_peripheral_scroll_snipe_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackpad>;
+    precision_scroll {
         layers = <NUM SYS>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_WHEEL>;
-        y-input-code = <INPUT_REL_MISC>;
-        bindings = <&ib_wheel_scaler_x 1 16>;
-   }; 
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 16>;
+    };
+};
 
-   trackball_peripheral_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
-        layers = <QWERTY NAV NUM SYS>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-   };
-
-   trackball_peripheral_snipe_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
-        layers = <NAV>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        bindings = <&ib_move_scaler_x 1 4 &ib_move_scaler_y 1 8>;
-   };
-
-   trackball_peripheral_scroll_listener {
-        compatible = "zmk,input-behavior-listener";
-        device = <&vtrackball>;
+&right_trackball_listener {
+    scroll {
         layers = <MOUSE>;
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_HWHEEL>;
-        y-input-code = <INPUT_REL_WHEEL>;
-        bindings = <&ib_wheel_scaler_x 1 8 &ib_wheel_scaler_y 1 8>;
-   };
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 8>;
+    };
 
+    precision {
+        layers = <NAV>;
+        input-processors = <&zip_x_scaler 1 4>, <&zip_y_scaler 1 8>;
+    };
+};
+
+/ {
     combos {
         compatible = "zmk,combos";
 
@@ -474,4 +428,3 @@
         };
     };
 };
- 
