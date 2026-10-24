@@ -70,8 +70,8 @@
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_WHEEL>;
-        y-input-code = <INPUT_REL_MISC>;
+        x-input-code = <INPUT_REL_HWHEEL>;
+        y-input-code = <INPUT_REL_WHEEL>;
         cpi = <1000>;
 
         /*   optional features   */

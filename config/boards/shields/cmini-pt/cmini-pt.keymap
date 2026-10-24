@@ -125,9 +125,9 @@
         device = <&vtrackpad>;
         layers = <QWERTY NAV MOUSE>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_WHEEL>;
-        y-input-code = <INPUT_REL_MISC>;
-        bindings = <&ib_wheel_scaler_x 1 8>;
+        x-input-code = <INPUT_REL_HWHEEL>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        bindings = <&ib_wheel_scaler_x 1 8 &ib_wheel_scaler_y 1 8>;
    }; 
 
    trackpad_peripheral_scroll_snipe_listener {
@@ -135,9 +135,9 @@
         device = <&vtrackpad>;
         layers = <NUM SYS>;
         evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_WHEEL>;
-        y-input-code = <INPUT_REL_MISC>;
-        bindings = <&ib_wheel_scaler_x 1 16>;
+        x-input-code = <INPUT_REL_HWHEEL>;
+        y-input-code = <INPUT_REL_WHEEL>;
+        bindings = <&ib_wheel_scaler_x 1 16 &ib_wheel_scaler_y 1 16>;
    }; 
 
    trackball_peripheral_listener {
