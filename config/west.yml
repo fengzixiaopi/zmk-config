@@ -11,7 +11,7 @@ manifest:
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: badjeff
-      revision: d8b2b71f0ef4f5f1461491f4f0d5040fb77c15c7
+      revision: 5f7a931497682d024902a270fcdc1200bb229082
     - name: zmk-split-peripheral-input-relay
       remote: badjeff
       revision: main
