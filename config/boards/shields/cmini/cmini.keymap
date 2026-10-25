@@ -95,8 +95,27 @@
 
 / {
 
+    macros {
+        type_great: type_great {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <10>;
+            bindings = <&macro_tap &kp G &kp R &kp E &kp A &kp T>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
+
+        type_great_combo {
+            bindings = <&type_great>;
+            // Caps Word (24) + backslash (35), on both keyboard layouts.
+            key-positions = <24 35>;
+            timeout-ms = <80>;
+            require-prior-idle-ms = <75>;
+        };
+
 
         left_bkt {
             bindings = <&kp LEFT_BRACKET>;
